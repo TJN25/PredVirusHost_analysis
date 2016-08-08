@@ -10,3 +10,4 @@ for line in read_temp:
 		pass
 	else:
 		output_file.write('%s\n' % words)
+
