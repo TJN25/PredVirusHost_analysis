@@ -2,9 +2,6 @@
 '''
 Replaces the spaces in the input file with a single tab.
 '''
-'arVOG_file.txt'
-'arVOG_file.tab'
-
 def FindReplace(x,y)
 input_file=open(x, 'r')
 output_file=open(y, 'a')
