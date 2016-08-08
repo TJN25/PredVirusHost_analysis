@@ -1,24 +1,34 @@
 #!/usr/bin/python
 '''
-This allows the results from contigs that you want, to be graphed in R. There is a sample output avaialable.
-
-You will need to make a list of the species you want to graph, including the extra '[' and other
-things found in the output_with_species.txt file and save into the same directory and name it 
-'species_to_graph.txt'
+Adds the name of the contig that each protein belongs to into a new column in the output.txt file.
 '''
-input_file=open('species_to_graph.txt', 'r')
-input_file_2=open('output_for_graph_metagenome.txt', 'r')
-output_file=open('output_for_graph_species_of_interest.txt', 'a')
-a={}
+dict_file=open('proteins_and_contigs_names.txt','r')
+input_file=open('output.txt', 'r')
+output_file=open('output_with_species.txt','a')
+output_file.write("'Protein Id'\t 'Archaeal Virus Model'\tE-value\t'Bacterial Phage Model'\tE-value\t'Eukaryotic Virus Model'\tE-value\tContig\n")
+x={}
+for line in dict_file:
+	words=line.rstrip()
+	names=words.split('\t')
+	key=names[0][0:]
+	value=names[1:][0:]
+	key=str(key)
+	item=key.replace('[','')
+	item=item.replace("'","")
+	item=item.replace(',','')
+	key=item.replace(']','')	
+	x[key]=value
 for line in input_file:
-	line=line.rstrip()
-	value=1
-	a[line]=value
-for line in input_file_2:
-	line=line.rstrip()
-	words=line.split('\t')
-	names=words[3]
-	if names in a:
-		output_file.write('%s\n' % line)
+	words=line.rstrip()
+	names=words.split('\t')
+	key=names[0][0:]
+	key=str(key)
+	item=key.replace('[','')
+	item=item.replace("'","")
+	item=item.replace(',','')
+	key=item.replace(']','')		
+	if key in x:
+		species=x[key]	
+		output_file.write('%s\t%s\n' % (words,species))
 	else:
-		pass
+		print('%s output_with_contigs.py' % key)
