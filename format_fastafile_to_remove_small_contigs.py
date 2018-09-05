@@ -9,3 +9,4 @@ for line in input_file:
 		temp_file.write('\n%s ' % words)
 	else:
 		temp_file.write(line)
+
