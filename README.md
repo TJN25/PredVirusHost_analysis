@@ -1,56 +1,143 @@
 # PredVirusHost
-Predicts the host domain of contigs from viromes
+Predicts the host domain of contigs from viromes by comparing proteins from a number of 
+contigs to hmm models and then scores each contig based on similarity to those models.
+
+
+
+Dependancies:
+- HMMER (http://hmmer.org/download.html)
+- R
+- dplyr (R package)
+
+
+
 The files that will be found are:
--Virus-Host_Matcher.sh
-	This calls other scripts, makes some simple adjustments to the files and sorts the final results into a folder.	
--remove_small_contigs.py
-	This looks at how many proteins are in each contig and removes any contigs from the fastafile if they
-	contain less than the number indicated by the user (default is 5 proteins or more).
--match_proteins_to_contigs.py 
-	This requires that the user input be correct. This takes the whole protein name, and separates out the part that will 
-	help define which contig the protein belongs to. For MG-RAST data, the charater where the split (delim) will happen is _ and the 
-	contig name is from the first part (start pos) (0) through until (end pos) the 3rd _ is found (3) (-g _ -s 0 -e 3). For Refseq files (once all 
-	spaces have been removed) it would be (-g [ -s 1 -e 0).
--find_and_replace_space_with_tab.py
-	The output of hmmsearch contains a changing number of spaces. This is needed so the other scripts can easily work with the files.
--generate_output_file.py
-	Combines the three hmm outputs into one fiile, where the best match for each protein to each host domain is kept.
--significant_matches_output.py
-	Provides a file where only proteins that have matched something are kept.
--output_with_contig_names.py
-	Appends the contig/species name onto the end of the output file.
--format_for_scoring.py
-	Generates a file that allows R to quickly score the contigs.
--score_matches_for_contigs.R
-	Scores the contigs, and includes an overall p-value and the mean and median e-values as well as the number of 
-	proteins on each contig.
--format_output_scores.py
-	Formats so the output contains headers and is tab-delimited to allow further analysis to be easily done.
-test.faa is a test file for checking everything is working and the Sample_Results folder contains 
-the expected output from running Virus-Host_Matcher.sh.
+-predvirushost.sh
+	This is the wrapper used to carry out the prediction of the viral hosts. 
+-host_scoring.R
+	Takes the output of the hmmsearches and scores each contig. It is called by the 
+	predvirushost.sh script.	
+-*.hmm
+	There are 3 profile-HMM files (arVOG, baPOG and euVOG) and these are used in the
+	hmmsearch step
+_*model_scores.txt
+	For each of the sets of profile-HMMs (arVOG, baPOG and euVOG) there are scores that are used to weight each 
+	model depending on how well the model can discriminate between the true hosts and 
+	the other hosts. These scores range from 0-1 and are used to adjust the bit scores 
+	in the host_scoring.R script.
+
+Options:
+The input requires that a fasta file (protein) is specified and that the format of the 
+protein headers is also specified. This is required for files with more than one contig as
+it is necessary to be able to idenitfy the protein name and contig name so that the results
+of the hmmsearch can be matched to the correct contig for scoring. There are default options
+for this (MGRAST, PROKKA, Refseq, Other). If 'Other' is selected then the format of the 
+header will need to be specified by giving the character that separates the contig name from
+the rest of the protein name along with the position of this character in the header.
+
+Example 1.
+
+>80818167_1_425_+
+XQXFETAARFGSIDDIRYKRPHHTRIVKDEILGTIRQVLTITPQEITLSRGDIDIIVRQAKVCQVTKALKGIDTIIAYDRGFEGEGRSHWRGVDIVPLHSDHVDKLLRKIVDFDTLANVLECLRNTCREISTHNVVGAT
+>80818167_525_896_-
+VAKTETKTTKIPDDVKQYVDIIIDALSKALETGNFTIELTYDNIKIKTGDINAYIDYKKLYIMYKDIDIIFSDYVAMVKVYNDYYSDPQIYYAHEYWAILEELHATAIDKVKERIKKALTKI
+>80818167_942_1050_-
+ALCSCVNMALQNANTLADMKYVPHDVLDTDKGHG
+
+The contig name is '80818167'
+This is separated by a '_' (-d _)
+This is from the start (-s 0)
+This ends 3 '_' from the end of the header (-e 3) 
+
+Example 2.
+
+>ABP73391.1_hypothetical_protein_[Acidianus_bottle-shaped_virus_complete_genome.]
+MTTTHDTNTKKLKYQFHTIHSQRIMTTVTQKPFTASPYIFSTTLRTTQTDGNNAINSHSHTQAGYNNSSERFLYLICTYIT
+
+>ABP73392.1_hypothetical_protein_[Acidianus_bottle-shaped_virus_complete_genome.]
+MNTQNIVEKTHEKFSSTWSYLEQTSTDLKQNLRSRLLGLDSLLRELYKQETDEKKKMYIFYALMYVDSALDNLDYMNPEHDPFAVFQAKWAVQKAFEIFSDLFKDYFKSD
+
+>ABP73393.1_hypothetical_protein_[Acidianus_bottle-shaped_virus_complete_genome.]
+MESLIKAIREEFISIFSLLKKPHKFTLEELRIRLRKLHNLLLQLFELEYDINRKVEVKYALEFVDSVYNQIDYVIPETLIPFAKEQLKYAVYRFNLYYT
+
+The contig name is 'Acidianus_bottle-shaped_virus_complete_genome'
+This is separated by a '[' (-d [)
+This is at the first occurrence of the '[' (-s 1)
+This continues to the end of the header (-e 0)
+
+Formatting the input file:
+If the contig labels in the output table are not correct then use the following for 
+the input file.
+
+##FILE-NAME.faa
+>protein_id[contig_name]
+protein_sequence
+
+>protein_id[contig_name]
+protein_sequence
+
+>protein_id[contig_name]
+protein_sequence
 
 
-The files containing the significant models are:
-arVOG_sig.hmm
-euVOG_sig.hmm
-baPOG_sig.hmm
-
-The files containing all of the models are:
-arVOG-all.hmm
-euVOG_all.hmm
-baPOG_all.hmm
+##
+Make sure that any spaces have been removed or replaced. 
+Use:
+ -f Other -d [ -s 1 -e 0 
+along with any other options.
 
 
-There are also some scripts that are useful for producing a graphical output in R.
-These are:
--format_for_graph.py
-	Generates a file that can be easily graphed.
--rewrite_with_contig_of_interest.py
-	Keeps only the contigs/species that the user wants to graph from the above output. This requires the user 
-	to create a text file with the list of contigs/species they wish to view, written in the same way they are in the
-	above output. The file should be saved as species_to_graph.txt
--graph_contig_of_interest.R
-	Produces a pdf of the graph for each contig/species the user wanted to graph.
 
 
-Samples of these can be found in the Sample_Results_Graphical folder.
+The help page shows:
+
+
+PredVirusHost.sh: compares proteins from a number of contigs to hmm models and then scores
+each contig based on similarity to those models.
+Version 3.0 2018
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+usage: [options] <filename> <file type>
+ 
+Basic options:
+  -i : <filename> the protein fasta file with protein identifiers not containing spaces
+  -o : <output file> the output file name (default is the input file name)
+  -f : <file type> the format of the fasta file (MGRAST, PROKKA, Refseq, Other)
+  -c : <Number of cores> The number of cores to use in the hmmsearch step
+  -p : <Number of proteins> contigs with this number of proteins or more will be analysed with the pipeline 
+Options if "Other" file type is selected:
+  -d : <delim> is the character that separates the contig name from the protein name/detail
+  -s : <start_pos> is the number of delimiters that you must pass to be left with just the contig name.
+  -e : <end_pos> is the number of delimiters from the end needed to be left with just the contig
+  For MG-RAST files the format would be -d _ -s 0 -e 3
+ 
+Trouble shooting:
+  -k : include in order to keep the temp files to see where there is a problem
+
+
+The output file will contain a tab-delimited table.
+
+##Example table
+genome	archaeal_score	phage_score	eukaryotic_score	call	difference.percentage	protein.counts
+contig100010	38.493	0	0	archaeal	100	1
+contig309	34.692	30.295	0	archaeal	12.67	5
+contig3338	39.298	95.024	0	phage	58.64	3
+contig273	182.7	44.8	584.002	eukaryotic	68.72	6
+
+Columns are:
+-Genome
+	The contig name
+-*_score
+	archaeal, phage, eukaryotic
+	The sum of the adjusted bit scores for the contig for each set of models.
+-call
+	The host that the contig has been assigned to.
+-difference.percentage
+	The percentage difference between the score of the assigned host and the next
+	highest scoring host.
+-protein.counts
+	The number of proteins in the contig.
+	
+
+
+
+

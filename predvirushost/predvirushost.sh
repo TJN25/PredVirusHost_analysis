@@ -1,0 +1,276 @@
+#!/bin/bash
+## PredVirusHost
+## Predicts the host domain of contigs from viromes by comparing proteins from a number of 
+## contigs to hmm models and then scores each contig based on similarity to those models.
+## Dependancies:
+## - HMMER (http://hmmer.org/download.html)
+## - R
+## - dplyr (R package)
+
+
+
+FILE_PATH=`dirname $0`
+keep_files='y'
+CPUS='1'
+PROTEINCOUNT='1'
+discriminant_models='n'
+
+while getopts "i:o:d:s:e:mrf:c:p:h" arg; do
+  case $arg in
+    i)
+      file1_input=$OPTARG
+      #echo $file1
+      ;;
+    o)
+      output_file=$OPTARG
+      #echo $output_file
+      ;;      
+    d)
+      delim=$OPTARG
+      #echo $delim
+      ;;
+    s)
+      pos_start=$OPTARG
+      #echo $pos_start
+      ;;
+    e)
+      pos_end=$OPTARG
+      #echo $pos_end
+      ;;   
+    m)
+      discriminant_models='y'      
+      echo "Using discriminant models"
+
+      #echo $pos_end
+      ;;          
+    r)
+      keep_files='n'
+      echo "Removing tmp files"
+      #echo $keep_files
+      ;;      
+	f)
+      file_type=$OPTARG
+      #echo $file1
+      ;;
+	c)
+      CPUS=$OPTARG
+      #echo $file1
+      ;;      
+	p)
+      PROTEINCOUNT=$OPTARG
+      #echo $file1
+      ;;         
+    h)
+echo 'PredVirusHost.sh: compares proteins from a number of contigs to hmm models and then scores'
+echo 'each contig based on similarity to those models.'
+echo 'Version 3.0 2018'
+echo '# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -'
+echo 'usage: [options] <filename> <file type>'
+echo ' '
+echo 'Basic options:'
+echo '  -i : <filename> the protein fasta file with protein identifiers not containing spaces'
+echo '  -o : <output file> the output file name (default is the input file name)'
+echo '  -f : <file type> the format of the fasta file (MGRAST, PROKKA, Refseq, Other)'
+echo '  -c : <Number of cores> The number of cores to use in the hmmsearch step'
+echo '  -p : <Number of proteins> contigs with this number of proteins or more will be analysed with the pipeline'
+echo '  -m : <Use discriminant models> Ignores the models that are not discriminant'
+echo ' '
+echo 'Options if "Other" file type is selected:'
+echo '  -d : <delim> is the character that separates the contig name from the protein name/detail'
+echo '  -s : <start_pos> is the number of delimiters that you must pass to be left with just the contig name'
+echo '  -e : <end_pos> is the number of delimiters from the end needed to be left with just the contig'
+echo '  For MG-RAST files the format would be -d _ -s 0 -e 3' 
+echo ' '
+echo 'Trouble shooting:'
+echo '  -k : include in order to keep the temp files to see where there is a problem'
+exit      
+      ;;
+     
+  esac
+done
+
+if [[ $file_type = 'PROKKA' ]]; then
+
+      delim='_'
+      pos_start='0'
+      pos_end='1'
+
+
+echo 'PROKKA file type'
+
+elif [[ $file_type = 'MGRAST' ]]
+then
+
+      delim='_'
+      pos_start='0'
+      pos_end='3'
+
+echo 'MGRAST file type'
+
+elif [[ $file_type = 'Refseq' ]]
+then
+
+      delim='['
+      pos_start='1'
+      pos_end='0'
+
+echo 'Refseq file type. Make sure that spaces have been removed'
+
+
+elif [[ $file_type = 'Other' ]]
+then
+
+echo 'Other file type. Make sure delineator, start and end values are correct and all spaces have been removed.'
+
+if [[ -z $delim ]]; then
+echo 'Error: Delimiter separting the genome name is required. Specify with -d <delimiter>'
+echo ' '
+echo 'Use -h for more help.'
+echo ' '
+exit
+
+elif [[ -z $pos_start ]]; then
+echo 'Error: Start position of genome name required. Specify with -s <start position>'
+echo ' '
+echo 'Use -h for more help.'
+echo ' '
+exit
+
+elif [[ -z $pos_end ]]; then
+echo 'Error: Stop position of genome name required. Specify with -e <end position>'
+echo ' '
+echo 'Use -h for more help.'
+echo ' '
+exit
+
+fi
+
+else
+
+echo ' '
+echo 'Error: -f <file type> is required. Options are MGRAST, PROKKA, Refseq and Other. '
+echo 'If Other is selected the the delimiter, start and stop positions of the genome name '
+echo 'is also required.'
+echo ' '
+echo 'Use -h for more help.'
+echo ' '
+exit
+fi
+
+if [[ -z $file1_input ]]; then
+echo 'Error: Fasta File Needed. Specify with -i <input file>'
+echo ' '
+echo 'Use -h for more help.'
+echo ' '
+exit
+else
+
+if [[ -z $output_file ]]; then
+output_file=`basename $file1_input`
+fi
+
+file1=$file1_input
+
+echo "Writing outputs to $output_file"
+mkdir $output_file.tmp.folder
+
+if [[ $pos_start -gt 0 ]]; then
+
+if [[ $pos_end -gt 0 ]]; then
+grep ">" $file1 | tr ' ' '_' | sed "s/\\$delim/ /$pos_start" | rev | sed "s/$delim/ /$pos_end" | rev | cut -d ' ' -f2 | sed 's/>//g' > tmp1
+
+else
+
+grep ">" $file1 | tr ' ' '_' | sed "s/\\$delim/ /$pos_start" | cut -d ' ' -f2 | sed 's/>//g' > tmp1
+
+fi
+
+else
+
+grep ">" $file1 | tr ' ' '_' | rev | sed "s/\\$delim/ /$pos_end" | rev | cut -d ' ' -f1 | sed 's/>//g' > tmp1
+
+fi
+
+
+grep ">" $file1 | tr ' ' '_' > tmp2
+
+paste -d ' ' tmp1 tmp2 | sed 's/>//g'  > $output_file.tmp.folder/genome_lookup.txt
+
+rm tmp1 tmp2
+
+cat $file1 | tr ' ' '_'  | tr '\n' ' ' | sed -e 's/>/\n>/g' | sed 's/ //g2' | sed '/^\s*$/d' > tmp1
+
+paste tmp1 $output_file.tmp.folder/genome_lookup.txt | tr ' ' '\t' > tmp1.faa
+
+cat tmp1.faa | tr ' ' '\t' | cut -f3 | uniq -c > tmp2
+
+join -1 3 -2 2 tmp1.faa tmp2 | tr ' ' '\t' > tmp3
+
+awk -v threshold="$PROTEINCOUNT" '$5 >= threshold' tmp3 > tmp4
+
+contig_count=$(awk -v threshold="$PROTEINCOUNT" '$1 >= threshold' tmp2 | wc -l)
+
+echo "$contig_count contigs with $PROTEINCOUNT or more proteins have been kept"
+
+cut -f2,3 tmp4 | tr '\t' '\n' > $output_file.tmp.folder/fastafile.faa
+
+rm tmp1 tmp2 tmp3 tmp1.faa tmp4
+
+
+
+arVOG_hmm=$FILE_PATH/arVOG.hmm
+baPOG_hmm=$FILE_PATH/baPOG.hmm
+euVOG_hmm=$FILE_PATH/euVOG.hmm
+
+
+
+
+ echo 'Match '$file1' to HMM virus models'
+ echo `basename $arVOG_hmm`
+ echo 'Running HMMSearch on '$file1' and arVOG models' 
+
+
+
+ hmmsearch --tblout $output_file.tmp.folder/arVOG_res.txt --noali --cpu $CPUS $arVOG_hmm $output_file.tmp.folder/fastafile.faa >> $output_file.tmp.folder/hmm_output.txt
+ echo 'Running HMMSearch on '$file1' and euVOG models' 
+ hmmsearch --tblout $output_file.tmp.folder/euVOG_res.txt --noali --cpu $CPUS  $euVOG_hmm $output_file.tmp.folder/fastafile.faa >> $output_file.tmp.folder/hmm_output.txt
+ echo 'Running HMMSearch on '$file1' and baPOG models' 
+ hmmsearch --tblout $output_file.tmp.folder/baPOG_res.txt --noali --cpu $CPUS $baPOG_hmm $output_file.tmp.folder/fastafile.faa >> $output_file.tmp.folder/hmm_output.txt
+ echo 'Making Protein List'
+
+
+
+
+
+# Calculates a score indicating which domain the genome likely belongs to
+host_scoring.R $FILE_PATH $output_file.tmp.folder $discriminant_models
+
+
+cp $output_file.tmp.folder/scores.txt ./$output_file.scores.txt
+
+keep_files_=$keep_files
+
+fi
+
+# these steps are needed to rename the files and put them in a folder
+
+if [[ $keep_files_ = 'y' ]]; then
+rm $output_file.tmp.folder/hmm_output.txt
+echo 'Temp files being moved to temp folder'
+echo 'Finished'
+
+elif [[ $keep_files_ = 'n' ]]; then
+
+rm $output_file.tmp.folder/*
+
+rmdir $output_file.tmp.folder
+
+echo 'Temp files removed'
+
+echo 'Finished'
+
+else
+
+echo "Did not complete the commands: If you wish to debug then include 'y' in the command."
+
+fi
