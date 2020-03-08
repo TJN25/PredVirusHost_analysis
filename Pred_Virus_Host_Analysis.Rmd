@@ -1,0 +1,14 @@
+---
+title: "Pred_Virus_Host"
+author: "Thomas Nicholson"
+date: "3/9/2020"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(comparativeSRA)
+library(ggplot2)
+```
