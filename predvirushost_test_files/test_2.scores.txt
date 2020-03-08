@@ -1,0 +1,7 @@
+genome	archaeal_score	phage_score	eukaryotic_score	call	difference.percentage	protein.counts
+Acidianus_bottle-shaped_virus_complete_genome.]	10787.936	113.076	0	archaeal	98.95	57
+Acidianus_filamentous_virus_2_partial_genome]	8555.208	0	0	archaeal	100	52
+Acidianus_filamentous_virus_3_partial_viral_genome]	17334.043	273.922	334.61	archaeal	98.07	68
+Acidianus_filamentous_virus_6_partial_viral_genome]	16343.024	274.794	328.503	archaeal	97.99	66
+Acidianus_filamentous_virus_7_partial_viral_genome]	12598.669	313.671	303.975	archaeal	97.51	51
+Acidianus_filamentus_virus_1_complete_genome]	5905.54	41.48	0	archaeal	99.3	40
