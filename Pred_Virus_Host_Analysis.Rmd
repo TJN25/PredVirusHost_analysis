@@ -12,3 +12,36 @@ library(tidyverse)
 library(comparativeSRA)
 library(ggplot2)
 ```
+
+
+```{r proteins_and_hmms}
+file_path <- "~/PredVirusHost/update_march_2020/"
+
+proteins <- read.table(paste(file_path, "archaeal_virus_lookup.txt", sep = ""), sep = "\t", header = F, as.is = T, fill = T)
+
+head(proteins)
+colnames(proteins) <- c("protein_accession", "protein_description", "genome")
+
+hmms <- read.table(paste(file_path, "arVOG_protein_hmm_list.txt", sep = ""), sep = "\t", header = F, as.is = T)
+
+head(hmms)
+colnames(hmms) <- c("protein_accession", "hmm_accession")
+
+dat <- hmms %>% left_join(proteins, by = "protein_accession")
+
+dat <- dat %>% mutate(protein_description = ifelse(grepl("hypothetical", protein_description), "hypothetical protein", protein_description))
+dat <- dat %>% mutate(protein_description = ifelse(grepl("ORF", protein_description), "hypothetical protein", protein_description))
+dat <- dat %>% mutate(protein_description = ifelse(grepl("unknown", protein_description), "hypothetical protein", protein_description))
+
+
+proteinDescr <- dat %>% group_by(hmm_accession) %>% summarise(protein_descriptions = paste(unique(protein_description), collapse = ", "))
+
+
+genomes <- dat %>% group_by(hmm_accession) %>% summarise(genomes = paste(unique(genome), collapse = ", "))
+
+summaryData <- proteinDescr %>% full_join(genomes, by = "hmm_accession")
+
+save(summaryData, file = "~/bin/PredVirusHost/hmm_accessions_descriptions.Rda")
+write.csv(summaryData, file = "~/bin/PredVirusHost/hmm_accessions_descriptions.csv", row.names = F, quote = F)
+
+```
