@@ -11,8 +11,98 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 #library(comparativeSRA)
 library(ggplot2)
+library(igraph)
+library(reshape2)
+library(ROSE)
+library(RColorBrewer)
+library(viridis)
 ```
 
+```{r functions}
+vog_occurence_matrix <- function(dat){
+  dat <- dat %>% group_by(model_1, model_2) %>% summarise(count = n()) %>% 
+  filter(!is.na(model_1), !is.na(model_2))
+
+
+mat <- dcast( dat , model_1~model_2)
+mat[is.na(mat)] <- 0
+
+
+#mat <- as.matrix(mat)
+rownames(mat) <- mat$model_1
+mat <- mat[,colnames(mat) != "model_1"]
+
+
+mat <- mat[,colnames(mat)!= ""]
+mat <- mat[,!is.na(colnames(mat))]
+
+mat$rowsum <- rowSums(mat, na.rm = T)
+
+mat <- mat[mat$rowsum > 0,]
+
+mat <- mat %>% select(-rowsum)
+mat <- as.matrix(mat)
+
+mat <- mat[,colnames(mat)!= ""]
+mat <- mat[,colnames(mat)!= "NA"]
+
+return(mat)
+}
+
+vog_melt <- function(mat){
+  melted_cormat <- melt(mat)
+melted_cormat <- melted_cormat %>% mutate(value_2 = log10(value) + 3) %>% 
+  mutate(value_2 = ifelse(value == 0, 0, value_2)) %>% arrange(value)
+
+var2 <- melted_cormat %>% filter(value > 0) %>% group_by(Var2) %>% summarise(count = length(unique(Var1))) %>% filter(Var2 != "")
+
+melted_cormat <- melted_cormat %>% left_join(var2, by = "Var2") 
+melted_cormat <- melted_cormat %>% arrange(-count)
+
+melted_cormat$Var2 <- factor(melted_cormat$Var2, levels = unique(melted_cormat$Var2))
+melted_cormat$Var1 <- factor(melted_cormat$Var1, levels = unique(melted_cormat$Var1))
+return(melted_cormat)
+}
+
+vog_counts <- function(melted_cormat, other_total, threshold = 1){
+  arVOG_matched <- length(unique(melted_cormat$Var1))
+  arVOG_name <- melted_cormat$Var2[1]
+
+
+other_matched <- length(unique(melted_cormat$Var2))
+other_name <- melted_cormat$Var2[1]
+
+
+arVOG_count <- as.data.frame(mat)
+other_count <- as.data.frame(t(mat))
+
+
+arVOG_count[arVOG_count != 0] <- 1
+other_count[other_count != 0] <- 1
+
+arVOG_count$rowsum <- rowSums(x = arVOG_count, na.rm = T)
+other_count$rowsum <- rowSums(x = other_count, na.rm = T)
+
+arVOG_count$names <- rownames(arVOG_count)
+other_count$names <- rownames(other_count)
+
+arVOG_count <- arVOG_count %>% select(names, rowsum)
+other_count <- other_count %>% select(names, rowsum)
+
+arVOG_count <- arVOG_count %>% group_by(rowsum) %>% summarise(count = n())
+other_count <- other_count %>% group_by(rowsum) %>% summarise(count = n())
+
+arVOG_1 <- arVOG_count$count[1]
+other_1 <- other_count$count[1]
+
+cat(paste("arVOGs: 781\nOther: ", other_total, "\narVOGs matched: ", arVOG_matched, "\nOther matched: ", other_matched, "\narVOGs with only one match: ", arVOG_1, 
+          "\nOther with only one match: ", other_1, sep = ""))
+
+multiple_models <- melted_cormat %>% filter(count > threshold, value > 0) %>% select(Var1, count) %>% unique() %>% arrange(Var1)
+return(multiple_models)
+}
+
+```
 
 ```{r archaeal_proteins_and_hmms}
 file_path <- "~/PredVirusHost/update_march_2020/"
@@ -106,3 +196,597 @@ write.csv(summaryData, file = "~/bin/PredVirusHost/phage_hmm_accessions_descript
 
 ```
 
+```{r arCOGs}
+file_path <- "~/PredVirusHost/update_march_2020/"
+
+#####----------- import and setup ---------########
+allArVOGs <- read.table(paste(file_path, "arVOG_protein_hmm_list.txt", sep = ""))
+head(allArVOGs)
+colnames(allArVOGs) <- c("proteins", "arVOGs")
+allArVOGs <- allArVOGs %>% select(arVOGs) %>% unique()
+hmmColnames <- c("target.name", "query.name", "accession.2", "E.value", "score", "bias", "E.value.2", "score.2", "bias.2", "exp", "reg", "clu", "ov", "env", "dom", "rep", "inc")
+dat <- read.csv(paste(file_path, "ar14.arCOG.csv", sep = ""))
+colnames(dat) <- c("domain_id", "genome", "protein_id", "length", "start", "stop", "arCOG", "class", "other_1", "other_2")
+lookup <- read.table(paste(file_path, "ar14.arCOGdef19.tab", sep = ""), sep = "\t", fill = T, comment.char = "", quote = "", as.is = T)
+colnames(lookup) <- c("arCOG", "f_class", "gene", "annotation", "cluster", "pfam", "cdd", "tigrfam")
+res <- read.table(paste(file_path, "/arCOG_arVOG.tab", sep = ""), sep = "", fill = T, as.is = T)
+colnames(res) <- hmmColnames
+head(res$target.name)
+res <- res %>% separate(col = target.name, into = c("i1", "protein_id", "i2"), sep = "\\|", remove = F, extra = "merge")
+total <- nrow(res)
+pb <- txtProgressBar(min = 0, max = total, style = 3)
+for(i in 1:total){
+   setTxtProgressBar(pb, i, label=paste( round(i/total*100, 0), "% done"))
+  if(res$accession.2[i] != "-"){
+    res[1,7:20] <- res[i, 6:19]
+    res$accession.2[i] <- "-"
+  }
+}
+res <- res %>% mutate(protein_id = as.numeric(protein_id),
+                      score = as.numeric(score)) %>% 
+  filter(!is.na(protein_id))
+
+
+res %>% group_by(protein_id) %>% summarise(count = n()) %>% arrange(-count)
+
+res <- res %>% filter(as.numeric(E.value) < 1e-5) %>% group_by(protein_id) %>%  arrange(-score) %>% top_n(n = -1, wt = score) %>% top_n(n = 1, wt = E.value) %>% ungroup %>% mutate(protein_id = as.character(protein_id)) 
+
+dat$protein_id <- as.character(dat$protein_id)
+
+res %>% group_by(protein_id) %>% summarise(count = n()) %>% arrange(-count)
+
+head(res)
+head(lookup)
+head(dat)
+
+all <- res %>% full_join(dat, by = "protein_id") %>% full_join(lookup, by = "arCOG")
+
+all <- all %>% select(protein_id, arCOG, gene, query.name, E.value, genome, annotation, pfam, cdd, tigrfam)
+
+arVOG_arCOGs <- all %>% filter(!is.na(query.name))
+
+not_found <- all %>% filter(is.na(query.name))
+save(arVOG_arCOGs, file = "arVOG_arCOGs.Rda")
+
+
+#####----------- bipartitle graph ---------########
+load(file = "arVOG_arCOGs.Rda")
+
+arVOG_arCOGs <- arVOG_arCOGs %>% dplyr::rename(model_1 = query.name, model_2 = arCOG)
+
+mat <- vog_occurence_matrix(dat = arVOG_arCOGs)
+
+g <- graph.incidence(mat, weighted = T)
+g
+  svg(filename="~/arVOG_arCOG_all.svg", 
+     width=100, 
+     height=100, 
+     pointsize=20)
+  
+V(g)$color <- V(g)$type
+V(g)$color=gsub("FALSE","red",V(g)$color)
+V(g)$color=gsub("TRUE","blue",V(g)$color)
+plot(g, edge.color="gray30", vertex.size = 5)
+
+dev.off()
+
+arVOG_arCOG_mat <- mat
+save(arVOG_arCOG_mat, file ="~/bin/PredVirusHost/arVOG_arCOG_matrix.Rda")
+
+#####----------- Other ---------########
+load(file ="~/bin/PredVirusHost/arVOG_arCOG_matrix.Rda")
+mat <- arVOG_arCOG_mat
+melted_cormat <- vog_melt(mat)
+
+arCOG_multiple <- vog_counts(melted_cormat = melted_cormat, other_total = length(unique(dat$arCOG)))
+
+
+tmp <- melted_cormat %>% filter(count > 1, value > 0)
+
+p <- ggplot(data = tmp, aes(Var2, Var1, fill = value_2))+
+ geom_tile(color = "white")+
+ scale_fill_gradient2(low = "blue", high = "red", mid = "white", space = "Lab") +
+  theme_minimal()+ 
+ theme(axis.text.x = element_text(angle = 45, vjust = 1, 
+    size = 12, hjust = 1))
+
+p
+
+ggsave("~/arCOG_arVOG_heatmap.svg", plot = p, device = "svg")
+
+```
+
+```{r pVOGs}
+file_path <- "~/PredVirusHost/update_march_2020/"
+#####----------- import and setup ---------########
+
+allArVOGs <- read.table(paste(file_path, "arVOG_protein_hmm_list.txt", sep = ""))
+
+
+head(allArVOGs)
+colnames(allArVOGs) <- c("protein_id", "arVOG")
+
+
+allArVOGs <- allArVOGs %>% unique()%>% mutate(type = "archeal")
+
+
+pVOGs <- read.table(paste(file_path, "pVOG_lookup.txt", sep = ""), sep = "\t", fill = T, quote = "", comment.char = "", as.is = T)
+head(pVOGs)
+
+colnames(pVOGs) <- c("pVOG", "other_1", "genome_id", "protein_id", "other_2", "gene_description")
+
+pVOG_descriptions <- read.table(paste(file_path, "pVOG_descriptions", sep = ""), sep = "\t", fill = T, quote = "", comment.char = "", as.is = T)
+head(pVOG_descriptions)
+
+colnames(pVOG_descriptions) <- c("pVOG", "genome_id", "genome_description", "other_2", "protein_id")
+
+pVOG_descriptions <- pVOG_descriptions %>% select(genome_id, genome_description) %>% unique()
+
+
+head(allArVOGs)
+
+
+arVOG_pVOGs <- allArVOGs %>% left_join(pVOGs, by = "protein_id") %>% left_join(pVOG_descriptions, by = "genome_id")
+tmp <- arVOG_pVOGs
+
+arVOG_pVOGs <- arVOG_pVOGs %>% filter(!is.na(pVOG))
+save(arVOG_pVOGs, file = "~/bin/PredVirusHost/arVOGs_pVOGs.Rda")
+#####----------- bipartitle graph ---------########
+
+load( file = "~/bin/PredVirusHost/arVOGs_pVOGs.Rda")
+
+
+arVOG_pVOGs <- arVOG_pVOGs %>% dplyr::rename(model_1 = arVOG, model_2 = pVOG)
+
+mat <- vog_occurence_matrix(dat = arVOG_pVOGs)
+
+g <- graph.incidence(mat, weighted = T)
+
+g
+
+  svg(filename="~/arVOG_pVOG.svg", 
+     width=100, 
+     height=100, 
+     pointsize=20)
+
+V(g)$color <- V(g)$type
+V(g)$color=gsub("FALSE","red",V(g)$color)
+V(g)$color=gsub("TRUE","blue",V(g)$color)
+plot(g, edge.color="gray30", vertex.size = 5)
+
+
+dev.off()
+
+arVOG_pVOG_mat <- mat
+save(arVOG_pVOG_mat, file ="~/bin/PredVirusHost/arVOG_pVOG_matrix.Rda")
+#####----------- Other ---------########
+load(file ="~/bin/PredVirusHost/arVOG_pVOG_matrix.Rda")
+mat <- arVOG_pVOG_mat
+melted_cormat <- vog_melt(mat)
+
+vog_counts(melted_cormat = melted_cormat, other_total = length(unique(pVOGs$pVOG)))
+
+
+tmp <- melted_cormat %>% filter(count > 1, value > 0)
+
+p <- ggplot(data = tmp, aes(Var2, Var1, fill = value_2))+
+ geom_tile(color = "white")+
+ scale_fill_gradient2(low = "blue", high = "red", mid = "white", space = "Lab") +
+  theme_minimal()+ 
+ theme(axis.text.x = element_text(angle = 45, vjust = 1, 
+    size = 12, hjust = 1))
+
+p
+
+ggsave("~/pVOG_arVOG_heatmap.svg", plot = p, device = "svg")
+
+
+```
+
+```{r VOGDB}
+file_path <- "~/PredVirusHost/update_march_2020/"
+#####----------- import and setup ---------########
+
+allArVOGs <- read.table(paste(file_path, "arVOG_protein_hmm_list.txt", sep = ""))
+
+
+head(allArVOGs)
+colnames(allArVOGs) <- c("protein_id", "arVOG")
+
+
+allArVOGs <- allArVOGs %>% unique()%>% mutate(type = "archeal")
+
+
+vogDB <- read.table(paste(file_path, "VOGDB_lookup.txt", sep = ""), sep = "\t", fill = T, quote = "", comment.char = "", as.is = T)
+head(vogDB)
+
+colnames(vogDB) <- c("other_1","pVOG", "other_2", "protein_id", "gene_description", "genome_description")
+
+arVOG_vogDB <- allArVOGs %>% left_join(vogDB, by = "protein_id")
+
+arVOG_vogDB <- arVOG_vogDB %>% filter(!is.na(pVOG))
+save(arVOG_vogDB, file = "~/bin/PredVirusHost/arVOG_vogDB.Rda")
+
+
+#####----------- bipartitle graph ---------########
+
+load( file = "~/bin/PredVirusHost/arVOG_vogDB.Rda")
+
+
+arVOG_vogDB <- arVOG_vogDB %>% dplyr::rename(model_1 = arVOG, model_2 = pVOG)
+
+mat <- vog_occurence_matrix(dat = arVOG_vogDB)
+
+g <- graph.incidence(mat, weighted = T)
+
+g
+
+  svg(filename="~/arVOG_vogDB.svg", 
+     width=100, 
+     height=100, 
+     pointsize=20)
+
+V(g)$color <- V(g)$type
+V(g)$color=gsub("FALSE","red",V(g)$color)
+V(g)$color=gsub("TRUE","blue",V(g)$color)
+plot(g, edge.color="gray30", vertex.size = 5)
+
+
+dev.off()
+
+arVOG_vogDB_mat <- mat
+save(arVOG_vogDB_mat, file ="~/bin/PredVirusHost/arVOG_vogDB_matrix.Rda")
+
+#####----------- Other ---------########
+load(file ="~/bin/PredVirusHost/arVOG_vogDB_matrix.Rda")
+mat <- arVOG_vogDB_mat
+
+melted_cormat <- vog_melt(mat)
+
+vog_counts(melted_cormat = melted_cormat, other_total = length(unique(vogDB$pVOG)))
+
+
+
+
+tmp <- melted_cormat %>% filter(count > 1, value > 0)
+
+p <- ggplot(data = tmp, aes(Var2, Var1, fill = value_2))+
+ geom_tile(color = "white")+
+ scale_fill_gradient2(low = "blue", high = "red", mid = "white", space = "Lab") +
+  theme_minimal()+ 
+ theme(axis.text.x = element_text(angle = 45, vjust = 1, 
+    size = 12, hjust = 1))
+
+p
+
+ggsave("~/VOGDB_arVOG_heatmap.svg", plot = p, device = "svg")
+
+
+```
+
+```{r baPOGs}
+file_path <- "~/PredVirusHost/update_march_2020/"
+
+#####----------- import and setup ---------########
+allArVOGs <- read.table(paste(file_path, "arVOG_protein_hmm_list.txt", sep = ""))
+head(allArVOGs)
+colnames(allArVOGs) <- c("protein_id", "arVOG")
+allArVOGs <- allArVOGs %>% select(arVOG) %>% unique()
+hmmColnames <- c("protein_id_bacterial", "accession.1", "arVOG", "accession.2", "E.value", "score", "bias", "E.value.2", "score.2", "bias.2", "exp", "reg", "clu", "ov", "env", "dom", "rep", "inc", "description")
+
+baPOGs <- read.table(paste(file_path, "baPOG_protein_hmm_list.txt", sep = ""))
+colnames(baPOGs) <- c("protein_id_bacterial", "baPOG")
+
+
+res <- read.table(paste(file_path, "/arVOG_baPOG.tab", sep = ""), sep = "", fill = T, as.is = T)
+colnames(res) <- hmmColnames
+head(res$protein_id_bacterial)
+
+
+res <- res %>% mutate(score = as.numeric(score)) %>% 
+  filter(!is.na(protein_id_bacterial))
+
+
+res %>% group_by(protein_id_bacterial) %>% summarise(count = n()) %>% arrange(-count)
+
+res <- res %>% filter(as.numeric(E.value) < 1e-5) %>% group_by(protein_id_bacterial) %>%  arrange(-score) %>% top_n(n = -1, wt = score) %>% top_n(n = 1, wt = E.value) %>% ungroup() 
+
+
+
+res %>% group_by(protein_id_bacterial) %>% summarise(count = n()) %>% arrange(-count)
+
+head(res)
+head(baPOGs)
+head(allArVOGs)
+
+all <- res %>% full_join(baPOGs, by = "protein_id_bacterial") 
+
+
+arVOG_bPOGs <- all %>% filter(!is.na(arVOG),
+                              !is.na(baPOG))
+
+not_found <- all %>% filter(is.na(query.name))
+save(arVOG_bPOGs, file = "arVOG_bPOGs.Rda")
+
+
+#####----------- bipartitle graph ---------########
+load(file = "arVOG_bPOGs.Rda")
+
+arVOG_bPOGs <- arVOG_bPOGs %>% dplyr::rename(model_1 = arVOG, model_2 = baPOG)
+
+mat <- vog_occurence_matrix(dat = arVOG_bPOGs)
+
+g <- graph.incidence(mat, weighted = T)
+g
+  svg(filename="~/arVOG_bPOGs.svg", 
+     width=100, 
+     height=100, 
+     pointsize=20)
+  
+V(g)$color <- V(g)$type
+V(g)$color=gsub("FALSE","red",V(g)$color)
+V(g)$color=gsub("TRUE","blue",V(g)$color)
+plot(g, edge.color="gray30", vertex.size = 5)
+
+dev.off()
+
+arVOG_baPOG_mat <- mat
+save(arVOG_baPOG_mat, file ="~/bin/PredVirusHost/arVOG_bPOGs_matrix.Rda")
+
+#####----------- Other ---------########
+load(file ="~/bin/PredVirusHost/arVOG_vogDB_matrix.Rda")
+mat <- arVOG_baPOG_mat
+melted_cormat <- vog_melt(mat)
+
+vog_counts(melted_cormat = melted_cormat, other_total = length(unique(baPOGs$baPOG)))
+
+tmp <- melted_cormat %>% filter(count > 1, value > 0)
+
+p <- ggplot(data = tmp, aes(Var2, Var1, fill = value_2))+
+ geom_tile(color = "white")+
+ scale_fill_gradient2(low = "blue", high = "red", mid = "white", space = "Lab") +
+  theme_minimal()+ 
+ theme(axis.text.x = element_text(angle = 45, vjust = 1, 
+    size = 12, hjust = 1))
+
+p
+
+ggsave("~/bPOGs_arVOG_heatmap.svg", plot = p, device = "svg")
+
+```
+
+```{r multiple_models}
+
+load(file ="~/bin/PredVirusHost/arVOG_arCOG_matrix.Rda")
+melted_cormat <- vog_melt(arVOG_arCOG_mat)
+arCOG_multiple <- vog_counts(melted_cormat = melted_cormat, other_total = 0)
+
+load(file ="~/bin/PredVirusHost/arVOG_pVOG_matrix.Rda")
+melted_cormat <- vog_melt(arVOG_pVOG_mat)
+pVOG_multiple <- vog_counts(melted_cormat = melted_cormat, other_total = 0)
+
+load(file ="~/bin/PredVirusHost/arVOG_vogDB_matrix.Rda")
+melted_cormat <- vog_melt(arVOG_vogDB_mat)
+vogDB_multiple <- vog_counts(melted_cormat = melted_cormat, other_total = 0)
+
+load(file ="~/bin/PredVirusHost/arVOG_bPOGs_matrix.Rda")
+melted_cormat <- vog_melt(arVOG_baPOG_mat)
+baPG_multiple <- vog_counts(melted_cormat = melted_cormat, other_total = 0)
+
+arCOG_multiple <- arCOG_multiple %>% mutate(group = "arCOG") 
+pVOG_multiple <- pVOG_multiple %>% mutate(group = "pVOG") 
+vogDB_multiple <- vogDB_multiple %>% mutate(group = "vogDB") 
+baPG_multiple <- baPG_multiple %>% mutate(group = "baPOG") 
+
+mulitple <- arCOG_multiple %>% bind_rows(pVOG_multiple, vogDB_multiple, baPG_multiple) %>% select(Var1, group, count) %>% rename(model_1 = Var1, model_2 = group)
+
+multi_mat <- vog_occurence_matrix(dat = mulitple)
+
+g <- graph.incidence(multi_mat, weighted = T)
+
+g
+
+  svg(filename="~/shared_arVOGs_vs_DBs.svg", 
+     width=100, 
+     height=100, 
+     pointsize=20)
+  
+V(g)$color <- V(g)$type
+V(g)$color=gsub("FALSE","red",V(g)$color)
+V(g)$color=gsub("TRUE","blue",V(g)$color)
+plot(g, edge.color="gray30", vertex.size = 5)
+
+dev.off()
+
+```
+
+```{r all_models}
+
+load(file ="~/bin/PredVirusHost/arVOG_arCOG_matrix.Rda")
+melted_cormat_arCOG <- vog_melt(arVOG_arCOG_mat)
+arCOG_multiple <- vog_counts(melted_cormat = melted_cormat_arCOG, other_total = 0)
+
+load(file ="~/bin/PredVirusHost/arVOG_pVOG_matrix.Rda")
+melted_cormat_pVOG <- vog_melt(arVOG_pVOG_mat)
+pVOG_multiple <- vog_counts(melted_cormat = melted_cormat_pVOG, other_total = 0, threshold = 0)
+
+load(file ="~/bin/PredVirusHost/arVOG_vogDB_matrix.Rda")
+melted_cormat_vogDB <- vog_melt(arVOG_vogDB_mat)
+vogDB_multiple <- vog_counts(melted_cormat = melted_cormat_vogDB, other_total = 0, threshold = 0)
+
+load(file ="~/bin/PredVirusHost/arVOG_bPOGs_matrix.Rda")
+melted_cormat_baPOG <- vog_melt(arVOG_baPOG_mat)
+baPG_multiple <- vog_counts(melted_cormat = melted_cormat_baPOG, other_total = 0, threshold = 0)
+
+arCOG_multiple <- arCOG_multiple %>% mutate(group = "arCOG") 
+pVOG_multiple <- pVOG_multiple %>% mutate(group = "VOG") 
+vogDB_multiple <- vogDB_multiple %>% mutate(group = "VOG") 
+baPG_multiple <- baPG_multiple %>% mutate(group = "baPOG") 
+
+mulitple <- arCOG_multiple %>% bind_rows(pVOG_multiple, vogDB_multiple, baPG_multiple) %>% select(Var1, group, count) %>% rename(model_1 = Var1, model_2 = group)
+
+multi_mat <- vog_occurence_matrix(dat = mulitple)
+
+g <- graph.incidence(multi_mat, weighted = T)
+
+g
+
+
+brewer.pal(n = 16, name = "Dark2")
+n <- 8
+qual_col_pals = brewer.pal.info[brewer.pal.info$category == 'qual',]
+col_vector = unlist(mapply(brewer.pal, qual_col_pals$maxcolors, rownames(qual_col_pals)))
+
+
+  svg(filename="~/all_arVOGs_vs_DBs.svg", 
+     width=1000, 
+     height=1000, 
+     pointsize=200)
+  
+  
+  V(g)$color <- ifelse(
+    multi_mat[V(g)[1:638], 2] > 0, ##baPOG exists
+    ifelse(multi_mat[V(g)[1:638], 3] > 0, ##vogDB exists
+           ifelse(multi_mat[V(g)[1:638], 3], ##pVOG exists
+                  ifelse(multi_mat[V(g)[1:638], 1] > 0, ##arCOG exists
+                         3, ##all found 
+                         1 ##baPOG, vogDB, pVOG
+        ), ##pVOG missing
+        ifelse(multi_mat[V(g)[1:638], 1] > 0, ##arCOG exists
+                         3, ##baPOG, vogDB, arCOG
+                         1 ##baPOG, vogDB
+          
+        )
+      ), ##vogDB missing
+      ifelse(multi_mat[V(g)[1:638], 3], ##pVOG exists
+             ifelse(multi_mat[V(g)[1:638], 1] > 0, ##arCOG exists
+                    3, ##baPOG, pVOG, arCOG 
+                    1 ##baPOG, pVOG
+            ), ##pVOG missing
+            ifelse(multi_mat[V(g)[1:638], 1] > 0, ##arCOG exists
+                    2, ##baPOG, arCOG 
+                    7 ##baPOG
+              
+            )
+          )
+    ) ##baPOG missing
+  ,     ifelse(multi_mat[V(g)[1:638], 3] > 0, ##vogDB exists
+           ifelse(multi_mat[V(g)[1:638], 3], ##pVOG exists
+                  ifelse(multi_mat[V(g)[1:638], 1] > 0, ##arCOG exists
+                         5, ##vogDB, pVOG, arCOG
+                         4 ##vogDB, pVOG
+        ), ##pVOG missing
+        ifelse(multi_mat[V(g)[1:638], 1] > 0, ##arCOG exists
+                         5, ##vogDB, arCOG
+                         4 ##vogDB
+          
+        )
+      ), ##vogDB missing
+      ifelse(multi_mat[V(g)[1:638], 3], ##pVOG exists
+             ifelse(multi_mat[V(g)[1:638], 1] > 0, ##arCOG exists
+                    5, ##pVOG, arCOG 
+                    4 ##pVOG
+            ), ##pVOG missing
+            ifelse(multi_mat[V(g)[1:638], 1] > 0, ##arCOG exists
+                    6, ##arCOG 
+                    8
+              
+            )
+          )
+    )
+  )
+  V(g)$color <- ifelse(V(g)$type == T, 9, V(g)$color)
+#col_vector <- plasma(n = 16)
+
+  V(g)$color <- col_vector[as.numeric(V(g)$color)]
+  
+ # V(g)$color[1:10]
+  
+#V(g)$color <- V(g)$type
+#V(g)$color <- col_vector[V(g)$color]
+#V(g)$color=gsub("FALSE","red",V(g)$color)
+#V(g)$color=gsub("TRUE","blue",V(g)$color)
+plot(g, edge.color="gray30", vertex.size = 5)
+
+dev.off()
+
+
+ 
+  df <- data.frame(x = c("baPOG-VOG", "baPOG-arCOG", "baPOG-VOG-arCOG", "VOG", "VOG-arCOG", "arCOG", "baPOG", "Model_Nodes"), y = 10, color = col_vector[1:n])
+
+  p <-ggplot() +
+    geom_bar(data = df, aes(x = x, y = y, fill = color), stat = "identity")
+  p
+ggsave("~/colours.svg", plot = p, device = "svg")
+
+```
+
+```{r roc_curve}
+eukaryoticRes <- read.table(file = "~/PredVirusHost/eukaryotic_simulation.txt", sep = "\t", header = T)
+archaealRes <- read.table(file = "~/PredVirusHost/archaeal_simulation.txt", sep = "\t", header = T)
+phagelRes <- read.table(file = "~/PredVirusHost/phage_simulation.txt", sep = "\t", header = T)
+
+## set max score
+archaeal <- archaealRes%>%mutate(max.score = ifelse(call == "archaeal", archaeal_score, ifelse(call == "phage", phage_score, eukaryotic_score)))%>% 
+  mutate(group = "archaeal")
+phage <- phagelRes%>%mutate(max.score = ifelse(call == "archaeal", archaeal_score, ifelse(call == "phage", phage_score, eukaryotic_score)))%>% 
+  mutate(group = "phage")
+eukaryotic <- eukaryoticRes%>%mutate(max.score = ifelse(call == "archaeal", archaeal_score, ifelse(call == "phage", phage_score, eukaryotic_score))) %>% 
+  mutate(group = "eukaryotic")
+
+
+all <- archaeal %>% bind_rows(phage) %>% bind_rows(eukaryotic)
+
+all[is.na(all)] <- 0
+
+rocData <- all %>% mutate(response = ifelse(group == "archaeal", 1, 0)) %>% 
+  filter(!is.na(response))
+ 
+
+
+
+  svg(filename="~/archaeal_roc_curve.svg", 
+     width=15, 
+     height=15, 
+     pointsize=20)
+roc.curve(response = rocData$response, predicted = rocData$archaeal_score, 
+          main="ROC curve for Archaeal Score")
+
+dev.off()
+
+
+rocData <- all %>% mutate(response = ifelse(group == "phage", 1, 0)) %>% 
+  filter(!is.na(response))
+ 
+  svg(filename="~/phage_roc_curve.svg", 
+     width=15, 
+     height=15, 
+     pointsize=20)
+roc.curve(response = rocData$response, predicted = rocData$phage_score, 
+          main="ROC curve for Archaeal Score")
+
+dev.off()
+
+
+rocData <- all %>% mutate(response = ifelse(group == "eukaryotic", 1, 0)) %>%
+  filter(!is.na(response))
+ 
+  svg(filename="~/eukaryotic_roc_curve.svg", 
+     width=15, 
+     height=15, 
+     pointsize=20)
+roc.curve(response = rocData$response, predicted = rocData$eukaryotic_score, 
+          main="ROC curve for Archaeal Score")
+
+dev.off()
+
+```
+
+
+```{r discriminant_models}
+filePath <- "~/complete_packages/predvirushost/"
+archaealModels <- read.table(paste(filePath, "/archaeal_model_scores.txt", sep = ""), sep = "\t", comment.char = "", quote = "", fill = T, as.is = T, header = T)
+phageModels <- read.table(paste(filePath, "/phage_model_scores.txt", sep = ""), sep = "\t", comment.char = "", quote = "", fill = T, as.is = T, header = T)
+eukaryoticModels <- read.table(paste(filePath, "/eukaryotic_model_scores.txt", sep = ""), sep = "\t", comment.char = "", quote = "", fill = T, as.is = T, header = T)
+
+```
