@@ -1012,6 +1012,62 @@ ggsave("~/phd/old/pred_virus_host/update_march_2020/sensitivity_specificity_diff
 
 ```
 
+```{r metageomes}
+
+imgvr <- read.table("~/PredVirusHost/IMGVR/IMGVR.tmp.folder/scores.txt", header = T, sep = "\t", fill = T, comment.char = "")
+bovine <- read.table("~/DB/metagenomes/bovine/bovine.tmp.folder/scores.txt", header = T, sep = "\t", fill = T, comment.char = "")
+mgm4441095 <- read.table("~/DB/metagenomes/mgm4441095.3.350.genecalling.coding.faa.tmp.folder/scores.txt", header = T, sep = "\t", fill = T, comment.char = "")
+mgm4441096 <- read.table("~/DB/metagenomes/mgm4441096.3.350.genecalling.coding.faa.tmp.folder/scores.txt", header = T, sep = "\t", fill = T, comment.char = "")
+mgm4442583 <- read.table("~/DB/metagenomes/mgm4442583.3.350.genecalling.coding.faa.tmp.folder/scores.txt", header = T, sep = "\t", fill = T, comment.char = "")
+mgm4449206 <- read.table("~/DB/metagenomes/mgm4449206.3.350.genecalling.faa.tmp.folder/scores.txt", header = T, sep = "\t", fill = T, comment.char = "")
+mgm4522044 <- read.table("~/DB/metagenomes/mgm4522044.3.350.genecalling.coding_bovine_rumen.faa.tmp.folder/scores.txt", header = T, sep = "\t", fill = T, comment.char = "")
+mgm4522044Cluster <- read.table("~/DB/metagenomes/mgm4522044.3.550.cluster.aa90.faa.tmp.folder/scores.txt", header = T, sep = "\t", fill = T, comment.char = "")
+mgm4529716 <- read.table("~/DB/metagenomes/mgm4529716.3.350.genecalling.faa.tmp.folder/scores.txt", header = T, sep = "\t", fill = T, comment.char = "")
+mgm4529719 <- read.table("~/DB/metagenomes/mgm4529719.3.350.genecalling.faa.tmp.folder/scores.txt", header = T, sep = "\t", fill = T, comment.char = "")
+mgm4530143 <- read.table("~/DB/metagenomes/mgm4530143.3.350.genecalling.faa.tmp.folder/scores.txt", header = T, sep = "\t", fill = T, comment.char = "")
+mgm4544453 <- read.table("~/DB/metagenomes/mgm4544453.3.350.genecalling.faa.tmp.folder/scores.txt", header = T, sep = "\t", fill = T, comment.char = "")
+HG_ORFans <- read.table("~/DB/metagenomes/HG_ORFans.faa.tmp.folder/scores.txt", header = T, sep = "\t", fill = T, comment.char = "")
+
+bovine <- bovine%>%mutate(genome = as.character(genome))
+mgm4441095 <- mgm4441095%>%mutate(genome = as.character(genome))
+mgm4441096 <- mgm4441096%>%mutate(genome = as.character(genome))
+HG_ORFans <- HG_ORFans%>%mutate(genome = as.character(genome))
+mgm4442583 <- mgm4442583%>%mutate(genome = as.character(genome))
+mgm4449206 <- mgm4449206%>%mutate(genome = as.character(genome))
+mgm4522044 <- mgm4522044%>%mutate(genome = as.character(genome))
+mgm4522044Cluster <- mgm4522044Cluster%>%mutate(genome = as.character(genome))
+mgm4529716 <- mgm4529716%>%mutate(genome = as.character(genome))
+mgm4529719 <- mgm4529719%>%mutate(genome = as.character(genome))
+mgm4530143 <- mgm4530143%>%mutate(genome = as.character(genome))
+mgm4544453 <- mgm4544453%>%mutate(genome = as.character(genome))
+
+metagenomes <- imgvr%>%
+  bind_rows(bovine)%>%
+  bind_rows(mgm4441095)%>%
+  bind_rows(mgm4441096)%>%
+  bind_rows(HG_ORFans)%>%
+  bind_rows(mgm4442583)%>%
+  bind_rows(mgm4449206)%>%
+  bind_rows(mgm4522044)%>%
+  bind_rows(mgm4522044Cluster)%>%
+  bind_rows(mgm4529716)%>%
+  bind_rows(mgm4529719)%>%
+  bind_rows(mgm4530143)%>%
+  bind_rows(mgm4544453)
+
+hotpools <-  mgm4441095%>%
+  bind_rows(mgm4441096)%>%
+  bind_rows(mgm4442583)%>%
+  bind_rows(mgm4449206)%>%
+  bind_rows(mgm4529716)%>%
+  bind_rows(mgm4529719)%>%
+  bind_rows(mgm4530143)%>%
+  bind_rows(mgm4544453)
+
+
+```
+
+
 ```{r extra}
 
 getwd()
