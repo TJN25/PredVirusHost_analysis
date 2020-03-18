@@ -796,7 +796,7 @@ eukaryoticModels <- read.table(paste(filePath, "/eukaryotic_model_scores.txt", s
 ```
 
 ```{r sens_and_spec}
-file_path <- "~/phd/old/pred_virus_host/update_march_2020/"
+file_path <- "~/phd/PredVirusHost//update_march_2020/"
 eukaryoticRes <- read.table(file = paste(file_path, "/eukaryotic_simulation.txt", sep = ""), sep = "\t", header = T)
 archaealRes <- read.table(file = paste(file_path, "/archaeal_simulation.txt", sep = ""), sep = "\t", header = T)
 phagelRes <- read.table(file = paste(file_path, "/phage_simulation.txt", sep = ""), sep = "\t", header = T)
@@ -826,6 +826,7 @@ all <- all%>%
 
 proteinSens <- data.frame(protein_count = 0, sensitivity = 0, count = 0)
 proteinSpec <- data.frame(protein_count = 0, specificity = 0, count = 0)
+proteinAcc <- data.frame(protein_count = 0, accuracy = 0, count = 0)
 
 i <- 3
 for(i in 1:(max(all$protein_count, na.rm = T))){
@@ -839,27 +840,40 @@ for(i in 1:(max(all$protein_count, na.rm = T))){
   FN <- tmp %>% filter(group == "archaeal", call != "archaeal") %>% nrow()  + tmp %>% filter(group == "phage", call != "phage") %>% nrow() + tmp %>% filter(group == "eukaryotic", call != "eukaryotic") %>% nrow() 
   spec <- TN/(TN + FP) * 100
   sens <- TP/(TP + FN) * 100
+  acc <- (TP + TN)/(TP + TN + FP + FN) * 100
 
 proteinSens <- proteinSens%>%bind_rows(data.frame(protein_count = i, sensitivity = sens, count = nrow(tmp%>%filter(!is.na(call)))))
 
 proteinSpec <- proteinSpec%>%bind_rows(data.frame(protein_count = i, specificity = spec, count = nrow(tmp%>%filter(!is.na(call)))))
 
+proteinAcc <- proteinAcc%>%bind_rows(data.frame(protein_count = i, accuracy = acc, count = nrow(tmp%>%filter(!is.na(call)))))
+
 }
 
 proteinSens <- proteinSens%>%mutate(sensitivity = ifelse(is.na(sensitivity), 100, sensitivity))
 proteinSpec <- proteinSpec%>%mutate(specificity = ifelse(is.na(specificity), 100, specificity))
+proteinAcc <- proteinAcc%>%mutate(accuracy = ifelse(is.na(accuracy), 100, accuracy))
 
 
 p <- ggplot() +
   geom_line(data = proteinSens, aes(x = protein_count, y = sensitivity, colour = "Sensitivity"), size = 1.5) +
   geom_line(data = proteinSpec, aes(x = protein_count, y = specificity, colour = "Specificity"), size = 1.5) +
+  geom_vline(xintercept = 5) +
+  geom_hline(yintercept = 94) +
   coord_cartesian(ylim = c(0, 105), xlim = c(0, 15)) +
   labs(x = "Number of Proteins", y = "Percentage (Sensitivity and Specificity)") +
   theme_bw()
 
 p
 
-ggsave("~/phd/old/pred_virus_host/update_march_2020/sensitivity_specificity_proteins.svg", plot = p, device = "svg")
+ggsave("~/phd/PredVirusHost/figures/sensitivity_specificity_proteins.svg", plot = p, device = "svg")
+
+p <- ggplot() +
+  geom_line(data = proteinAcc, aes(x = protein_count, y = accuracy), size = 1.5) +
+  coord_cartesian(ylim = c(0, 105), xlim = c(0, 50)) +
+  labs(x = "Number of Proteins", y = "Percentage (Accuracy)") +
+  theme_bw()
+p
 
 all <- archaeal %>% bind_rows(phage) #%>% bind_rows(eukaryotic)
 
