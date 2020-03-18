@@ -953,6 +953,8 @@ all <- all%>%
                                                   round((eukaryotic_score - phage_score)/eukaryotic_score*100, 2)
                                         ))
                                         ))
+
+
 all <- all %>% mutate(difference.percentage = ifelse(is.na(difference.percentage), 0, ifelse(is.infinite(difference.percentage), 100, difference.percentage)))
 
 all <- all %>% mutate(difference.percentage = abs(difference.percentage))
@@ -1064,6 +1066,102 @@ hotpools <-  mgm4441095%>%
   bind_rows(mgm4530143)%>%
   bind_rows(mgm4544453)
 
+metagenomes <- metagenomes%>%
+  mutate(call = ifelse(archaeal_score >= phage_score,
+                       ifelse(archaeal_score >= eukaryotic_score,
+                              ifelse(archaeal_score > 60, "archaeal", "none"),
+                              ifelse(eukaryotic_score > 150, "eukaryotic", "none")),
+                       ifelse(phage_score >= eukaryotic_score, ifelse(phage_score > 110, "phage", "none"), ifelse(eukaryotic_score > 150, "eukaryotic", "none"))))
+
+
+
+metagenomes <- metagenomes%>%
+  mutate(difference.percentage = ifelse(call == "archaeal",
+                                        ifelse(phage_score >= eukaryotic_score,
+                                               round((archaeal_score - phage_score)/archaeal_score*100, 2),
+                                               round((archaeal_score - eukaryotic_score)/archaeal_score*100, 2)
+                                        ),
+                                        ifelse(call == "phage",ifelse(archaeal_score >= eukaryotic_score,
+                                                                      round((phage_score - archaeal_score)/phage_score*100, 2),
+                                                                      round((phage_score - eukaryotic_score)/phage_score*100, 2)
+                                        ), ifelse(archaeal_score >= phage_score,
+                                                  round((eukaryotic_score - archaeal_score)/eukaryotic_score*100, 2),
+                                                  round((eukaryotic_score - phage_score)/eukaryotic_score*100, 2)
+                                        ))
+                                        ))
+
+
+metagenomes <- metagenomes %>% mutate(difference.percentage = ifelse(is.na(difference.percentage), 0, ifelse(is.infinite(difference.percentage), 100, difference.percentage)))
+
+hotpools <- hotpools %>% mutate(difference.percentage = abs(difference.percentage))
+                                            
+    all <- all%>%
+  mutate(call = ifelse(archaeal_score >= phage_score,
+                       ifelse(archaeal_score >= eukaryotic_score,
+                              ifelse(archaeal_score > 60, "archaeal", "none"),
+                              ifelse(eukaryotic_score > 150, "eukaryotic", "none")),
+                       ifelse(phage_score >= eukaryotic_score, ifelse(phage_score > 110, "phage", "none"), ifelse(eukaryotic_score > 150, "eukaryotic", "none"))))
+
+
+
+hotpools <- hotpools%>%
+  mutate(difference.percentage = ifelse(call == "archaeal",
+                                        ifelse(phage_score >= eukaryotic_score,
+                                               round((archaeal_score - phage_score)/archaeal_score*100, 2),
+                                               round((archaeal_score - eukaryotic_score)/archaeal_score*100, 2)
+                                        ),
+                                        ifelse(call == "phage",ifelse(archaeal_score >= eukaryotic_score,
+                                                                      round((phage_score - archaeal_score)/phage_score*100, 2),
+                                                                      round((phage_score - eukaryotic_score)/phage_score*100, 2)
+                                        ), ifelse(archaeal_score >= phage_score,
+                                                  round((eukaryotic_score - archaeal_score)/eukaryotic_score*100, 2),
+                                                  round((eukaryotic_score - phage_score)/eukaryotic_score*100, 2)
+                                        ))
+                                        ))
+
+
+hotpools <- hotpools %>% mutate(difference.percentage = ifelse(is.na(difference.percentage), 0, ifelse(is.infinite(difference.percentage), 100, difference.percentage)))
+
+hotpools <- hotpools %>% mutate(difference.percentage = abs(difference.percentage))
+                                            
+
+metagenomes$difference.percentage[metagenomes$call == "none"] <- 0                                               
+hotpools$difference.percentage[hotpools$call == "none"] <- 0                                               
+                                           
+
+ggplot() +
+  geom_freqpoly(data = metagenomes, aes(x = protein.counts), binwidth = 1, colour = "red") +
+  geom_freqpoly(data = hotpools, aes(x = protein.counts), binwidth = 1, colour = "blue") +
+  xlim(c(0,20))
+
+metagenomes$group <- "Metagenomes"
+hotpools$group <- "Thermal"
+metagenomes$group[metagenomes$protein.counts >= 3] <- "3 or more"
+metagenomes$group[metagenomes$protein.counts < 3] <- "less than 3"
+hotpools$group[hotpools$protein.counts >= 3] <- "3 or more"
+hotpools$group[hotpools$protein.counts < 3] <- "less than 3"
+
+
+all <- metagenomes %>% bind_rows(hotpools)
+
+ggplot() + 
+  geom_bar(data = metagenomes, aes(x = call, y = ..count.., group = group, fill = group), position = "dodge")
+
+ggplot() + 
+  geom_bar(data = hotpools %>% filter(call != "none"), aes(x = call, y = ..count.., group = group, fill = group), position = "dodge")
+
+
+p <- ggplot() +
+  geom_bar(data = metagenomes, aes(x = call, y = ..count..))
+p
+
+ggsave("~/metagenomes_bargraph.svg", plot = p, device = "svg")
+
+p <-ggplot() +
+  geom_bar(data = hotpools %>% filter(call != "none"), aes(x = call, y = ..count..))
+p
+
+ggsave("~/thermal_bargraph.svg", plot = p, device = "svg")
 
 ```
 
