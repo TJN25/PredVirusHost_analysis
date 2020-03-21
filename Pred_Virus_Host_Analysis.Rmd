@@ -893,7 +893,7 @@ scoreSpec <- data.frame(score = 0, specificity = 0, count = 0)
 
 
 
-bin <- 50
+bin <- 10
 
 
 total <- round(2000/bin)
@@ -903,10 +903,10 @@ for(i in 1:total){
   tmp <- all%>%filter(archaeal_score <= i*bin, archaeal_score > (i-1)*bin)
 
 
-  TN <- tmp %>% filter(group != "archaeal", call != "archaeal") %>% nrow() 
-  FP <- tmp %>% filter(group != "archaeal", call == "archaeal") %>% nrow() 
-  TP <- tmp %>% filter(group == "archaeal", call == "archaeal") %>% nrow()  
-  FN <- tmp %>% filter(group == "archaeal", call != "archaeal") %>% nrow() 
+  TN <- tmp %>% filter(group != "archaeal", call != "archaeal") %>% nrow() + tmp %>% filter(group != "phage", call != "phage") %>% nrow() + tmp %>% filter(group != "eukaryotic", call != "eukaryotic") %>% nrow()
+  FP <- tmp %>% filter(group != "archaeal", call == "archaeal") %>% nrow() + tmp %>% filter(group != "phage", call == "phage") %>% nrow() + tmp %>% filter(group != "eukaryotic", call == "eukaryotic") %>% nrow()
+  TP <- tmp %>% filter(group == "archaeal", call == "archaeal") %>% nrow()  + tmp %>% filter(group == "phage", call == "phage") %>% nrow() + tmp %>% filter(group == "eukaryotic", call == "eukaryotic") %>% nrow() 
+  FN <- tmp %>% filter(group == "archaeal", call != "archaeal") %>% nrow()  + tmp %>% filter(group == "phage", call != "phage") %>% nrow() + tmp %>% filter(group == "eukaryotic", call != "eukaryotic") %>% nrow() 
   if(FP == 0 ){
       spec <- 0
   }else if(TN == 0){
@@ -926,16 +926,17 @@ scoreSpec <- scoreSpec%>%bind_rows(data.frame(score = i*bin, specificity = spec,
 
 
 p <- ggplot() +
-  geom_histogram(data = all %>% filter(archaeal_score > 0), aes(x = archaeal_score, y = ..count../max(..count..)*100), fill='grey', binwidth = bin) +
+  geom_histogram(data = all %>% filter(archaeal_score > 0), aes(x = archaeal_score, y = ..count../max(..count..)*100), fill='grey', binwidth = 10) +
   
   geom_line(data = scoreSens, aes(x = score, y = sensitivity, colour = "Sensitivity"), size = 1.5) +
   geom_line(data = scoreSpec, aes(x = score, y = specificity, colour = "Specificity"), size = 1.5) +
-  coord_cartesian(ylim = c(0, 105), xlim = c(bin, 350)) +
+  geom_hline(yintercept = 95) +
+  coord_cartesian(ylim = c(0, 105), xlim = c(0, 300)) +
   labs(x = "Score", y = "Percentage (Sensitivity and Specificity)") +
   theme_bw()
 
 p
-ggsave("~/phd/old/pred_virus_host/update_march_2020/sensitivity_specificity_scores.svg", plot = p, device = "svg")
+ggsave("~/phd/PredVirusHost/figures//sensitivity_specificity_scores.svg", plot = p, device = "svg")
 
 
 
