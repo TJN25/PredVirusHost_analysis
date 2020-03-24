@@ -125,13 +125,13 @@ dat <- dat %>% mutate(protein_description = ifelse(grepl("ORF", protein_descript
 dat <- dat %>% mutate(protein_description = ifelse(grepl("unknown", protein_description), "hypothetical protein", protein_description))
 
 
-proteinDescr <- dat %>% group_by(hmm_accession) %>% summarise(protein_descriptions = paste(unique(protein_description), collapse = ", "))
+proteinDescr <- dat %>% group_by(hmm_accession) %>% summarise(protein_descriptions = paste(unique(protein_description), collapse = ":"))
 
 dat <- dat %>% mutate(genome = str_replace_all(genome, "Virus_PhiCh1_complete_genome.", "Natrialba_phage_PhiCh1"))
 dat <- dat %>% mutate(genome = str_replace_all(genome, "TPA:", ""))
 
 
-genomes <- dat %>% group_by(hmm_accession) %>% summarise(genomes = paste(unique(genome), collapse = ", "))
+genomes <- dat %>% group_by(hmm_accession) %>% summarise(genomes = paste(unique(genome), collapse = ":"))
 
 genera <- dat %>% separate(col = genome, into = c("genus", "other"), sep = "_", remove = F, extra = "merge") %>% group_by(hmm_accession) %>% summarise(genera = paste(unique(genus), collapse = ", "))
 
@@ -141,9 +141,12 @@ counts <- dat %>% group_by(hmm_accession) %>% summarise(count = length(unique(pr
 summaryData <- proteinDescr %>% full_join(genomes, by = "hmm_accession") %>% full_join(counts, by = "hmm_accession") %>% full_join(genera, by = "hmm_accession")
 
 summaryData <- summaryData %>% mutate(protein_descriptions = ifelse(count > 1, str_replace(string = protein_descriptions, pattern = ", hypothetical protein,", replacement = ","), protein_descriptions)) %>% mutate(protein_descriptions = ifelse(count > 1, str_replace(string = protein_descriptions, pattern = ", hypothetical protein", replacement = ""), protein_descriptions))%>% mutate(protein_descriptions = ifelse(count > 1, str_replace(string = protein_descriptions, pattern = "hypothetical protein,", replacement = ""), protein_descriptions))
+summaryData <- summaryData %>% mutate(protein_descriptions = str_replace_all(protein_descriptions, ",", ":"))
+
+summaryData <- summaryData %>% mutate_all(as.character) %>% mutate_if(is.character, str_replace_all, pattern = ",", replacement =":")
 
 save(summaryData, file = "~/bin/PredVirusHost/archaeal_hmm_accessions_descriptions.Rda")
-write.csv(summaryData, file = "~/bin/PredVirusHost/archeaeal_hmm_accessions_descriptions.csv", row.names = F, quote = F)
+write.csv(summaryData, file = "~/bin/PredVirusHost/archaeal_hmm_accessions_descriptions.csv", row.names = F, quote = F)
 
 ```
 
@@ -191,9 +194,63 @@ counts <- dat %>% group_by(hmm_accession) %>% summarise(count = length(unique(pr
 summaryData <- proteinDescr %>% full_join(genomes, by = "hmm_accession") %>% full_join(counts, by = "hmm_accession") %>% full_join(genera, by = "hmm_accession")
 
 summaryData <- summaryData %>% mutate(protein_descriptions = ifelse(count > 1, str_replace(string = protein_descriptions, pattern = ", hypothetical protein,", replacement = ","), protein_descriptions)) %>% mutate(protein_descriptions = ifelse(count > 1, str_replace(string = protein_descriptions, pattern = ", hypothetical protein", replacement = ""), protein_descriptions))%>% mutate(protein_descriptions = ifelse(count > 1, str_replace(string = protein_descriptions, pattern = "hypothetical protein,", replacement = ""), protein_descriptions))
+summaryData <- summaryData %>% mutate_all(as.character) %>% mutate_if(is.character, str_replace_all, pattern = ",", replacement =":")
 
 save(summaryData, file = "~/bin/PredVirusHost/phage_hmm_accessions_descriptions.Rda")
 write.csv(summaryData, file = "~/bin/PredVirusHost/phage_hmm_accessions_descriptions.csv", row.names = F, quote = F)
+
+```
+
+```{r eukaryotic_proteins_and_hmms}
+file_path <- "~/PredVirusHost/update_march_2020/"
+
+proteins <- read.table(paste(file_path, "eukaryotic_proteins_and_functions.txt", sep = ""), sep = "\t", header = F, as.is = T, quote = "", comment.char = "")
+
+proteins <- proteins %>% mutate(V2 = str_replace_all(string = V2, pattern = "_\\[2", replacement = "__2")) %>% mutate(V2 = str_replace_all(string = V2, pattern = "\\]", ""))
+
+
+
+proteins[proteins == ""] <- "hypothetical protein"
+proteins[is.na(proteins)] <- "hypothetical protein"
+
+head(proteins)
+colnames(proteins) <- c("protein_accession",  "genome", "protein_description")
+
+hmms <- read.table(paste(file_path, "euVOG_protein_hmm_list.txt", sep = ""), sep = "\t", header = F, as.is = T)
+
+head(hmms)
+colnames(hmms) <- c("protein_accession", "genome_2", "hmm_accession")
+
+dat <- hmms %>% left_join(proteins, by = "protein_accession")
+
+dat <- dat %>% mutate(protein_description = ifelse(grepl("hypothetical", protein_description), "hypothetical protein", protein_description))
+dat <- dat %>% mutate(protein_description = ifelse(grepl("ORF", protein_description), "hypothetical protein", protein_description))
+dat <- dat %>% mutate(protein_description = ifelse(grepl("unknown", protein_description), "hypothetical protein", protein_description))
+
+dat <- dat %>% filter(!is.na(protein_description))
+
+proteinDescr <- dat %>% group_by(hmm_accession) %>% summarise(protein_descriptions = paste(unique(protein_description), collapse = ", "))
+
+dat <- dat %>% mutate(genome = str_replace_all(genome, "Virus_PhiCh1_complete_genome.", "Natrialba_phage_PhiCh1"))
+dat <- dat %>% mutate(genome = str_replace_all(genome, "TPA:", ""))
+
+
+genomes <- dat %>% group_by(hmm_accession) %>% summarise(genomes = paste(unique(genome), collapse = ", "))
+
+genera <- dat %>% separate(col = genome, into = c("genus", "other"), sep = "_", remove = F, extra = "merge") %>% group_by(hmm_accession) %>% summarise(genera = paste(unique(genus), collapse = ", "))
+
+counts <- dat %>% group_by(hmm_accession) %>% summarise(count = length(unique(protein_description)))
+
+
+summaryData <- proteinDescr %>% full_join(genomes, by = "hmm_accession") %>% full_join(counts, by = "hmm_accession") %>% full_join(genera, by = "hmm_accession")
+
+summaryData <- summaryData %>% mutate(protein_descriptions = ifelse(count > 1, str_replace(string = protein_descriptions, pattern = ", hypothetical protein,", replacement = ","), protein_descriptions)) %>% mutate(protein_descriptions = ifelse(count > 1, str_replace(string = protein_descriptions, pattern = ", hypothetical protein", replacement = ""), protein_descriptions))%>% mutate(protein_descriptions = ifelse(count > 1, str_replace(string = protein_descriptions, pattern = "hypothetical protein,", replacement = ""), protein_descriptions))
+summaryData <- summaryData %>% mutate_all(as.character) %>% mutate_if(is.character, str_replace_all, pattern = ",", replacement =":")
+
+summaryData <- summaryData %>% select(-genera)
+
+save(summaryData, file = "~/bin/PredVirusHost/eukaryotic_hmm_accessions_descriptions.Rda")
+write.csv(summaryData, file = "~/bin/PredVirusHost/eukaryotic_hmm_accessions_descriptions.csv", row.names = F, quote = F)
 
 ```
 
@@ -907,6 +964,7 @@ scoreSens <- scoreSens%>%bind_rows(data.frame(score = i*bin, sensitivity = sens,
 scoreSpec <- scoreSpec%>%bind_rows(data.frame(score = i*bin, specificity = spec, count = nrow(tmp%>%filter(!is.na(call)))))
 
 }
+
 
 
 

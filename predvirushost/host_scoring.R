@@ -38,6 +38,21 @@ archaealModels <- read.table(paste(filePath, "/archaeal_model_scores.txt", sep =
 phageModels <- read.table(paste(filePath, "/phage_model_scores.txt", sep = ""), sep = "\t", comment.char = "", quote = "", fill = T, as.is = T, header = T)
 eukaryoticModels <- read.table(paste(filePath, "/eukaryotic_model_scores.txt", sep = ""), sep = "\t", comment.char = "", quote = "", fill = T, as.is = T, header = T)
 
+
+archaealDescr <- read.table(paste(filePath, "/archaeal_hmm_accessions_descriptions.csv", sep = ""), sep = "\t", comment.char = "", quote = "", fill = T, as.is = T, header = T)
+phageDescr <- read.table(paste(filePath, "/phage_hmm_accessions_descriptions.csv", sep = ""), sep = "\t", comment.char = "", quote = "", fill = T, as.is = T, header = T)
+eukaryoticDesc <- read.table(paste(filePath, "/eukaryotic_hmm_accessions_descriptions.csv", sep = ""), sep = "\t", comment.char = "", quote = "", fill = T, as.is = T, header = T)
+
+# archaealDescr <- read.csv("~/bin/PredVirusHost/archaeal_hmm_accessions_descriptions.csv", comment.char = "", quote = "", fill = T, as.is = T, header = T)
+# phageDescr <- read.csv("~/bin/PredVirusHost/phage_hmm_accessions_descriptions.csv", comment.char = "", quote = "", fill = T, as.is = T, header = T)
+# eukaryoticDescr <- read.csv("~/bin/PredVirusHost/eukaryotic_hmm_accessions_descriptions.csv", comment.char = "", quote = "", fill = T, as.is = T, header = T)
+
+eukaryoticDescr <- eukaryoticDescr %>% mutate(genera = NA)
+
+allDescr <- archaealDescr %>% bind_rows(phageDescr, eukaryoticDescr)
+
+colnames(allDescr)[1] <- "query.name"
+
 aa <- aa%>%left_join(genome_lookup, by = "target.name")%>%filter(as.numeric(score) > 30)
 pp <- pp%>%left_join(genome_lookup, by = "target.name")%>%filter(as.numeric(score) > 30)
 ee <- ee%>%left_join(genome_lookup, by = "target.name")%>%filter(as.numeric(score) > 30)
@@ -47,6 +62,9 @@ aa <- aa%>%left_join(archaealModels, by = "query.name")
 pp <- pp%>%left_join(phageModels, by = "query.name")
 ee <- ee%>%left_join(eukaryoticModels, by = "query.name")
 
+aa <- aa%>%left_join(allDescr, by = "query.name")
+pp <- pp%>%left_join(allDescr, by = "query.name")
+ee <- ee%>%left_join(allDescr, by = "query.name")
 
 if(discriminant_models_only == T){
   cat("Using discriminant models\n")
