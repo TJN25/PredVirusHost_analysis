@@ -1,0 +1,9 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor R script (local)
+#!Contigs_from_predvirushost
+#!genome-build-accession NCBI_Assembly:predvirushost_name
+#!annotation-date 2020-03-27
+#!annotation-source hmmsearch (VOGs) (local version)
+##sequence-region 80818340 1 1053
+80818340	predvirushost	CDS	1	1053	0	+	.	none:hypothetical protein:::Sulfolobus_virus_STSV2_complete_genome.:Sulfolobus_tengchongensis_spindle-shaped_virus_STSV1_complete_genome:Acidianus_tailed_spindle_virus:Sulfolobus_turreted_icosahedral_virus_2_complete_genome.:Hyperthermophilic_Archaeal_Virus_1_complete_genome.:::Sulfolobus: Acidianus: Hyperthermophilic::

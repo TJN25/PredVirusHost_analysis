@@ -17,6 +17,8 @@ library(ROSE)
 library(RColorBrewer)
 library(viridis)
 library(zoo)
+library(genoPlotR)
+library(ape)
 ```
 
 ```{r functions}
@@ -1238,6 +1240,24 @@ ggsave("~/thermal_bargraph.svg", plot = p, device = "svg")
 
 ```
 
+```{r plot_genomes}
+gff <- read.table("~/bin/PredVirusHost/predvirushost_test_files/test_2.tmp.folder/Acidianus_bottle-shaped_virus_complete_genome.]_contig.gff", sep = "\t", fill = T, comment.char = "#", quote = "")
+colnames(gff) <- c("sequence", "source", "feature", "start", "end", "score", "strand", "phase", "atrribute")
+gff <- gff %>% separate(col = atrribute, into = c("call", "description"), remove = F, extra = "merge", sep = ":")
+gff <- gff %>% mutate(unique_names = paste(sequence, row_number(), sep = "_"))
+gff$call[is.na(gff$call)] <- "none"
+names1 <- gff$unique_names
+starts1 <- gff$start
+ends1 <- gff$end
+strands1 <- gff$strand
+gff <- gff %>% mutate(colours = ifelse(call == "archaeal", "blue", ifelse(call == "phage", "red", ifelse(call == "eukaryotic", "green", "black"))))
+cols1 <-gff$colours
+df1 <- data.frame(name=names1, start=starts1, end=ends1,
+strand=strands1, col="black", fill = cols1)
+dna_seg1 <- dna_seg(df1)
+is.dna_seg(dna_seg1)
+plot_gene_map(dna_segs=list(dna_seg1))
+```
 
 ```{r extra}
 

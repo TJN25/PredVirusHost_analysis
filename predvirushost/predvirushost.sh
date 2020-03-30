@@ -63,7 +63,7 @@ while getopts "i:o:d:s:e:mrf:c:p:h" arg; do
     h)
 echo 'PredVirusHost.sh: compares proteins from a number of contigs to hmm models and then scores'
 echo 'each contig based on similarity to those models.'
-echo 'Version 3.0 2018'
+echo 'Version 1.0 2019'
 echo '# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -'
 echo 'usage: [options] <filename> <file type>'
 echo ' '
@@ -214,6 +214,8 @@ echo "$contig_count contigs with $PROTEINCOUNT or more proteins have been kept"
 
 cut -f2,3 tmp4 | tr '\t' '\n' > $output_file.tmp.folder/fastafile.faa
 
+
+
 rm tmp1 tmp2 tmp3 tmp1.faa tmp4
 
 
@@ -247,6 +249,8 @@ host_scoring.R $FILE_PATH $output_file.tmp.folder $discriminant_models
 
 
 cp $output_file.tmp.folder/scores.txt ./$output_file.scores.txt
+cp $output_file.tmp.folder/proteins.txt ./$output_file.proteins.txt
+cp $output_file.tmp.folder/genome_lookup.txt ./$output_file.genome_lookup.txt
 
 keep_files_=$keep_files
 

@@ -1,0 +1,11 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor R script (local)
+#!Contigs_from_predvirushost
+#!genome-build-accession NCBI_Assembly:predvirushost_name
+#!annotation-date 2020-03-27
+#!annotation-source hmmsearch (VOGs) (local version)
+##sequence-region 80818178 1 885
+80818178	predvirushost	CDS	1	450	0	+	.	NA
+80818178	predvirushost	CDS	451	819	0	+	.	none:hypothetical protein:::Acidianus_filamentous_virus_7_partial_viral_genome:Acidianus_filamentous_virus_9_complete_genome.:::Acidianus::
+80818178	predvirushost	CDS	820	885	0	+	.	NA

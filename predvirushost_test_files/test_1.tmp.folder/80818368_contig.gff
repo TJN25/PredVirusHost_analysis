@@ -1,0 +1,11 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor R script (local)
+#!Contigs_from_predvirushost
+#!genome-build-accession NCBI_Assembly:predvirushost_name
+#!annotation-date 2020-03-27
+#!annotation-source hmmsearch (VOGs) (local version)
+##sequence-region 80818368 1 699
+80818368	predvirushost	CDS	1	273	0	+	.	NA
+80818368	predvirushost	CDS	274	468	0	+	.	none:hypothetical protein:::Sulfolobus_monocaudavirus_SMV4:Sulfolobus_monocaudavirus_SMV3:Hyperthermophilic_Archaeal_Virus_1:::Sulfolobus: Hyperthermophilic::
+80818368	predvirushost	CDS	469	699	0	+	.	NA
