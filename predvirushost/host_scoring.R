@@ -3,6 +3,15 @@ options(warn = -1)
 
 suppressMessages(library(dplyr, quietly = T))
 
+# test <- F
+# if(test){
+#   
+#   
+#   load("PredVirusHost_test_data.Rda")
+#   filePath <- PredVirusHost_test_data$filePath
+#   filePath2 <- PredVirusHost_test_data$filePath2
+#   filePath2 <- "~/bin/PredVirusHost/predvirushost_test_files/test_1.tmp.folder/"
+# }
 
 args <- commandArgs(trailingOnly = T)
 filePath <- args[1]
@@ -39,17 +48,17 @@ phageModels <- read.table(paste(filePath, "/phage_model_scores.txt", sep = ""), 
 eukaryoticModels <- read.table(paste(filePath, "/eukaryotic_model_scores.txt", sep = ""), sep = "\t", comment.char = "", quote = "", fill = T, as.is = T, header = T)
 
 
-archaealDescr <- read.table(paste(filePath, "/archaeal_hmm_accessions_descriptions.csv", sep = ""), sep = "\t", comment.char = "", quote = "", fill = T, as.is = T, header = T)
-phageDescr <- read.table(paste(filePath, "/phage_hmm_accessions_descriptions.csv", sep = ""), sep = "\t", comment.char = "", quote = "", fill = T, as.is = T, header = T)
-eukaryoticDesc <- read.table(paste(filePath, "/eukaryotic_hmm_accessions_descriptions.csv", sep = ""), sep = "\t", comment.char = "", quote = "", fill = T, as.is = T, header = T)
+archaealDescr <- read.csv(paste(filePath, "/archaeal_hmm_accessions_descriptions.csv", sep = ""), comment.char = "", quote = "", fill = T, as.is = T, header = T)
+phageDescr <- read.csv(paste(filePath, "/phage_hmm_accessions_descriptions.csv", sep = ""),  comment.char = "", quote = "", fill = T, as.is = T, header = T)
+eukaryoticDesc <- read.csv(paste(filePath, "/eukaryotic_hmm_accessions_descriptions.csv", sep = ""), comment.char = "", quote = "", fill = T, as.is = T, header = T)
 
 # archaealDescr <- read.csv("~/bin/PredVirusHost/archaeal_hmm_accessions_descriptions.csv", comment.char = "", quote = "", fill = T, as.is = T, header = T)
 # phageDescr <- read.csv("~/bin/PredVirusHost/phage_hmm_accessions_descriptions.csv", comment.char = "", quote = "", fill = T, as.is = T, header = T)
 # eukaryoticDescr <- read.csv("~/bin/PredVirusHost/eukaryotic_hmm_accessions_descriptions.csv", comment.char = "", quote = "", fill = T, as.is = T, header = T)
 
-eukaryoticDescr <- eukaryoticDescr %>% mutate(genera = NA)
+eukaryoticDesc <- eukaryoticDesc %>% mutate(genera = NA)
 
-allDescr <- archaealDescr %>% bind_rows(phageDescr, eukaryoticDescr)
+allDescr <- archaealDescr %>% bind_rows(phageDescr, eukaryoticDesc)
 
 colnames(allDescr)[1] <- "query.name"
 
@@ -77,6 +86,58 @@ aa <- aa%>%mutate(score = score*score.percentage)
 pp <- pp%>%mutate(score = score*score.percentage)
 ee <- ee%>%mutate(score = score*score.percentage)
 }
+
+
+aaTmp <- aa %>% select(target.name, protein_descriptions, score, genome, genera, genomes, query.name, score.percentage, count) %>% 
+  rename(description.of.target.aa = protein_descriptions, score.aa = score, 
+         genera.aa  = genera, genomes.aa = genomes, query.name.aa = query.name, 
+         score.percentage.aa = score.percentage, count.aa = count)
+bbTmp <- pp %>% select(target.name, protein_descriptions, score, genera, genomes, query.name, score.percentage, count) %>% 
+  rename(description.of.target.bb = protein_descriptions, score.bb = score, 
+         genera.bb  = genera, genomes.bb = genomes, query.name.bb = query.name, 
+         score.percentage.bb = score.percentage, count.bb = count)
+eeTmp <- ee %>% select(target.name, protein_descriptions, score, genera, genomes, query.name, score.percentage, count) %>% 
+  rename(description.of.target.ee = protein_descriptions, score.ee = score, 
+         genera.ee  = genera, genomes.ee = genomes, query.name.ee = query.name, 
+         score.percentage.ee = score.percentage, count.ee = count)
+
+allProteins <- aaTmp %>% full_join(bbTmp, by = "target.name") %>% full_join(eeTmp, by = "target.name")
+
+allProteins <- allProteins %>% mutate_all(as.character) %>% mutate(score.aa = as.numeric(score.aa),
+                                                                   score.bb = as.numeric(score.bb),
+                                                                   score.ee = as.numeric(score.ee),
+                                                                   count.aa = as.numeric(count.aa),
+                                                                   count.bb = as.numeric(count.bb),
+                                                                   count.ee = as.numeric(count.ee)
+                                                                   )
+
+allProteins[is.na(allProteins)] <- ""
+
+
+allProteins <- allProteins %>% mutate(call = ifelse(score.aa >= score.bb,
+                                                    ifelse(score.aa >= score.ee,
+                                                           ifelse(score.aa > 60, "archaeal", "none"),
+                                                           ifelse(score.ee > 150, "eukaryotic", "none")),
+                                                    ifelse(score.bb >= score.ee, ifelse(score.bb > 110, "phage", "none"), ifelse(score.ee > 150, "eukaryotic", "none"))))
+
+
+
+allProteins <- allProteins %>% mutate(score = ifelse(call == "archaeal", score.aa, ifelse(call == "phage", score.bb, ifelse(call == "eukaryotic", score.ee, 0))),
+                                      count = max(count.aa, count.bb, count.ee, na.rm = T),
+                                      genomes = paste(genomes.aa, genomes.bb, genomes.ee, sep = ":"),
+                                      query.name = paste(query.name.aa, query.name.bb, query.name.ee, sep = ":"),
+                                      genera = paste(genera.aa, genera.bb, genera.ee, sep = ":"),
+                                      score.percentage = paste(score.percentage.aa, score.percentage.bb, score.percentage.ee, sep = ":"),
+                                      description.of.target = paste(description.of.target.aa, description.of.target.bb, description.of.target.ee, sep = ":")) %>% 
+mutate(score = as.numeric(score),
+       count = as.numeric(count))
+
+
+
+allProteins <- allProteins %>% select(target.name, description.of.target, score, genome, genera, genomes, query.name, score.percentage, count, call) %>% 
+  rename(protein_descriptions = description.of.target)
+
+write.table(allProteins, paste(filePath2, "/proteins.txt", sep = ""), col.names = T, row.names = F, quote = F, sep = "\t")
 
 
 

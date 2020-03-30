@@ -1,0 +1,9 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor R script (local)
+#!Contigs_from_predvirushost
+#!genome-build-accession NCBI_Assembly:predvirushost_name
+#!annotation-date 2020-03-27
+#!annotation-source hmmsearch (VOGs) (local version)
+##sequence-region 80818244 1 1029
+80818244	predvirushost	CDS	1	1029	85.695	+	.	archaeal:hypothetical protein:putative_glycosyltransferase:putative_glycosyl_transferase:::Sulfolobus_islandicus_rod-shaped_virus_8:Sulfolobus_virus_SIRV-1_complete_viral_genome:Halovirus_HCTV-1:Halovirus_HHTV-1:Sulfolobus_islandicus_rod-shaped_virus_7:Sulfolobus_islandicus_rod-shaped_virus_10:Acidianus_rod-shaped_virus_2:Aeropyrum_coil-shaped_virus_complete_genome:Sulfolobales_Mexican_rudivirus_1:Sulfolobus_islandicus_rod-shaped_virus_9:Acidianus_rod-shaped_virus_1_complete_viral_genome:::Sulfolobus: Halovirus: Acidianus: Aeropyrum: Sulfolobales::

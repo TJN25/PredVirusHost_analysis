@@ -1,0 +1,12 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor R script (local)
+#!Contigs_from_predvirushost
+#!genome-build-accession NCBI_Assembly:predvirushost_name
+#!annotation-date 2020-03-27
+#!annotation-source hmmsearch (VOGs) (local version)
+##sequence-region 80818347 1 822
+80818347	predvirushost	CDS	1	90	0	+	.	NA
+80818347	predvirushost	CDS	91	237	0	+	.	NA
+80818347	predvirushost	CDS	238	663	0	+	.	NA
+80818347	predvirushost	CDS	664	822	0	+	.	NA
