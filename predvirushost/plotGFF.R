@@ -17,7 +17,7 @@ starts1 <- gff$start
 ends1 <- gff$end
 strands1 <- gff$strand
 gff <- gff %>% mutate(colours = ifelse(strand == "+", "grey", "black"))
-gff <- gff %>% mutate(colours = ifelse(call == "archaeal", "blue", ifelse(call == "phage", "red", ifelse(call == "eukaryotic", "green", colours))))
+gff <- gff %>% mutate(colours = ifelse(call == "archaeal", "blue", ifelse(call == "phage", "red", ifelse(call == "eukaryotic", "green", ifelse(call == "none", "black", colours)))))
 cols1 <-gff$colours
 df1 <- data.frame(name=names1, start=starts1, end=ends1,
                   strand=strands1, col="black", fill = cols1)

@@ -82,7 +82,7 @@ echo '  -e : <end_pos> is the number of delimiters from the end needed to be lef
 echo '  For MG-RAST files the format would be -d _ -s 0 -e 3' 
 echo ' '
 echo 'Trouble shooting:'
-echo '  -k : include in order to keep the temp files to see where there is a problem'
+echo '  -r : include in order to remove the temp files to see where there is a problem'
 exit      
       ;;
      

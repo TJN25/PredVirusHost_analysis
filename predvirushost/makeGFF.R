@@ -57,6 +57,7 @@ if(test){
 
 filePath <- opt$path_1
 filePath2 <- opt$path_2
+print(filePath)
 input_type <- opt$file_type
 gff_used <- F
 
@@ -94,11 +95,15 @@ if(opt$gff != "None"){
     select(target.name, left, right)
   
   sequences <- sequences %>% left_join(genome_lookup, by = "target.name") 
-  sequences <- sequences %>% filter(grepl(pattern = contig_name, x = genome))
-
+  sequences <- sequences %>% filter(contig_name == genome)
+  
   if(nrow(sequences) == nrow(gff)){
     gff <- gff %>% bind_cols(sequences)
     gff_used <- T
+  }else{
+    print(nrow(sequences))
+    print(length(gff))
+    cat("not using gff\n")
   }
 }else{
  fasta <- readLines(paste(filePath2, "/tmp.faa", sep = ""))
@@ -129,6 +134,7 @@ hmmDat <- read.table(opt$hmmres, sep = "\t", as.is = T, header = T)
 hmmDat <- hmmDat %>% group_by(target.name) %>% arrange(-score) %>% mutate(id = row_number()) %>% filter(id == 1) %>% select(-id)
 
 if(gff_used){
+  cat("gff used\n")
   hmmDat <- hmmDat %>% filter(grepl(pattern = contig_name, x = genome))
 
   hmmDat <- hmmDat %>% select(target.name, protein_descriptions, score, genera, genomes, call) %>% 
@@ -172,13 +178,16 @@ if(gff_used){
                as.character(gffLines$x[nrow(gffLines)])), fileConn)
   close(fileConn)
   
+  cat(paste(filePath2, "/", contig_name, "_contig.gff\n", sep = ""))
+  
+  
   write.table(x = gff, file = paste(filePath2, "/", contig_name, "_contig.gff", sep = ""), row.names = F, col.names = F, quote = F, sep = "\t", append = T)
   
   
   
   
   }else{
-  
+  cat("gff not used\n")
   gff <- data.frame(seqname = hmmDat$genome,
                     source = "predvirushost",
                     feature = "CDS",
@@ -232,6 +241,8 @@ if(gff_used){
                  paste("##sequence-region ", dat$seqname[1], " ", dat$start[1], " ", dat$end[nrow(dat)], sep = "")), fileConn)
     close(fileConn)
     
+    cat(paste(filePath2, "/", dat$seqname[1], "_contig.gff\n", sep = ""))
+    
     write.table(x = dat, file = paste(filePath2, "/", dat$seqname[1], "_contig.gff", sep = ""), row.names = F, col.names = F, quote = F, sep = "\t", append = T)
     
   }else{
@@ -253,6 +264,8 @@ if(gff_used){
                    "#!annotation-source hmmsearch (VOGs) (local version)",
                    paste("##sequence-region ", dat$seqname[1], " ", dat$start[1], " ", dat$end[nrow(dat)], sep = "")), fileConn)
       close(fileConn)
+      
+      cat(paste(filePath2, "/", dat$seqname[1], "_contig.gff\n", sep = ""))
       
       write.table(x = dat, file = paste(filePath2, "/", dat$seqname[1], "_contig.gff", sep = ""), row.names = F, col.names = F, quote = F, sep = "\t", append = T)
       

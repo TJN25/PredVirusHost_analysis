@@ -79,7 +79,7 @@ echo ' '
 exit
 fi
 
-FILE_PATH2="/Users/thomasnicholson/bin/PredVirusHost/predvirushost_test_files/test_2.tmp.folder"
+FILE_PATH2=`pwd`
 
 echo "making tmp.faa using $fasta_input"
 cat $fasta_input | sed 's/ /_/g' | tr '\n' ' ' | sed 's/>/\n/g' | sed 's/ /\t/' | sed 's/ //g' > tmp.faa
