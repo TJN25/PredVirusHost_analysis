@@ -245,7 +245,10 @@ euVOG_hmm=$FILE_PATH/euVOG.hmm
 
 
 # Calculates a score indicating which domain the genome likely belongs to
-host_scoring.R $FILE_PATH $output_file.tmp.folder $discriminant_models
+
+echo "host_scoring.R $FILE_PATH $output_file.tmp.folder $discriminant_models"
+
+~/bin/PredVirusHost/predvirushost/host_scoring.R $FILE_PATH $output_file.tmp.folder $discriminant_models
 
 
 cp $output_file.tmp.folder/scores.txt ./$output_file.scores.txt

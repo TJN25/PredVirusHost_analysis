@@ -3,15 +3,13 @@ options(warn = -1)
 
 suppressMessages(library(dplyr, quietly = T))
 
-# test <- F
-# if(test){
-#   
-#   
-#   load("PredVirusHost_test_data.Rda")
-#   filePath <- PredVirusHost_test_data$filePath
-#   filePath2 <- PredVirusHost_test_data$filePath2
-#   filePath2 <- "~/bin/PredVirusHost/predvirushost_test_files/test_1.tmp.folder/"
-# }
+test <- F
+if(test){
+
+
+  filePath <- "~/bin/PredVirusHost/predvirushost/"
+  filePath2 <- "~/bin/PredVirusHost/archaea/archaea_all.tmp.folder/"
+}
 
 args <- commandArgs(trailingOnly = T)
 filePath <- args[1]
@@ -21,7 +19,7 @@ if(args[3] == "y"){
 discriminant_models_only <- T
 #cat("Using discriminant models\n")
 }else{
-#  cat("Using all models\n")
+ # cat("Using all models\n")
   discriminant_models_only <- F
 }
 
@@ -111,7 +109,7 @@ allProteins <- allProteins %>% mutate_all(as.character) %>% mutate(score.aa = as
                                                                    count.ee = as.numeric(count.ee)
                                                                    )
 
-allProteins[is.na(allProteins)] <- ""
+allProteins[is.na(allProteins)] <- 0
 
 
 allProteins <- allProteins %>% mutate(call = ifelse(score.aa >= score.bb,
