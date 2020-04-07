@@ -46,12 +46,12 @@ if ( !is.null(opt$help) ) {
 test <- F
 if(test){
   opt$path_1 <- "~/bin/PredVirusHost/predvirushost"
-  opt$path_2 <- "~/bin/PredVirusHost/predvirushost_test_files/test_2.tmp.folder"
+  opt$path_2 <- "~/bin/PredVirusHost/archaea/"
   opt$file_type <- "REFSEQ"
-  opt$contig_name <- "Acidianus_filamentous_virus_2"
-  opt$gff <- "~/Downloads/Acidianus_filamentous_virus_2.gff3"
-  opt$hmmres <- "~/bin/PredVirusHost/predvirushost_test_files/test_2.tmp.folder/proteins.txt"
-  opt$genome_lookup <- "~/bin/PredVirusHost/predvirushost_test_files/test_2.tmp.folder/genome_lookup.txt"
+  opt$contig_name <- "Methanothermobacter_phage_psiM100]"
+  opt$gff <- "~/bin/PredVirusHost/archaea/gff_files/Methanothermobacter_phage_psiM100.gff3"
+  opt$hmmres <- "~/bin/PredVirusHost/archaea/archaea_all_2.proteins.txt"
+  opt$genome_lookup <- "~/bin/PredVirusHost/archaea/archaea_all.genome_lookup.txt"
 }
 
 
@@ -97,12 +97,16 @@ if(opt$gff != "None"){
   sequences <- sequences %>% left_join(genome_lookup, by = "target.name") 
   sequences <- sequences %>% filter(contig_name == genome)
   
+  # sequences <- sequences %>% mutate(gene.length = right - left + 3)
+  # gff <- gff %>% mutate(gene.length = end - start)
+  
+  
   if(nrow(sequences) == nrow(gff)){
     gff <- gff %>% bind_cols(sequences)
     gff_used <- T
   }else{
     print(nrow(sequences))
-    print(length(gff))
+    print(nrow(gff))
     cat("not using gff\n")
   }
 }else{

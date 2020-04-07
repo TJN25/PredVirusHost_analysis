@@ -1,0 +1,94 @@
+##sequence-region NC_001338.1 1 15465
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=244589
+NC_001338.1	RefSeq	region	1	15465	.	+	.	ID=NC_001338.1:1..15465;Dbxref=taxon:244589;Is_circular=true;gbkey=Src;genome=genomic;mol_type=genomic DNA;old-name=Sulfolobus virus 1
+NC_001338.1	RefSeq	gene	191	946	.	+	.	ID=gene-SSV-1p01;Dbxref=GeneID:2559641;Name=SSV-1p01;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p01
+NC_001338.1	RefSeq	CDS	191	946	.	+	0	ID=cds-NP_039777.1;Parent=gene-SSV-1p01;Dbxref=GOA:P20202,InterPro:IPR003959,UniProtKB/Swiss-Prot:P20202,Genbank:NP_039777.1,GeneID:2559641;Name=NP_039777.1;gbkey=CDS;locus_tag=SSV-1p01;product=ORF B-251;protein_id=NP_039777.1;transl_table=11
+NC_001338.1	RefSeq	gene	961	1968	.	-	.	ID=gene-SSV-1p02;Dbxref=GeneID:2559644;Name=int;gbkey=Gene;gene=int;gene_biotype=protein_coding;locus_tag=SSV-1p02
+NC_001338.1	RefSeq	CDS	961	1968	.	-	0	ID=cds-NP_039778.1;Parent=gene-SSV-1p02;Dbxref=GOA:P20214,InterPro:IPR012922,UniProtKB/Swiss-Prot:P20214,Genbank:NP_039778.1,GeneID:2559644;Name=NP_039778.1;gbkey=CDS;gene=int;locus_tag=SSV-1p02;product=ORF D-335;protein_id=NP_039778.1;transl_table=11
+NC_001338.1	RefSeq	sequence_feature	1735	1778	.	-	.	ID=id-SSV-1p02;Dbxref=GeneID:2559644;Note=integration site;gbkey=misc_feature;gene=int;locus_tag=SSV-1p02
+NC_001338.1	RefSeq	gene	1983	2147	.	-	.	ID=gene-SSV-1p03;Dbxref=GeneID:2559647;Name=SSV-1p03;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p03
+NC_001338.1	RefSeq	CDS	1983	2147	.	-	0	ID=cds-NP_039779.1;Parent=gene-SSV-1p03;Dbxref=UniProtKB/Swiss-Prot:P20218,Genbank:NP_039779.1,GeneID:2559647;Name=NP_039779.1;gbkey=CDS;locus_tag=SSV-1p03;product=ORF E-54;protein_id=NP_039779.1;transl_table=11
+NC_001338.1	RefSeq	gene	2120	2398	.	-	.	ID=gene-SSV-1p04;Dbxref=GeneID:2559633;Name=SSV-1p04;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p04
+NC_001338.1	RefSeq	CDS	2120	2398	.	-	0	ID=cds-NP_039780.1;Parent=gene-SSV-1p04;Dbxref=UniProtKB/Swiss-Prot:P20221,Genbank:NP_039780.1,GeneID:2559633;Name=NP_039780.1;gbkey=CDS;locus_tag=SSV-1p04;product=ORF F-92;protein_id=NP_039780.1;transl_table=11
+NC_001338.1	RefSeq	gene	2395	3129	.	-	.	ID=gene-SSV-1p05;Dbxref=GeneID:2559648;Name=SSV-1p05;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p05
+NC_001338.1	RefSeq	CDS	2395	3129	.	-	0	ID=cds-NP_039781.1;Parent=gene-SSV-1p05;Dbxref=InterPro:IPR022012,UniProtKB/Swiss-Prot:P20213,Genbank:NP_039781.1,GeneID:2559648;Name=NP_039781.1;gbkey=CDS;locus_tag=SSV-1p05;product=ORF D-244;protein_id=NP_039781.1;transl_table=11
+NC_001338.1	RefSeq	gene	3039	3575	.	-	.	ID=gene-SSV-1p06;Dbxref=GeneID:2559637;Name=SSV-1p06;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p06
+NC_001338.1	RefSeq	CDS	3039	3575	.	-	0	ID=cds-NP_039782.1;Parent=gene-SSV-1p06;Dbxref=UniProtKB/Swiss-Prot:P20216,Genbank:NP_039782.1,GeneID:2559637;Name=NP_039782.1;gbkey=CDS;locus_tag=SSV-1p06;product=ORF E-178;protein_id=NP_039782.1;transl_table=11
+NC_001338.1	RefSeq	gene	3581	3862	.	-	.	ID=gene-SSV-1p07;Dbxref=GeneID:2559634;Name=SSV-1p07;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p07
+NC_001338.1	RefSeq	CDS	3581	3862	.	-	0	ID=cds-NP_039783.1;Parent=gene-SSV-1p07;Dbxref=GOA:P20222,InterPro:IPR011991,PDB:1TBX,UniProtKB/Swiss-Prot:P20222,Genbank:NP_039783.1,GeneID:2559634;Name=NP_039783.1;gbkey=CDS;locus_tag=SSV-1p07;product=ORF F-93;protein_id=NP_039783.1;transl_table=11
+NC_001338.1	RefSeq	gene	3870	4025	.	-	.	ID=gene-SSV-1p08;Dbxref=GeneID:2559638;Name=SSV-1p08;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p08
+NC_001338.1	RefSeq	CDS	3870	4025	.	-	0	ID=cds-NP_039784.1;Parent=gene-SSV-1p08;Dbxref=GOA:P20217,InterPro:IPR002145,UniProtKB/Swiss-Prot:P20217,Genbank:NP_039784.1,GeneID:2559638;Name=NP_039784.1;gbkey=CDS;locus_tag=SSV-1p08;product=ORF E-51;protein_id=NP_039784.1;transl_table=11
+NC_001338.1	RefSeq	gene	4026	4316	.	-	.	ID=gene-SSV-1p09;Dbxref=GeneID:2559636;Name=SSV-1p09;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p09
+NC_001338.1	RefSeq	CDS	4026	4316	.	-	0	ID=cds-NP_039785.1;Parent=gene-SSV-1p09;Dbxref=UniProtKB/Swiss-Prot:P20219,Genbank:NP_039785.1,GeneID:2559636;Name=NP_039785.1;gbkey=CDS;locus_tag=SSV-1p09;product=ORF E-96;protein_id=NP_039785.1;transl_table=11
+NC_001338.1	RefSeq	gene	4318	4509	.	-	.	ID=gene-SSV-1p10;Dbxref=GeneID:2559643;Name=SSV-1p10;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p10
+NC_001338.1	RefSeq	CDS	4318	4509	.	-	0	ID=cds-NP_039786.1;Parent=gene-SSV-1p10;Dbxref=PDB:1SKV,UniProtKB/Swiss-Prot:P20215,Genbank:NP_039786.1,GeneID:2559643;Name=NP_039786.1;gbkey=CDS;locus_tag=SSV-1p10;product=ORF D-63;protein_id=NP_039786.1;transl_table=11
+NC_001338.1	RefSeq	gene	4622	4960	.	-	.	ID=gene-SSV-1p11;Dbxref=GeneID:2559635;Name=SSV-1p11;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p11
+NC_001338.1	RefSeq	CDS	4622	4960	.	-	0	ID=cds-NP_039787.1;Parent=gene-SSV-1p11;Dbxref=InterPro:IPR018601,PDB:2VQC,UniProtKB/Swiss-Prot:P20220,Genbank:NP_039787.1,GeneID:2559635;Name=NP_039787.1;gbkey=CDS;locus_tag=SSV-1p11;product=ORF F-112;protein_id=NP_039787.1;transl_table=11
+NC_001338.1	RefSeq	sequence_feature	4976	4976	.	+	.	ID=id-NC_001338.1:4976..4976;Note=start transcript T5;gbkey=misc_feature
+NC_001338.1	RefSeq	promoter	5002	5007	.	-	.	ID=id-NC_001338.1:5002..5007;Note=promoter box A (T5);gbkey=regulatory;regulatory_class=promoter
+NC_001338.1	RefSeq	gene	5177	5326	.	+	.	ID=gene-SSV-1p12;Dbxref=GeneID:2559640;Name=SSV-1p12;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p12
+NC_001338.1	RefSeq	CDS	5177	5326	.	+	0	ID=cds-NP_039788.1;Parent=gene-SSV-1p12;Dbxref=UniProtKB/Swiss-Prot:P20204,Genbank:NP_039788.1,GeneID:2559640;Name=NP_039788.1;gbkey=CDS;locus_tag=SSV-1p12;product=ORF B-49;protein_id=NP_039788.1;transl_table=11
+NC_001338.1	RefSeq	sequence_feature	5177	5177	.	+	.	ID=id-SSV-1p12;Dbxref=GeneID:2559640;Note=start transcript Tind;gbkey=misc_feature;locus_tag=SSV-1p12
+NC_001338.1	RefSeq	sequence_feature	5346	5348	.	+	.	ID=id-NC_001338.1:5346..5348;Note=pot. transcription termination site Tind;gbkey=misc_feature
+NC_001338.1	RefSeq	sequence_feature	5451	5458	.	+	.	ID=id-NC_001338.1:5451..5458;Note=pot. alt. transcription termination site Tind;gbkey=misc_feature
+NC_001338.1	RefSeq	repeat_region	5724	5747	.	+	.	ID=id-NC_001338.1:5724..5747;Note=direct repeat 1;gbkey=repeat_region
+NC_001338.1	RefSeq	promoter	5753	5758	.	+	.	ID=id-NC_001338.1:5753..5758;Note=promoter box A (T6);gbkey=regulatory;regulatory_class=promoter
+NC_001338.1	RefSeq	repeat_region	5763	5786	.	+	.	ID=id-NC_001338.1:5763..5786;Note=direct repeat 1;gbkey=repeat_region
+NC_001338.1	RefSeq	sequence_feature	5783	5783	.	+	.	ID=id-NC_001338.1:5783..5783;Note=start transcript T6;gbkey=misc_feature
+NC_001338.1	RefSeq	gene	5797	6099	.	+	.	ID=gene-SSV-1p13;Dbxref=GeneID:2559639;Name=SSV-1p13;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p13
+NC_001338.1	RefSeq	CDS	5797	6099	.	+	0	ID=cds-NP_039789.1;Parent=gene-SSV-1p13;Dbxref=InterPro:IPR020507,UniProtKB/Swiss-Prot:P20194,Genbank:NP_039789.1,GeneID:2559639;Name=NP_039789.1;gbkey=CDS;locus_tag=SSV-1p13;product=ORF A-100;protein_id=NP_039789.1;transl_table=11
+NC_001338.1	RefSeq	repeat_region	6101	6123	.	+	.	ID=id-NC_001338.1:6101..6123;Note=direct repeat 2;gbkey=repeat_region
+NC_001338.1	RefSeq	gene	6115	6513	.	+	.	ID=gene-SSV-1p14;Dbxref=GeneID:2559646;Name=SSV-1p14;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p14
+NC_001338.1	RefSeq	CDS	6115	6513	.	+	0	ID=cds-NP_039790.1;Parent=gene-SSV-1p14;Dbxref=UniProtKB/Swiss-Prot:P20195,Genbank:NP_039790.1,GeneID:2559646;Name=NP_039790.1;gbkey=CDS;locus_tag=SSV-1p14;product=ORF A-132;protein_id=NP_039790.1;transl_table=11
+NC_001338.1	RefSeq	repeat_region	6496	6518	.	+	.	ID=id-NC_001338.1:6496..6518;Note=direct repeat 2;gbkey=repeat_region
+NC_001338.1	RefSeq	gene	6510	6752	.	+	.	ID=gene-SSV-1p15;Dbxref=GeneID:2559649;Name=SSV-1p15;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p15
+NC_001338.1	RefSeq	CDS	6510	6752	.	+	0	ID=cds-NP_039791.1;Parent=gene-SSV-1p15;Dbxref=GOA:P20211,InterPro:IPR002145,UniProtKB/Swiss-Prot:P20211,Genbank:NP_039791.1,GeneID:2559649;Name=NP_039791.1;gbkey=CDS;locus_tag=SSV-1p15;product=ORF C-80;protein_id=NP_039791.1;transl_table=11
+NC_001338.1	RefSeq	gene	6745	6984	.	+	.	ID=gene-SSV-1p16;Dbxref=GeneID:2559645;Name=SSV-1p16;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p16
+NC_001338.1	RefSeq	CDS	6745	6984	.	+	0	ID=cds-NP_039792.1;Parent=gene-SSV-1p16;Dbxref=GOA:P20199,InterPro:IPR015880,UniProtKB/Swiss-Prot:P20199,Genbank:NP_039792.1,GeneID:2559645;Name=NP_039792.1;gbkey=CDS;locus_tag=SSV-1p16;product=ORF A-79;protein_id=NP_039792.1;transl_table=11
+NC_001338.1	RefSeq	gene	6988	7125	.	+	.	ID=gene-SSV-1p17;Dbxref=GeneID:2559642;Name=SSV-1p17;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p17
+NC_001338.1	RefSeq	CDS	6988	7125	.	+	0	ID=cds-NP_039793.1;Parent=gene-SSV-1p17;Dbxref=GOA:P20198,InterPro:IPR007087,InterPro:IPR015880,UniProtKB/Swiss-Prot:P20198,Genbank:NP_039793.1,GeneID:2559642;Name=NP_039793.1;gbkey=CDS;locus_tag=SSV-1p17;product=ORF A-45;protein_id=NP_039793.1;transl_table=11
+NC_001338.1	RefSeq	gene	7122	7430	.	+	.	ID=gene-SSV-1p18;Dbxref=GeneID:2559662;Name=SSV-1p18;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p18
+NC_001338.1	RefSeq	CDS	7122	7430	.	+	0	ID=cds-NP_039794.1;Parent=gene-SSV-1p18;Dbxref=InterPro:IPR020512,UniProtKB/Swiss-Prot:P20206,Genbank:NP_039794.1,GeneID:2559662;Name=NP_039794.1;gbkey=CDS;locus_tag=SSV-1p18;product=ORF C-102;protein_id=NP_039794.1;transl_table=11
+NC_001338.1	RefSeq	gene	7427	7816	.	+	.	ID=gene-SSV-1p19;Dbxref=GeneID:2559654;Name=SSV-1p19;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p19
+NC_001338.1	RefSeq	CDS	7427	7816	.	+	0	ID=cds-NP_039795.1;Parent=gene-SSV-1p19;Dbxref=GOA:P20201,InterPro:IPR007087,InterPro:IPR015880,PDB:2WBT,UniProtKB/Swiss-Prot:P20201,Genbank:NP_039795.1,GeneID:2559654;Name=NP_039795.1;gbkey=CDS;locus_tag=SSV-1p19;product=ORF B-129;protein_id=NP_039795.1;transl_table=11
+NC_001338.1	RefSeq	promoter	7823	7828	.	+	.	ID=id-NC_001338.1:7823..7828;Note=promoter box A (T3);gbkey=regulatory;regulatory_class=promoter
+NC_001338.1	RefSeq	sequence_feature	7851	7851	.	+	.	ID=id-NC_001338.1:7851..7851;Note=start transcript T3;gbkey=misc_feature
+NC_001338.1	RefSeq	gene	7852	8727	.	+	.	ID=gene-SSV-1p20;Dbxref=GeneID:2559657;Name=SSV-1p20;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p20
+NC_001338.1	RefSeq	CDS	7852	8727	.	+	0	ID=cds-NP_039796.1;Parent=gene-SSV-1p20;Dbxref=UniProtKB/Swiss-Prot:P20197,Genbank:NP_039796.1,GeneID:2559657;Name=NP_039796.1;gbkey=CDS;locus_tag=SSV-1p20;product=ORF A-291;protein_id=NP_039796.1;transl_table=11
+NC_001338.1	RefSeq	sequence_feature	8747	8757	.	+	.	ID=id-NC_001338.1:8747..8757;Note=transcription termination site T5;gbkey=misc_feature
+NC_001338.1	RefSeq	gene	8766	9140	.	+	.	ID=gene-SSV-1p21;Dbxref=GeneID:2559653;Name=SSV-1p21;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p21
+NC_001338.1	RefSeq	CDS	8766	9140	.	+	0	ID=cds-NP_039797.1;Parent=gene-SSV-1p21;Dbxref=UniProtKB/Swiss-Prot:P20208,Genbank:NP_039797.1,GeneID:2559653;Name=NP_039797.1;gbkey=CDS;locus_tag=SSV-1p21;product=ORF C-124;protein_id=NP_039797.1;transl_table=11
+NC_001338.1	RefSeq	promoter	9146	9151	.	+	.	ID=id-NC_001338.1:9146..9151;Note=promoter box A (T4);gbkey=regulatory;regulatory_class=promoter
+NC_001338.1	RefSeq	sequence_feature	9173	9173	.	+	.	ID=id-NC_001338.1:9173..9173;Note=start transcript T4;gbkey=misc_feature
+NC_001338.1	RefSeq	gene	9174	11552	.	+	.	ID=gene-SSV-1p22;Dbxref=GeneID:2559658;Name=SSV-1p22;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p22
+NC_001338.1	RefSeq	CDS	9174	11552	.	+	0	ID=cds-NP_039798.1;Parent=gene-SSV-1p22;Dbxref=UniProtKB/Swiss-Prot:P20210,Genbank:NP_039798.1,GeneID:2559658;Name=NP_039798.1;gbkey=CDS;locus_tag=SSV-1p22;product=ORF C-792;protein_id=NP_039798.1;transl_table=11
+NC_001338.1	RefSeq	gene	11549	11785	.	+	.	ID=gene-SSV-1p23;Dbxref=GeneID:2559651;Name=SSV-1p23;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p23
+NC_001338.1	RefSeq	CDS	11549	11785	.	+	0	ID=cds-NP_039799.1;Parent=gene-SSV-1p23;Dbxref=InterPro:IPR020142,UniProtKB/Swiss-Prot:P20205,Genbank:NP_039799.1,GeneID:2559651;Name=NP_039799.1;gbkey=CDS;locus_tag=SSV-1p23;product=ORF B-78;protein_id=NP_039799.1;transl_table=11
+NC_001338.1	RefSeq	gene	11775	12275	.	+	.	ID=gene-SSV-1p24;Dbxref=GeneID:2559650;Name=SSV-1p24;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p24
+NC_001338.1	RefSeq	CDS	11775	12275	.	+	0	ID=cds-NP_039800.1;Parent=gene-SSV-1p24;Dbxref=InterPro:IPR020364,UniProtKB/Swiss-Prot:P20209,Genbank:NP_039800.1,GeneID:2559650;Name=NP_039800.1;gbkey=CDS;locus_tag=SSV-1p24;product=ORF C-166;protein_id=NP_039800.1;transl_table=11
+NC_001338.1	RefSeq	promoter	12530	12535	.	+	.	ID=id-NC_001338.1:12530..12535;Note=promoter box A (T1%2C T2);gbkey=regulatory;regulatory_class=promoter
+NC_001338.1	RefSeq	sequence_feature	12559	12559	.	+	.	ID=id-NC_001338.1:12559..12559;Note=start transcript T1 and T2;gbkey=misc_feature
+NC_001338.1	RefSeq	gene	12780	12999	.	+	.	ID=gene-SSV-1p26;Dbxref=GeneID:2559659;Name=SSV-1p26;gbkey=Gene;gene_biotype=other;locus_tag=SSV-1p26
+NC_001338.1	RefSeq	mRNA	12780	12999	.	+	.	ID=rna-SSV-1p26;Parent=gene-SSV-1p26;Dbxref=GeneID:2559659;gbkey=mRNA;locus_tag=SSV-1p26;product=VP3 protein
+NC_001338.1	RefSeq	exon	12780	12999	.	+	.	ID=exon-SSV-1p26-1;Parent=rna-SSV-1p26;Dbxref=GeneID:2559659;gbkey=mRNA;locus_tag=SSV-1p26;product=VP3 protein
+NC_001338.1	RefSeq	repeat_region	12926	12986	.	+	.	ID=id-SSV-1p26;Dbxref=GeneID:2559659;Note=direct repeat 3;gbkey=repeat_region;locus_tag=SSV-1p26
+NC_001338.1	RefSeq	gene	13012	13290	.	+	.	ID=gene-SSV-1p27;Dbxref=GeneID:2559660;Name=V3;gbkey=Gene;gene=V3;gene_biotype=protein_coding;locus_tag=SSV-1p27
+NC_001338.1	RefSeq	CDS	13012	13290	.	+	0	ID=cds-NP_039801.1;Parent=gene-SSV-1p27;Dbxref=GOA:P20225,InterPro:IPR009379,UniProtKB/Swiss-Prot:P20225,Genbank:NP_039801.1,GeneID:2559660;Name=NP_039801.1;gbkey=CDS;gene=V3;locus_tag=SSV-1p27;product=VP3 protein;protein_id=NP_039801.1;transl_table=11
+NC_001338.1	RefSeq	sequence_feature	13047	13059	.	+	.	ID=id-SSV-1p27;Dbxref=GeneID:2559660;Note=transcription termination site T1;gbkey=misc_feature;gene=V3;locus_tag=SSV-1p27
+NC_001338.1	RefSeq	repeat_region	13212	13272	.	+	.	ID=id-SSV-1p27-2;Dbxref=GeneID:2559660;Note=direct repeat 3;gbkey=repeat_region;gene=V3;locus_tag=SSV-1p27
+NC_001338.1	RefSeq	gene	13292	13516	.	+	.	ID=gene-SSV-1p28;Dbxref=GeneID:2559664;Name=SSV-1p28;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p28
+NC_001338.1	RefSeq	CDS	13292	13516	.	+	0	ID=cds-NP_039802.1;Parent=gene-SSV-1p28;Dbxref=GOA:P20224,UniProtKB/Swiss-Prot:P20224,Genbank:NP_039802.1,GeneID:2559664;Name=NP_039802.1;gbkey=CDS;locus_tag=SSV-1p28;product=VP2 protein;protein_id=NP_039802.1;transl_table=11
+NC_001338.1	RefSeq	promoter	13521	13526	.	+	.	ID=id-NC_001338.1:13521..13526;Note=promoter box A (T9);gbkey=regulatory;regulatory_class=promoter
+NC_001338.1	RefSeq	sequence_feature	13549	13560	.	+	.	ID=id-NC_001338.1:13549..13560;Note=transcription termination site T2;gbkey=misc_feature
+NC_001338.1	RefSeq	sequence_feature	13551	13551	.	+	.	ID=id-NC_001338.1:13551..13551;Note=start transcript T9;gbkey=misc_feature
+NC_001338.1	RefSeq	gene	13552	13800	.	+	.	ID=gene-SSV-1p29;Dbxref=GeneID:2559665;Name=SSV-1p29;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p29
+NC_001338.1	RefSeq	CDS	13552	13800	.	+	0	ID=cds-NP_039803.1;Parent=gene-SSV-1p29;Dbxref=InterPro:IPR020261,UniProtKB/Swiss-Prot:P20200,Genbank:NP_039803.1,GeneID:2559665;Name=NP_039803.1;gbkey=CDS;locus_tag=SSV-1p29;product=ORF A-82;protein_id=NP_039803.1;transl_table=11
+NC_001338.1	RefSeq	gene	13797	14051	.	+	.	ID=gene-SSV-1p30;Dbxref=GeneID:2559656;Name=SSV-1p30;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p30
+NC_001338.1	RefSeq	CDS	13797	14051	.	+	0	ID=cds-NP_039804.1;Parent=gene-SSV-1p30;Dbxref=InterPro:IPR020272,UniProtKB/Swiss-Prot:P20212,Genbank:NP_039804.1,GeneID:2559656;Name=NP_039804.1;gbkey=CDS;locus_tag=SSV-1p30;product=ORF C-84;protein_id=NP_039804.1;transl_table=11
+NC_001338.1	RefSeq	gene	14087	14920	.	+	.	ID=gene-SSV-1p31;Dbxref=GeneID:2559652;Name=SSV-1p31;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p31
+NC_001338.1	RefSeq	CDS	14087	14920	.	+	0	ID=cds-NP_039805.1;Parent=gene-SSV-1p31;Dbxref=UniProtKB/Swiss-Prot:P20203,Genbank:NP_039805.1,GeneID:2559652;Name=NP_039805.1;gbkey=CDS;locus_tag=SSV-1p31;product=ORF B-277;protein_id=NP_039805.1;transl_table=11
+NC_001338.1	RefSeq	gene	14922	15230	.	+	.	ID=gene-SSV-1p32;Dbxref=GeneID:2559655;Name=SSV-1p32;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p32
+NC_001338.1	RefSeq	CDS	14922	15230	.	+	0	ID=cds-NP_039806.1;Parent=gene-SSV-1p32;Dbxref=UniProtKB/Swiss-Prot:P20207,Genbank:NP_039806.1,GeneID:2559655;Name=NP_039806.1;gbkey=CDS;locus_tag=SSV-1p32;product=ORF C-102;protein_id=NP_039806.1;transl_table=11
+NC_001338.1	RefSeq	gene	15223	15465	.	+	.	ID=gene-SSV-1p33;Dbxref=GeneID:2559661;Name=SSV-1p33;gbkey=Gene;gene_biotype=protein_coding;locus_tag=SSV-1p33
+NC_001338.1	RefSeq	CDS	15223	15465	.	+	0	ID=cds-NP_039807.1;Parent=gene-SSV-1p33;Dbxref=InterPro:IPR020219,UniProtKB/Swiss-Prot:P20196,Genbank:NP_039807.1,GeneID:2559661;Name=NP_039807.1;Note=circular;end_range=15465,.;gbkey=CDS;locus_tag=SSV-1p33;partial=true;product=ORF A-153;protein_id=NP_039807.1;transl_table=11
+

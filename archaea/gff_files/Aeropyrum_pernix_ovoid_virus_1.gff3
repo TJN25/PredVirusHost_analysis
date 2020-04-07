@@ -1,0 +1,46 @@
+##sequence-region NC_028256.1 1 13769
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1032474
+NC_028256.1	RefSeq	region	1	13769	.	+	.	ID=NC_028256.1:1..13769;Dbxref=taxon:1032474;Is_circular=true;gbkey=Src;genome=proviral;mol_type=genomic DNA;nat-host=Aeropyrum pernix K1;note=new integrated virus present in the sequence BA000002.3
+NC_028256.1	RefSeq	gene	1	387	.	-	.	ID=gene-ASQ65_gp01;Dbxref=GeneID:26131619;Name=ASQ65_gp01;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp01
+NC_028256.1	RefSeq	CDS	1	387	.	-	0	ID=cds-YP_009177652.1;Parent=gene-ASQ65_gp01;Dbxref=Genbank:YP_009177652.1,GeneID:26131619;Name=YP_009177652.1;Note=orf1-128;gbkey=CDS;locus_tag=ASQ65_gp01;product=hypothetical protein;protein_id=YP_009177652.1;transl_table=11
+NC_028256.1	RefSeq	gene	374	643	.	-	.	ID=gene-ASQ65_gp02;Dbxref=GeneID:26131599;Name=ASQ65_gp02;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp02
+NC_028256.1	RefSeq	CDS	374	643	.	-	0	ID=cds-YP_009177653.1;Parent=gene-ASQ65_gp02;Dbxref=Genbank:YP_009177653.1,GeneID:26131599;Name=YP_009177653.1;Note=orf2-89;gbkey=CDS;locus_tag=ASQ65_gp02;product=hypothetical protein;protein_id=YP_009177653.1;transl_table=11
+NC_028256.1	RefSeq	gene	647	988	.	-	.	ID=gene-ASQ65_gp03;Dbxref=GeneID:26131600;Name=ASQ65_gp03;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp03
+NC_028256.1	RefSeq	CDS	647	988	.	-	0	ID=cds-YP_009177654.1;Parent=gene-ASQ65_gp03;Dbxref=Genbank:YP_009177654.1,GeneID:26131600;Name=YP_009177654.1;Note=orf3-113;gbkey=CDS;locus_tag=ASQ65_gp03;product=hypothetical protein;protein_id=YP_009177654.1;transl_table=11
+NC_028256.1	RefSeq	gene	995	1240	.	-	.	ID=gene-ASQ65_gp04;Dbxref=GeneID:26131601;Name=ASQ65_gp04;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp04
+NC_028256.1	RefSeq	CDS	995	1240	.	-	0	ID=cds-YP_009177655.1;Parent=gene-ASQ65_gp04;Dbxref=Genbank:YP_009177655.1,GeneID:26131601;Name=YP_009177655.1;Note=orf4-81;gbkey=CDS;locus_tag=ASQ65_gp04;product=hypothetical protein;protein_id=YP_009177655.1;transl_table=11
+NC_028256.1	RefSeq	gene	1362	2021	.	+	.	ID=gene-ASQ65_gp05;Dbxref=GeneID:26131602;Name=ASQ65_gp05;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp05
+NC_028256.1	RefSeq	CDS	1362	2021	.	+	0	ID=cds-YP_009177656.1;Parent=gene-ASQ65_gp05;Dbxref=Genbank:YP_009177656.1,GeneID:26131602;Name=YP_009177656.1;Note=orf5-119;gbkey=CDS;locus_tag=ASQ65_gp05;product=hypothetical protein;protein_id=YP_009177656.1;transl_table=11
+NC_028256.1	RefSeq	gene	1933	2217	.	-	.	ID=gene-ASQ65_gp06;Dbxref=GeneID:26131603;Name=ASQ65_gp06;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp06
+NC_028256.1	RefSeq	CDS	1933	2217	.	-	0	ID=cds-YP_009177657.1;Parent=gene-ASQ65_gp06;Dbxref=Genbank:YP_009177657.1,GeneID:26131603;Name=YP_009177657.1;Note=orf6-94;gbkey=CDS;locus_tag=ASQ65_gp06;product=hypothetical protein;protein_id=YP_009177657.1;transl_table=11
+NC_028256.1	RefSeq	gene	2566	2739	.	-	.	ID=gene-ASQ65_gp07;Dbxref=GeneID:26131604;Name=ASQ65_gp07;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp07
+NC_028256.1	RefSeq	CDS	2566	2739	.	-	0	ID=cds-YP_009177658.1;Parent=gene-ASQ65_gp07;Dbxref=Genbank:YP_009177658.1,GeneID:26131604;Name=YP_009177658.1;Note=orf7-57;gbkey=CDS;locus_tag=ASQ65_gp07;product=hypothetical protein;protein_id=YP_009177658.1;transl_table=11
+NC_028256.1	RefSeq	gene	2845	3168	.	-	.	ID=gene-ASQ65_gp08;Dbxref=GeneID:26131605;Name=ASQ65_gp08;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp08
+NC_028256.1	RefSeq	CDS	2845	3168	.	-	0	ID=cds-YP_009177659.1;Parent=gene-ASQ65_gp08;Dbxref=Genbank:YP_009177659.1,GeneID:26131605;Name=YP_009177659.1;Note=orf8-107;gbkey=CDS;locus_tag=ASQ65_gp08;product=hypothetical protein;protein_id=YP_009177659.1;transl_table=11
+NC_028256.1	RefSeq	gene	3221	5257	.	-	.	ID=gene-ASQ65_gp09;Dbxref=GeneID:26131606;Name=ASQ65_gp09;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp09
+NC_028256.1	RefSeq	CDS	3221	5257	.	-	0	ID=cds-YP_009177660.1;Parent=gene-ASQ65_gp09;Dbxref=Genbank:YP_009177660.1,GeneID:26131606;Name=YP_009177660.1;Note=orf9-678;gbkey=CDS;locus_tag=ASQ65_gp09;product=hypothetical protein;protein_id=YP_009177660.1;transl_table=11
+NC_028256.1	RefSeq	gene	5348	6202	.	-	.	ID=gene-ASQ65_gp10;Dbxref=GeneID:26131607;Name=ASQ65_gp10;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp10
+NC_028256.1	RefSeq	CDS	5348	6202	.	-	0	ID=cds-YP_009177661.1;Parent=gene-ASQ65_gp10;Dbxref=Genbank:YP_009177661.1,GeneID:26131607;Name=YP_009177661.1;Note=orf10-284;gbkey=CDS;locus_tag=ASQ65_gp10;product=hypothetical protein;protein_id=YP_009177661.1;transl_table=11
+NC_028256.1	RefSeq	gene	6356	7024	.	-	.	ID=gene-ASQ65_gp11;Dbxref=GeneID:26131608;Name=ASQ65_gp11;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp11
+NC_028256.1	RefSeq	CDS	6356	7024	.	-	0	ID=cds-YP_009177662.1;Parent=gene-ASQ65_gp11;Dbxref=Genbank:YP_009177662.1,GeneID:26131608;Name=YP_009177662.1;Note=orf11-222;gbkey=CDS;locus_tag=ASQ65_gp11;product=hypothetical protein;protein_id=YP_009177662.1;transl_table=11
+NC_028256.1	RefSeq	gene	7046	7303	.	-	.	ID=gene-ASQ65_gp12;Dbxref=GeneID:26131609;Name=ASQ65_gp12;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp12
+NC_028256.1	RefSeq	CDS	7046	7303	.	-	0	ID=cds-YP_009177663.1;Parent=gene-ASQ65_gp12;Dbxref=Genbank:YP_009177663.1,GeneID:26131609;Name=YP_009177663.1;Note=orf12-85;gbkey=CDS;locus_tag=ASQ65_gp12;product=hypothetical protein;protein_id=YP_009177663.1;transl_table=11
+NC_028256.1	RefSeq	gene	7392	7676	.	+	.	ID=gene-ASQ65_gp13;Dbxref=GeneID:26131610;Name=ASQ65_gp13;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp13
+NC_028256.1	RefSeq	CDS	7392	7676	.	+	0	ID=cds-YP_009177664.1;Parent=gene-ASQ65_gp13;Dbxref=Genbank:YP_009177664.1,GeneID:26131610;Name=YP_009177664.1;Note=orf13-94;gbkey=CDS;locus_tag=ASQ65_gp13;product=hypothetical protein;protein_id=YP_009177664.1;transl_table=11
+NC_028256.1	RefSeq	gene	7764	8129	.	-	.	ID=gene-ASQ65_gp14;Dbxref=GeneID:26131611;Name=ASQ65_gp14;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp14
+NC_028256.1	RefSeq	CDS	7764	8129	.	-	0	ID=cds-YP_009177665.1;Parent=gene-ASQ65_gp14;Dbxref=Genbank:YP_009177665.1,GeneID:26131611;Name=YP_009177665.1;Note=orf14-121;gbkey=CDS;locus_tag=ASQ65_gp14;product=hypothetical protein;protein_id=YP_009177665.1;transl_table=11
+NC_028256.1	RefSeq	gene	8140	8919	.	-	.	ID=gene-ASQ65_gp15;Dbxref=GeneID:26131612;Name=ASQ65_gp15;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp15
+NC_028256.1	RefSeq	CDS	8140	8919	.	-	0	ID=cds-YP_009177666.1;Parent=gene-ASQ65_gp15;Dbxref=Genbank:YP_009177666.1,GeneID:26131612;Name=YP_009177666.1;Note=orf15-259;gbkey=CDS;locus_tag=ASQ65_gp15;product=hypothetical protein;protein_id=YP_009177666.1;transl_table=11
+NC_028256.1	RefSeq	gene	8984	10159	.	-	.	ID=gene-ASQ65_gp16;Dbxref=GeneID:26131613;Name=ASQ65_gp16;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp16
+NC_028256.1	RefSeq	CDS	8984	10159	.	-	0	ID=cds-YP_009177667.1;Parent=gene-ASQ65_gp16;Dbxref=Genbank:YP_009177667.1,GeneID:26131613;Name=YP_009177667.1;Note=orf16-391;gbkey=CDS;locus_tag=ASQ65_gp16;product=hypothetical protein;protein_id=YP_009177667.1;transl_table=11
+NC_028256.1	RefSeq	gene	10216	10821	.	+	.	ID=gene-ASQ65_gp17;Dbxref=GeneID:26131614;Name=ASQ65_gp17;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp17
+NC_028256.1	RefSeq	CDS	10216	10821	.	+	0	ID=cds-YP_009177668.1;Parent=gene-ASQ65_gp17;Dbxref=Genbank:YP_009177668.1,GeneID:26131614;Name=YP_009177668.1;Note=orf17-201;gbkey=CDS;locus_tag=ASQ65_gp17;product=hypothetical protein;protein_id=YP_009177668.1;transl_table=11
+NC_028256.1	RefSeq	gene	10814	11212	.	+	.	ID=gene-ASQ65_gp18;Dbxref=GeneID:26131615;Name=ASQ65_gp18;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp18
+NC_028256.1	RefSeq	CDS	10814	11212	.	+	0	ID=cds-YP_009177669.1;Parent=gene-ASQ65_gp18;Dbxref=Genbank:YP_009177669.1,GeneID:26131615;Name=YP_009177669.1;Note=orf18-132;gbkey=CDS;locus_tag=ASQ65_gp18;product=hypothetical protein;protein_id=YP_009177669.1;transl_table=11
+NC_028256.1	RefSeq	gene	11229	11972	.	+	.	ID=gene-ASQ65_gp19;Dbxref=GeneID:26131616;Name=ASQ65_gp19;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp19
+NC_028256.1	RefSeq	CDS	11229	11972	.	+	0	ID=cds-YP_009177670.1;Parent=gene-ASQ65_gp19;Dbxref=Genbank:YP_009177670.1,GeneID:26131616;Name=YP_009177670.1;Note=orf19-247;gbkey=CDS;locus_tag=ASQ65_gp19;product=hypothetical protein;protein_id=YP_009177670.1;transl_table=11
+NC_028256.1	RefSeq	gene	11956	12258	.	+	.	ID=gene-ASQ65_gp20;Dbxref=GeneID:26131617;Name=ASQ65_gp20;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp20
+NC_028256.1	RefSeq	CDS	11956	12258	.	+	0	ID=cds-YP_009177671.1;Parent=gene-ASQ65_gp20;Dbxref=Genbank:YP_009177671.1,GeneID:26131617;Name=YP_009177671.1;Note=orf20-100;gbkey=CDS;locus_tag=ASQ65_gp20;product=hypothetical protein;protein_id=YP_009177671.1;transl_table=11
+NC_028256.1	RefSeq	gene	12273	13472	.	+	.	ID=gene-ASQ65_gp21;Dbxref=GeneID:26131618;Name=ASQ65_gp21;gbkey=Gene;gene_biotype=protein_coding;locus_tag=ASQ65_gp21
+NC_028256.1	RefSeq	CDS	12273	13472	.	+	0	ID=cds-YP_009177672.1;Parent=gene-ASQ65_gp21;Dbxref=Genbank:YP_009177672.1,GeneID:26131618;Name=YP_009177672.1;Note=orf21-399;gbkey=CDS;locus_tag=ASQ65_gp21;product=hypothetical protein;protein_id=YP_009177672.1;transl_table=11
+

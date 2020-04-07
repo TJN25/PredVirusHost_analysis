@@ -1,0 +1,61 @@
+ID   AAG39946; SV 1; linear; genomic DNA; STD; PHG; 468 BP.
+XX
+PA   AF301375.1
+XX
+DT   15-DEC-2000 (Rel. 66, Created)
+DT   15-APR-2005 (Rel. 83, Last updated, Version 4)
+XX
+DE   Methanothermobacter phage psiM100 unknown
+XX
+KW   .
+XX
+OS   Methanothermobacter phage psiM100
+OC   Viruses; Caudovirales; Siphoviridae.
+XX
+RN   [1]
+RX   DOI; 10.1128/JB.183.19.5788-5792.2001.
+RX   PUBMED; 11544247.
+RA   Luo Y., Pfister P., Leisinger T., Wasserfallen A.;
+RT   "The genome of archaeal prophage PsiM100 encodes the lytic enzyme
+RT   responsible for autolysis of Methanothermobacter wolfeii";
+RL   J. Bacteriol. 183(19):5788-5792(2001).
+XX
+RN   [2]
+RA   Luo Y.;
+RT   ;
+RL   Submitted (31-AUG-2000) to the INSDC.
+RL   Institute of Microbiology, Swiss Federal Institute of Technology Zurich,
+RL   Schmelzbergstrasse 7, Zurich CH-8092, Switzerland
+XX
+DR   MD5; 54a556c86363053bf7d4246e9c0f8818.
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   source          1..468
+FT                   /organism="Methanothermobacter phage psiM100"
+FT                   /focus
+FT                   /mol_type="genomic DNA"
+FT                   /db_xref="taxon:173824"
+FT   CDS             AF301375.1:4800..5267
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="ORFA"
+FT                   /product="unknown"
+FT                   /db_xref="GOA:Q9HH65"
+FT                   /db_xref="InterPro:IPR007527"
+FT                   /db_xref="UniProtKB/TrEMBL:Q9HH65"
+FT                   /protein_id="AAG39946.1"
+FT                   /translation="MAGEHLRRLRKAQNIQVEPLPGDDALLPFITRSENGEYLVTVLDN
+FT                   MIRCECPDYQYRHGDEGSYICKHCWAVLQHILNESYEEYGDHECMRTFKVPAWLAEEKG
+FT                   LSRERVTGTIEHETPKAILLRTPKGESYWLPKSQIHEERIPADQTTLGVKG"
+XX
+SQ   Sequence 468 BP; 152 A; 113 C; 117 G; 86 T; 0 other;
+     atggcaggag aacacctacg gaggctgcgg aaggcgcaga acatccaagt cgaacctcta        60
+     cctggggatg atgcattact accattcatc acccggtcag agaatgggga ataccttgtc       120
+     acagtactgg ataacatgat acgatgcgaa tgccctgatt accagtaccg tcatggcgat       180
+     gagggttcat atatctgcaa acattgctgg gcagtcctgc agcacatact caacgaatca       240
+     tatgaagaat acggtgacca tgaatgcatg cgcacattca aagtgcctgc ttggcttgct       300
+     gaagaaaaag gactcagcag agaaagagtg acaggaacaa tagaacatga aacacccaag       360
+     gccatactgc taagaacacc caaaggggag tcttactggc tccccaaaag ccagatccat       420
+     gaagaaagga tccccgctga tcaaaccacc ctgggggtga aaggatga                    468
+//

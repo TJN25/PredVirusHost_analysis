@@ -1,0 +1,2412 @@
+ID   MK450543; SV 1; circular; genomic DNA; STD; PHG; 58487 BP.
+XX
+AC   MK450543;
+XX
+PR   Project:PRJNA517034;
+XX
+DT   14-MAR-2019 (Rel. 140, Created)
+DT   14-MAR-2019 (Rel. 140, Last updated, Version 1)
+XX
+DE   Natrialba phage PhiCh1, complete genome.
+XX
+KW   .
+XX
+OS   Natrialba phage PhiCh1
+OC   Viruses; dsDNA viruses, no RNA stage; Caudovirales; Myoviridae;
+OC   Myohalovirus; unclassified Myohalovirus.
+XX
+RN   [1]
+RP   1-58487
+RX   PUBMED; 9044293.
+RA   Witte A., Baranyi U., Klein R., Sulzner M., Luo C., Wanner G., Kruger D.H.,
+RA   Lubitz W.;
+RT   "Characterization of Natronobacterium magadii phage phi Ch1, a unique
+RT   archaeal phage containing DNA and RNA";
+RL   Mol. Microbiol. 23(3):603-616(1997).
+XX
+RN   [2]
+RP   1-58487
+RX   DOI; 10.1046/j.1365-2958.2002.03064.x.
+RX   PUBMED; 12139629.
+RA   Klein R., Baranyi U., Rossler N., Greineder B., Scholz H., Witte A.;
+RT   "Natrialba magadii virus phiCh1: first complete nucleotide sequence and
+RT   functional organization of a virus infecting a haloalkaliphilic archaeon";
+RL   Mol. Microbiol. 45(3):851-863(2002).
+XX
+RN   [3]
+RC   DOI: 10.3390/genes10030194
+RP   1-58487
+RA   Dyall-Smith M., Palm P., Wanner G., Witte A., Oesterhelt D., Pfeiffer F.;
+RT   "Halobacterium salinarum virus ChaoS9, a Novel Halovirus Related to PhiH1
+RT   and PhiCh1";
+RL   (misc) Genes (Basel) 10(3):0-194(2019).
+XX
+RN   [4]
+RP   1-58487
+RA   Dyall-Smith M., Palm P., Wanner G., Witte A., Oesterhelt D., Pfeiffer F.;
+RT   ;
+RL   Submitted (25-JAN-2019) to the INSDC.
+RL   Computational Biology Group, Max-Planck-Institute of Biochemistry, Am
+RL   Klopferspitz 18, Martinsried 82152, Germany
+XX
+DR   MD5; 14225a23a999a6f30e8268ed8648290c.
+DR   BioSample; SAMN10818528.
+DR   ENA; SRR8649344.
+DR   PubMed; 9044293.
+DR   PubMed; 12139629.
+XX
+CC   ##Assembly-Data-START##
+CC   Assembly Method       :: Geneious map to reference
+CC                            (GenBank:AF440695) v. 10.2
+CC   Coverage              :: 3192x
+CC   Sequencing Technology :: Illumina
+CC   ##Assembly-Data-END##
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   source          1..58487
+FT                   /organism="Natrialba phage PhiCh1"
+FT                   /host="Natrialba magadii ATCC 43099"
+FT                   /lab_host="Natrialba magadii strain L11"
+FT                   /mol_type="genomic DNA"
+FT                   /country="Austria"
+FT                   /collection_date="1996"
+FT                   /db_xref="taxon:114777"
+FT   gene            join(58242..58487,1..63)
+FT                   /gene="terS"
+FT                   /locus_tag="PhiCh1_470"
+FT   CDS             join(58242..58487,1..63)
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="terS"
+FT                   /locus_tag="PhiCh1_470"
+FT                   /product="terminase small subunit"
+FT                   /note="terminase small subunit TerS; corresponds to phiCh1
+FT                   ORF98 and to Nmag_4250; homolog of PhiH1_485; this gene is
+FT                   complete; in the provirus state the DNA is circular; in
+FT                   virus particles, the linear double-stranded DNA is
+FT                   terminally redundant due to the headful packaging
+FT                   mechanism"
+FT                   /protein_id="QBJ01276.1"
+FT                   /translation="MNDDSPADGRAGSRNVFWDLHDRDHYACPGCGRSADEVSSVHIHH
+FT                   RDGNKHNDSRHNLVGLCHLCHLGGRHDLDFEDPRLTKPTPGGLGKPSVRADPPSADF"
+FT   misc_feature    45..46
+FT                   /gene="terS"
+FT                   /locus_tag="PhiCh1_470"
+FT                   /note="pac site; packaging cleavage site"
+FT   gene            115..717
+FT                   /locus_tag="PhiCh1_005"
+FT   CDS             115..717
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_005"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF1 and to Nmag_4251; homolog
+FT                   of PhiH1_005"
+FT                   /protein_id="QBJ01183.1"
+FT                   /translation="MTDTNSKFHEEAHPEAIQITNQERDYGQWGQCVVDPAKSTGERCT
+FT                   QPAKGSHGKCHTHGGSTTTADENPKQGRGDQDGNDNAVEHGAYRENFIDHLTESEQEMI
+FT                   ESVYGDLETAEDAQDVARFVASILLAQFKRSDFDERFARRFESICDKAGIFPAEELEMT
+FT                   ADVNQTTQMELGDDEKDIARKLLRERHEQAAGESRDE"
+FT   gene            710..2374
+FT                   /gene="terL"
+FT                   /locus_tag="PhiCh1_010"
+FT   CDS             710..2374
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="terL"
+FT                   /locus_tag="PhiCh1_010"
+FT                   /product="terminase large subunit"
+FT                   /note="terminase large subunit TerL; corresponds to phiCh1
+FT                   ORF2 and to Nmag_4252; homolog of PhiH1_010"
+FT                   /protein_id="QBJ01184.1"
+FT                   /translation="MSSEQFVPEEQLSTSEALDHQADRLVEATRDLETKRELLNPFETG
+FT                   DWLTFANELTMNYMAEEMEDDPYYLLDEHHGLWLDKFDSGDRILLCHRDGLKTTITLAY
+FT                   LIAGLEYKSGFRGIWAMNNQIQVGKKADTEFWKMVDRNPWLINLNAPPEKEAVKAKVFA
+FT                   NGSILNAGWLGGGIEGDRAHLLILDDIIKEKGDGDTEDVLDWIEAVCVPMVKDHGRTVV
+FT                   IGTRKRPDDIYTHFRTLEGYEFDEYPAILDYWDQQFSADDDYEVRRPDEDLYTAVDDPW
+FT                   NTGETLQVLWPEARGPRWLADKRSKMADHRFWREYSLVIMGSSGDLIDAKDVRVPAEDG
+FT                   GCSIGDRDPPPKYRAGPGEVVVLSHDPANSPTGDDAAFTVWLLQRDGRRRLLDCHAESG
+FT                   MGPTDIKTQLVEYDRAYDPAIIVIEDNGMQSYVVEDAIEFDSQLGAKVTGLPMTGKKHS
+FT                   LENGIARLRILVENGRILFHRGHQTTEDFITSMQSLERRDGKMHGHTPDYIAAWYMAEK
+FT                   GLRKLEEMGLVDADDTAAHDVDEDDDEESTGGGLYGA"
+FT   gene            2371..2505
+FT                   /locus_tag="PhiCh1_015"
+FT   CDS             2371..2505
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_015"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to Nmag_4253; homolog of PhiH1_015; not
+FT                   annotated in phiCh1"
+FT                   /protein_id="QBJ01185.1"
+FT                   /translation="MILMKRKDDSESDDESRAKYAIVGGESTVDEIRATLDREEDDDD"
+FT   gene            2492..2797
+FT                   /locus_tag="PhiCh1_020"
+FT   CDS             2492..2797
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_020"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF3 and to Nmag_4254"
+FT                   /protein_id="QBJ01186.1"
+FT                   /translation="MMTTEVQSAHCLRRIVVARVAAADLFREDVRVVDGIPDDAEVKST
+FT                   YLDPDTDSIVFIVQSSSFEPVKERATIPRLDLEVEAVEPERQRNAQVINEVERADG"
+FT   gene            2790..2975
+FT                   /locus_tag="PhiCh1_025"
+FT   CDS             2790..2975
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_025"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF4 and to Nmag_4255; homolog
+FT                   of PhiH1_020"
+FT                   /protein_id="QBJ01187.1"
+FT                   /translation="MGETDPPKIWIDHYDLNLGVRGGSQDTIEDVKEVFDEELEKAIER
+FT                   DPKLGEEIPEDSRDFQ"
+FT   gene            2972..3250
+FT                   /locus_tag="PhiCh1_030"
+FT   CDS             2972..3250
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_030"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF5 and to Nmag_4256"
+FT                   /protein_id="QBJ01188.1"
+FT                   /translation="MTQHDHIRADRLRVDYRDSVPDVANTAMIATLEELVDGPLVDVRS
+FT                   GGLLIHEYGAGIDTQLTIYTPPTVDVVDGEDVNEAVAKLTTGGDSAR"
+FT   gene            3247..4794
+FT                   /gene="por"
+FT                   /locus_tag="PhiCh1_035"
+FT   CDS             3247..4794
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="por"
+FT                   /locus_tag="PhiCh1_035"
+FT                   /product="portal protein"
+FT                   /note="portal protein Por; corresponds to phiCh1 ORF6 and
+FT                   to Nmag_4257; homolog of PhiH1_025"
+FT                   /protein_id="QBJ01189.1"
+FT                   /translation="MSSNTDSGLYSDITKSVTEKSAETQQLQEERASRTRGGARRPPFN
+FT                   PVKMAELLEHNETHAKCVHAKSRYVAGFGINIIPHPEAEDPDRDGEQYERVWDFWFGDD
+FT                   SNWQVGPVESERATATNVLQTAWTDYEAIGWLTIEILTQTDGTPTGLAYVPGHTIRKRM
+FT                   DERGFVQLLEEKEKYFGVAGDRYQTNGNGDLDPVFVDADDGSTGTSVSNPANELIFKRN
+FT                   HSPLYPHYGAPDIIPAVKTIRGDSAAQDYNIDFFENDGVPRIAIIVKGAELTEKGREEM
+FT                   RNLIEDNNEDNHRTAFIETEKIVQNEDYLNLADGADRSDVEIRLEPLTVGIDEEASFLE
+FT                   FRGRNEHDILKVHDVPPVIAGVVESGAFSTDAEEQRKEFAEETIQPKQHDFGELLYELV
+FT                   HKQGLDAPDWTIEFELAKPDTKLQDVEIASQRVQAMQGLLTVNELRDEFGFEPFPEEHV
+FT                   YGGETLVAEVTGGSGPGGGIGDQIEQLVEDRADEIIDSYQADLETEQLIEIGANADS"
+FT   gene            4801..5748
+FT                   /gene="gpC"
+FT                   /locus_tag="PhiCh1_040"
+FT   CDS             4801..5748
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="gpC"
+FT                   /locus_tag="PhiCh1_040"
+FT                   /product="head morphogenesis protein"
+FT                   /note="head morphogenesis protein gpC; corresponds to
+FT                   phiCh1 ORF7 and to Nmag_4258; homolog of PhiH1_030"
+FT                   /protein_id="QBJ01190.1"
+FT                   /translation="MSTTSSSSTSRSKLADRREHIRHLHKQDDLVPEEQEAYEEFLDDY
+FT                   VEGLQPLEDEIEQWLQSASEEDLSSLESIREGINGLIEDGDYTDDFEQVFREGGERSAQ
+FT                   AGRQLADRRYNLGVATDVVPEAALESIDDWVDEAAGSTLETITEDSTSWLRGAHEEGLS
+FT                   IPEIQGQINEDLFEGRLEDHVAERAARTGTISTSNLGVHSSFEESDLVIGEEWIAIGDQ
+FT                   RTRDDHDDADGQIVAVDESFLVGGEELDHPGDPSAPLEQIVNCRCTVVAVFADDLTEDE
+FT                   IEALEAGERIQKATVDETVKILDDGSHEPLAAGV"
+FT   gene            5827..7713
+FT                   /gene="gpB"
+FT                   /locus_tag="PhiCh1_045"
+FT   CDS             5827..7713
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="gpB"
+FT                   /locus_tag="PhiCh1_045"
+FT                   /product="prohead protease"
+FT                   /note="prohead protease gpB; corresponds to Nmag_4259;
+FT                   homolog of PhiH1_040; fusion of phiCh1 ORF8 and phiCh1 ORF9
+FT                   by genome sequence correction"
+FT                   /protein_id="QBJ01191.1"
+FT                   /translation="MSNNEKRRFTKHVAIKTIDEEEQTATGIVLTPYELDHQLDFVYPD
+FT                   GVQAMYNPAPEDGVLHAAFPEDAAELEFNEVLEEDQEIDGEEFEEGDWVVRRKYHDDEL
+FT                   WSFVGEVLHGFSIGGDVSKADEFESIDDLPDEVEIPDSVDPDAVDDEHWPPAGIRNGAT
+FT                   SEISDVDIPAVTSAMYATKGRDLEKNLYESAEDRDDFVDRMTRRGAPEEGAGGLYDYLD
+FT                   QLEKTAPDGAVTKFFADAEKFDFDSCVESVMEDGHTQEEAEEICGAQYHDTKMEHSNTP
+FT                   DEEPDDATKWQMFKSWLAGTGGPFDAAESDDGVSPAEGQSEVSAGTFSKAIDVARDVTK
+FT                   EGRTLNATNREALMAGHDAIEMALESDVDFETNRFTDDDSTEFDIVQYGSSGESDDETE
+FT                   KSRPVEKLTEEQGELVLAAIQRFVDNQGEAAFSEFRSWVWSTDILDDDTAFAADEAAYQ
+FT                   YREWDREQREQTSVTEDFLDWVQDESDTDTEITMSKDDNTDSETDKAMEDAPEWGQAIY
+FT                   EEQQKNSDRIDELSKAIDDEGDADGGETSESDGDSSGDGEGETSKSADGETAPEWVQPI
+FT                   QDGIEKNAENIQAVAQASGHSQQLDYDGEAGTEKNADEEPDDGEVKKAFLGL"
+FT   misc_feature    7442..7741
+FT                   /note="corresponds to phiCh1 ORF10, which is spurious"
+FT   gene            7757..8722
+FT                   /gene="gpE"
+FT                   /locus_tag="PhiCh1_050"
+FT   CDS             7757..8722
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="gpE"
+FT                   /locus_tag="PhiCh1_050"
+FT                   /product="major capsid protein"
+FT                   /note="major capsid protein gpE; corresponds to phiCh1
+FT                   ORF11 and to Nmag_4260; homolog of PhiH1_045"
+FT                   /protein_id="QBJ01192.1"
+FT                   /translation="MASRTINNDLSRITEKNALTVDDLDAGGTLPDPLWDEFWTDMIEE
+FT                   TPLLDAIRTETVGAKKTRIPTLNIGERHRRPQDEGEWNENESDVSTGTIDISTEKATVA
+FT                   WDLPREVVQENPEGEALADRILNLMTDAWSADVEDLAANGDEDAEDSFENQNDGFITVA
+FT                   EGDVETIDAADDILDNDLVIRTIAGLDSKYRARMNPALIVSEDQLLSYHYTLTDRDTPL
+FT                   GDNVIMGEADVNPFSFPIIGSGLWPDDKAMFTDPQNLIYALYRDLEIDVLTESDKVSER
+FT                   DLHARYFMRGDDDFAIENTEAVVLAEGLGDPLEHLEEETS"
+FT   gene            8732..9175
+FT                   /locus_tag="PhiCh1_055"
+FT   CDS             8732..9175
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_055"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF12 and to Nmag_4261;
+FT                   homolog of PhiH1_050"
+FT                   /protein_id="QBJ01193.1"
+FT                   /translation="MAERTIRHRDDGPPGFSRYADSISTEPGDEISVDGELAKYLVDEK
+FT                   RYFEYVDDGPTADSVDSDEEAEAEDDPDDADDSEDSGDEDGGDEGSYEFDEDSWFEDHD
+FT                   DYESRIERVESGDVDDHLDTIADIESSEQVKDSIGVRRAEVEG"
+FT   gene            9182..9778
+FT                   /gene="ada"
+FT                   /locus_tag="PhiCh1_060"
+FT   CDS             9182..9778
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="ada"
+FT                   /locus_tag="PhiCh1_060"
+FT                   /product="head-tail adaptor protein"
+FT                   /note="head-tail adaptor protein Ada; corresponds to phiCh1
+FT                   ORF13 and to Nmag_4262; homolog of PhiH1_055"
+FT                   /protein_id="QBJ01194.1"
+FT                   /translation="MPLEPSDVESELPFDAKAFGWSEEKFKSELETYIAAATETVEKWI
+FT                   NTTLEPETVTRDLSRPSHVDGHDLPMPSRPVQDVVSVTIDTDRAMGRDVDEDDYWVEET
+FT                   HLELKPGADRKSWPTDRRSITVEWEYGYEEVPESPKKAIIRLVRARLRAINAEGISSDT
+FT                   IMGDSISYDPEDEVVLAARKDVAGFEAPSYYGGVE"
+FT   gene            9775..10155
+FT                   /gene="hco"
+FT                   /locus_tag="PhiCh1_065"
+FT   CDS             9775..10155
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="hco"
+FT                   /locus_tag="PhiCh1_065"
+FT                   /product="head closure protein, type 1"
+FT                   /note="head closure protein Hco, type 1; corresponds to
+FT                   phiCh1 ORF14 and to Nmag_4263; homolog of PhiH1_060"
+FT                   /protein_id="QBJ01195.1"
+FT                   /translation="MSPLPSSAAAVRQRLHMHGVDISIQHYEVGEGGSRGSPAEESATD
+FT                   DVKAYVQDKSASTSLSELLGQEMSIDIVFTVLADDVDEDLRDGGHDAASTVTYHGRSYV
+FT                   VEHAEDEGGATITLHCSTREDS"
+FT   gene            10157..10438
+FT                   /locus_tag="PhiCh1_070"
+FT   CDS             10157..10438
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_070"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF15 and to Nmag_4264;
+FT                   homolog of PhiH1_065"
+FT                   /protein_id="QBJ01196.1"
+FT                   /translation="MIDNYEDRNREQTLNAAGDFSGDRLEEFLEYEREHKNRKTVIEPL
+FT                   ERELLTVTTTGRNYVAGLWFDSMSEEKVVRRTTRVEQAIEREELREVD"
+FT   gene            10438..10875
+FT                   /gene="nep"
+FT                   /locus_tag="PhiCh1_075"
+FT   CDS             10438..10875
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="nep"
+FT                   /locus_tag="PhiCh1_075"
+FT                   /product="putative neck protein, type 1"
+FT                   /note="putative neck protein Nep, type 1; corresponds to
+FT                   phiCh1 ORF16 and to Nmag_4265; homolog of PhiH1_070"
+FT                   /protein_id="QBJ01197.1"
+FT                   /translation="MVEDENNIPEAREAIQDGLTDGLERLHTITLRELITNMSDGQDAL
+FT                   GNPWEPLKESTIRAKGSDTPLIDNSRLLTDINAASMMDRANRMAVIGTNLDYAEHHEFG
+FT                   APEAGIPARPIFGPAGAYASQQAPDVIGDEIDTNLEGAVID"
+FT   gene            10892..11488
+FT                   /gene="tco"
+FT                   /locus_tag="PhiCh1_080"
+FT   CDS             10892..11488
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="tco"
+FT                   /locus_tag="PhiCh1_080"
+FT                   /product="tail completion protein, type 1"
+FT                   /note="tail completion protein Tco, type 1; corresponds to
+FT                   phiCh1 ORF17 and to Nmag_4266; homolog of PhiH1_075"
+FT                   /protein_id="QBJ01198.1"
+FT                   /translation="MLTTAEEDRFEEALPLEGLEVKWDGESYEYDLDPFWTGGDAADEE
+FT                   PTESVEYPAIVFDWETQNQPELGRQPLNDLHSIDVSSDESVLTETKTAEVSDDLAITIA
+FT                   VEAAWDDNGVPPQARVTQLTKQIWRFLRFELDLNSEGENEERPMNVEVPDESSVEPVRV
+FT                   EHTIRAPWQIRFHHAERHEEEHNTVEEFEINITIE"
+FT   gene            11525..12805
+FT                   /gene="cp67"
+FT                   /locus_tag="PhiCh1_085"
+FT   CDS             11525..12805
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="cp67"
+FT                   /locus_tag="PhiCh1_085"
+FT                   /product="tail sheath protein"
+FT                   /note="tail sheath protein CP67; corresponds to phiCh1
+FT                   ORF18 and to Nmag_4267; homolog of PhiH1_080"
+FT                   /protein_id="QBJ01199.1"
+FT                   /translation="MPKQIVEIELTAEIADRPQETFTDAAIVGTAEEEPPDAEFGEVNQ
+FT                   YSTSTSVGDDYGEDSDVYTASEAIEEMGAEQWRVMVLEATEVTEEELSDGDTIDKVPIL
+FT                   GNHEVESPDGDIEFTTDDDPDVEDFDAEIVINSATGDVATSEDSIELTYFHADWSQLDE
+FT                   FPSDVNNFAVADRRFDLKGVGVLDETHSWASDEDMGMIANGVNVDDYDSVDEAMDVAHE
+FT                   VAGYVPSGDLMMIVDASDDDLAAYQLGKFAVSEPWYNPLWNELPAGETVSKNVGDPEEQ
+FT                   GTFEGGDEAEGEGPVNVLIDVSDANRVSNAVTTAGADSDTSFFDIRRTKVYTAEMLELD
+FT                   LESLQVSDDDVPFTEDGQAMIEDAIKGTMSGLTGSVGQPLAEYEVDVPEWDDDDVDRVN
+FT                   RNWGGIDLDARLAQRAHTFSLGLNVSV"
+FT   gene            12822..13214
+FT                   /gene="gpA"
+FT                   /locus_tag="PhiCh1_090"
+FT   CDS             12822..13214
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="gpA"
+FT                   /locus_tag="PhiCh1_090"
+FT                   /product="capsid protein"
+FT                   /note="capsid protein gpA/H; corresponds to phiCh1 ORF19
+FT                   and to Nmag_4268; homolog of PhiH1_085"
+FT                   /protein_id="QBJ01200.1"
+FT                   /translation="MGTQYDGSDVSVIFAGMRIEQLQSVSTPDVSYPGEYDRTLGDDDD
+FT                   VFVTDDTPEELEGELVVAPTSGSIDDLEQHLHDRTIDTLTIRFPPDHSQSSETYSGTAL
+FT                   TERSDEDFDGDDSDDRTYSFVSEDIE"
+FT   gene            13214..13594
+FT                   /locus_tag="PhiCh1_095"
+FT   CDS             13214..13594
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_095"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF20 and to Nmag_4269;
+FT                   homolog of PhiH1_090"
+FT                   /protein_id="QBJ01201.1"
+FT                   /translation="MTDRDITEYEEQEWPIEEGETQSEIEYEFLNGGSMKYLVQDPETE
+FT                   TIMSFIAPQMGEEEKTQSERQFELNRDSIVAPELTMERWRDLRTADQIGLTNEVSEAIG
+FT                   LDRVLGNAVDSRDHLPDELLPE"
+FT   gene            13855..14694
+FT                   /locus_tag="PhiCh1_100"
+FT   CDS             13855..14694
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_100"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF21 and to Nmag_4270;
+FT                   contains a CxxC motif in a domain which is also found in
+FT                   HNH endonuclease"
+FT                   /protein_id="QBJ01202.1"
+FT                   /translation="MVSGDEHECPECGKAFDSHQSMSSHHAGLHGGPPFTSTCSAKYCN
+FT                   AEYSTPPSQSNKDNKYCSKECRTSGAWRDEEVMEALYLLRGMSVSQIGDYLGCSGQTVW
+FT                   RWLDEHGIEARQASEPKYPRISSKDWLVKTYVEKNMTSGEIAEWVGCSSGVVWEWCQRH
+FT                   GIDCQENGSWPRGEDHHLYGGGDIKYGEGWNKKKKERVRERDGRECQHCGRGEQEHVKL
+FT                   FGTKHIVHHVVPARSIEDAQERNAMKNLVTLCRGDCHKRWEEMAPLRPITSRVEVRG"
+FT   gene            15278..17500
+FT                   /gene="tpm"
+FT                   /locus_tag="PhiCh1_105"
+FT   CDS             15278..17500
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="tpm"
+FT                   /locus_tag="PhiCh1_105"
+FT                   /product="tape-measure tail protein"
+FT                   /note="tape-measure tail protein Tpm; corresponds to
+FT                   Nmag_4272; homolog of PhiH1_100; fusion of phiCh1 ORF22 and
+FT                   phiCh1 ORF23 by genome sequence correction"
+FT                   /protein_id="QBJ01203.1"
+FT                   /translation="MIPGGGGGNIRRLATVMTAQDNASETLDDVEEKGGETAESMEEVE
+FT                   ESSEGVSRGFDSIDRAGVALSGTLAGTGVALQGVLDRTSELRGSLALTAGMMDDVDGSV
+FT                   DALAASMSDATFPTQDVVLTMEELRHLGVETEEEMENVALAADQLADATGSSASVIAGS
+FT                   LAPSIQALDGDLDALEDRSDAFTLALNDSRLEAQDLNSVVQRSSQELQELGLTSDETAG
+FT                   LISMYAQANQVEGTQAARQFREAIRESNGDLNELKDELNLSEDALDEWNETVMENEGET
+FT                   ERLADEYAETKTVMDELRVVASDLQLRFSGVLQPLSALPPVLFAAGSAGLFYSTVLQSS
+FT                   AVPATVTSTAATTANTAALTGKTAALRTASGAQTLMTMSTASLATATRAKTASMWASVT
+FT                   GMGASAVAALSAASAKGILTAATGGLTAGVLALNAALGPIGAAFLLVGAATAALIGLWK
+FT                   TDLFGAGDAAAGVLGRIRSGASTLVAIVQELIGILYELGRIALTLPVMALLAPFAAALN
+FT                   FLEDPSRWLQAGREIPSMIASGISSAASAPIDAVSNVASGIRDRLPFSPALAGPLQDLD
+FT                   RVGPALVGTITDGIRDRASAPVDAVTDVASGVRDRLPFSPALAGPLQDVDEVGGSLMGT
+FT                   IAGDVEGEGGTLSSALESTLGQTPLGEAAGSAAGAVGDALGGGGGGGGGEHIEITIEEI
+FT                   NAGGEGSSEENIRSAGEDLAGRVIEEISEHLARENNYEPNGSANGS"
+FT   gene            17497..18051
+FT                   /locus_tag="PhiCh1_110"
+FT   CDS             17497..18051
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_110"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF24 and to Nmag_4273;
+FT                   homolog of PhiH1_105"
+FT                   /protein_id="QBJ01204.1"
+FT                   /translation="MTTVTIEDIVFDGIPSSDIDVEGVTSVDDSGAWDAPEQAVEKGFD
+FT                   YSSYNQPEPITASFEAWATPEHRATLVELRDATEPFAASVDQLVLGSAKLTQLDTNREV
+FT                   SSASHYRVTVEFEEVREAELETAEMSVESDSGDLSSSSEDADVSYEQPEEDDTGTSEET
+FT                   TDDGGIVGALSSVREGLSGVL"
+FT   gene            18052..18396
+FT                   /locus_tag="PhiCh1_115"
+FT   CDS             18052..18396
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_115"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF25 and to Nmag_4274;
+FT                   homolog of PhiH1_110"
+FT                   /protein_id="QBJ01205.1"
+FT                   /translation="MGEIIPIPERRARDKRPINIEFQPRSMPGQRFAIRMDWNDVAGEW
+FT                   TMEIEHVTREHRITKSVAKAFRAYEYEEFVYFVFIDPSGNETEITPENLGDEIRLFAFP
+FT                   GEAGQPPDEW"
+FT   gene            18399..19241
+FT                   /locus_tag="PhiCh1_120"
+FT   CDS             18399..19241
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_120"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to Nmag_4275; homolog of PhiH1_115;
+FT                   fusion of phiCh1 ORF26 and phiCh1 ORF27 by genome sequence
+FT                   correction"
+FT                   /protein_id="QBJ01206.1"
+FT                   /translation="MVFQQHRSVQAGDVNLDGLDLDISVTKSSDDPLEFEVSTWNLSEA
+FT                   SWRKIDEGDQCRIELGWADGEIATVCFGEITSTKPEMDGGDLRYQIKGIDESEGATYAR
+FT                   PDEDWGQKSWVNTSPDEIASDIFQSCGLTAAVEPVGGNIQGVWSATPDKRARDLVDELL
+FT                   EYAVEISGEAWEWYAEQGRGYFQPRNQETVDAPELSYDSSLVSINEASSEDDDAELELD
+FT                   FETMLDPRIRKGAAVYVDVDQHRGGYRVDSFEFSSDTTSGTHIVNGTLIPIDADYSVA"
+FT   gene            19247..19807
+FT                   /locus_tag="PhiCh1_125"
+FT   CDS             19247..19807
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_125"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF28 and to Nmag_4276;
+FT                   homolog of PhiH1_125"
+FT                   /protein_id="QBJ01207.1"
+FT                   /translation="MPSNLISELKGIVRSEVQSAQTVTFVRVEEVDDDRRATVSLKRDS
+FT                   DLLIDNVPIASTWAGDGFGVVIPVDRGVEGLVLHPKEPLEKQIQQRGEQEPGSERRFEL
+FT                   EDAVFFPQLWLDEDDVPDHEDDEFVVKHESGSEFRLDDDGVHVEPELFVDGIAFTEHSH
+FT                   DFDYDGGGEDSSSLSGTTEAPDE"
+FT   gene            19831..20187
+FT                   /locus_tag="PhiCh1_130"
+FT   CDS             19831..20187
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_130"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF29 and to Nmag_4277;
+FT                   homolog of PhiH1_140"
+FT                   /protein_id="QBJ01208.1"
+FT                   /translation="MKFKRTLAQTAEGDFRVEGGNLVFTGGAAGVEQELRTMLATIEGE
+FT                   DPFNPDHGLAILEAAGADPAIIERGIRSALEDDDRVSSVDAVDTDDAGANRKTTVDIDV
+FT                   TLVDGTSVGFDLEV"
+FT   gene            20194..21465
+FT                   /gene="bpj"
+FT                   /locus_tag="PhiCh1_135"
+FT   CDS             20194..21465
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="bpj"
+FT                   /locus_tag="PhiCh1_135"
+FT                   /product="baseplate J family protein"
+FT                   /note="baseplate J family protein Bpj; corresponds to
+FT                   phiCh1 ORF30 and to Nmag_4278; homolog of PhiH1_145"
+FT                   /protein_id="QBJ01209.1"
+FT                   /translation="MSENSDYGVQDDGTFRRKHVDVIRDDAERRFKNTAGEDIEFNPSS
+FT                   GQQAIIDILTQEAAVQWMALEEVYYAGFFEDASGEALDKQLALAGFSRQPSQSATGEVV
+FT                   FKRDDPADDDITIDEETEVTTRRSDTRPAIPFETTEEVILQEGQTEVTASIEARKAWQV
+FT                   DLDEEWLGEETNIPAGEITEFGDPVAGVDDVENELPTGDEDEGFQPGRDRESDAEFRLR
+FT                   YQNSLAEGGTSTAPAMESSVYNYDEDIIDVRIDEVRDEDEGFGPRVTVFAPEIEDDDIA
+FT                   QAILEARGAGTESIGEESGTAEFDAGDESTEHFDRAEEITIYVDAELTTSDSFSDDDID
+FT                   TITDRIIQYIGGEAGDDIVYPGLEIGDEVIYDQIFRRVMETSGVIEADLEVGTDEEDLD
+FT                   TENIDIDDREAAMTGLDEVSIDES"
+FT   gene            21455..22063
+FT                   /locus_tag="PhiCh1_140"
+FT   CDS             21455..22063
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_140"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF31 and to Nmag_4279;
+FT                   homolog of PhiH1_150"
+FT                   /protein_id="QBJ01210.1"
+FT                   /translation="MSREDVRERLERTLNSPYPTDGDIWNAILETFAAEFAELEEAREQ
+FT                   VLESKFVTDATGEQLDRLGTIFDLDRQRGEPDSNYRARLQVALRAQLTSATVDEIRDVI
+FT                   AVLLDIDAADVEIEEPYDREPMHLNVSVDGEALDDAGIGDDEFISVVDTVVAIGVSVGL
+FT                   LIEFDVEEIVGVQDDVSAEIDTVQTAYVDDARTNIDTLS"
+FT   gene            22067..22651
+FT                   /locus_tag="PhiCh1_145"
+FT   CDS             22067..22651
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_145"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF32 and to Nmag_4280"
+FT                   /protein_id="QBJ01211.1"
+FT                   /translation="MTSVTASETVSLADNVQVDLYDADELANRIPGWEAMTDRERLGAL
+FT                   EDVDPVGEFSEHNVTTLEYRTHLAELLNPDVDVDPVEATHLAFGDDDTPPDEDDEELEG
+FT                   ENYRTELSDIIQEVERYRTITLLGSDDAVGDELIESGLVTAADPGDAGDMLVNRVILDD
+FT                   DRLRPKTTDHAVRIRVDISYHDVADETVVSS"
+FT   gene            22648..23256
+FT                   /locus_tag="PhiCh1_150"
+FT   CDS             22648..23256
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_150"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF33 and to Nmag_4281"
+FT                   /protein_id="QBJ01212.1"
+FT                   /translation="MTERVLPGASGSNLYGIEMAEAWGQYSDGWIVPASDPTKSAQRYE
+FT                   DIDETVFTAFEVTYSSEDLTVEIGPGEAFVDGLVMLDEPREITLEANTQDQEVAIGWDP
+FT                   DAIYHSDEHDTRDEADRVLVDLASEIDDDDPSVVIWSFDTDGSGVVEARNERYIGPVVK
+FT                   AGKVTVETIEDLPSAEDFPLGTEFFVEEENQSYEVTQDE"
+FT   gene            23249..24619
+FT                   /locus_tag="PhiCh1_155"
+FT   CDS             23249..24619
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_155"
+FT                   /product="repeat-containing tail fiber protein"
+FT                   /note="corresponds to phiCh1 ORF34 and to
+FT                   Nmag_4286/Nmag_4282; homolog of PhiH1_165 and of PhiH1_185"
+FT                   /protein_id="QBJ01213.1"
+FT                   /translation="MSKIWEPSGGVDDKVLFGMYPEDLDAQDRQELYAEAFEDIVKSYS
+FT                   TMATACRYQAIIDEMIDDETRAQLIADTQAAMEAVSIARTAMDSISESSTAMDPISESI
+FT                   VAMEAVIDSDDIALPAVVESQIAMDAVSTSQTAMDAVSDSQTAMDAVSDSQTAMDAVSV
+FT                   SQTAMDAVSDSQTAMDAVSDSQTAMDAVSDSQTAMDAVSVSTVAMEAVAASALAMDAVI
+FT                   ASDDIALPTIVEEEIAMDAVSTSDTAMDAVSTSETAMDAVGGSQTAMDAVAGSQTAMDA
+FT                   VAASIMPRSAVFDSDYAVSSLWAASPGARTILEEGGSPTLPHTYDDSRSGSSGTHLRIE
+FT                   DGSDISLPGNATSALEIEVVDSDDPYRRGLTLELDLSNATTLEFEMRADSVPDSRIDHG
+FT                   VEVDGSTLFSNSGNSSWTNRSVDVSEYSGTHDVLFFTDTDSRTGGDWMTYFSNINLI"
+FT   misc_feature    23477..27031
+FT                   /note="invertible segment involved in tail fiber protein
+FT                   switching; inversion leads to activation of PhiCh1_175 with
+FT                   simultaneous inactivation of PhiCh1_155"
+FT   gene            24624..24911
+FT                   /locus_tag="PhiCh1_160"
+FT   CDS             24624..24911
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_160"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to Nmag_4285; homolog of PhiH1_170; not
+FT                   annotated in phiCh1"
+FT                   /protein_id="QBJ01214.1"
+FT                   /translation="MQLIFTPDDSGTNRASGYATVPYSSDSEEETVAEITEDVLASVFQ
+FT                   EAQDNGATLKGADESIDTAVDDPLSYRDYLILRDGEIVFDESYSRNQNEG"
+FT   gene            complement(24922..25596)
+FT                   /gene="int1"
+FT                   /locus_tag="PhiCh1_165"
+FT   CDS             complement(24922..25596)
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="int1"
+FT                   /locus_tag="PhiCh1_165"
+FT                   /product="tyrosine integrase/recombinase"
+FT                   /note="tyrosine integrase/recombinase Int1; corresponds to
+FT                   phiCh1 ORF35 and to Nmag_4284; homolog of PhiH1_175"
+FT                   /protein_id="QBJ01215.1"
+FT                   /translation="MSKERHAHEDALNETEFQKLLDGAHLLTPPANLEATFVITMSGKL
+FT                   GMRIGEIAHMKRTWVKPDQGLIEVPSHEPCEKGRDGGLCGYCRRQANRTYQNDPENRDL
+FT                   DELLKSYWEPKTEAAERAVPYEFDEDVEDVVSSFFEYYYEVPLSVNTCRRRVKDAAEAS
+FT                   DLNRRVYPHALRATAASTHAYEGLNIASMKAMMGWAKLSTAEKYIRISGGRTKRALLEI
+FT                   YG"
+FT   gene            complement(25634..25915)
+FT                   /locus_tag="PhiCh1_170"
+FT   CDS             complement(25634..25915)
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_170"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to Nmag_4283; homolog of PhiH1_180; not
+FT                   annotated in phiCh1"
+FT                   /protein_id="QBJ01216.1"
+FT                   /translation="MELIFTPEDSGTKRASGYATVPYSSDAEDETVVETTKSELAAIFE
+FT                   AAKSDGKTLSSVDEGIGAAVEDPLPYRDFLILKNGEIVFDEGYTRSNE"
+FT   gene            complement(25919..27205)
+FT                   /locus_tag="PhiCh1_175"
+FT   CDS             complement(25919..27205)
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_175"
+FT                   /product="repeat-containing tail fiber protein"
+FT                   /note="corresponds to phiCh1 ORF36 and to Nmag_4282;
+FT                   homolog of PhiH1_165 and of PhiH1_185"
+FT                   /protein_id="QBJ01217.1"
+FT                   /translation="MDPISVSDVALDTIWESEIAWQIVRDVAMAVGKFVAGLVELDGAD
+FT                   YADIGEVADDAAAMDLVSVDQRAMDAVSASAVAMEAVAASTIAMDAAIASEDIALPTIV
+FT                   ETETAMNEVSLSDLALDSLWESDVAWGMIRDLSMAVGKFAVGRAGLSGYDYADIDDVAS
+FT                   SQTAMDAVSTSETAMDAVSTSETAMDAVSTSETAMDAVSTSETAMDAVSASTLAMDAIW
+FT                   DSQLAWDTVAAVSMAVGKFVAARAGLEGSNYADIDAVASDQTAMDSVAASIIARTAAIS
+FT                   SAYTYDTIWSTDLASGTIWDTGDFANDPTNSGWWSQSFDLSNSSTFSVYTRADNGSPDL
+FT                   KIKIGGSEVFGTDSDHSSWTERSFDVSSYSGETTIELGLEGYDNSPDDYISDRYNGRSG
+FT                   GESLYIRMETLGSVGSSSEYAEFSDMKLE"
+FT   gene            27239..27964
+FT                   /locus_tag="PhiCh1_180"
+FT   CDS             27239..27964
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_180"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF37 and to Nmag_4287"
+FT                   /protein_id="QBJ01218.1"
+FT                   /translation="MSYNSIDVQTAVAQTGTALDEISRSEPLTIAAPLFIILATYVLFY
+FT                   EGLLWSIGTDGWRGIRSQLPLLDKLAESAGAYTHYEIDPERETVGVLELDVDEAIDVFQ
+FT                   EDHGYLDGPVAAHKGLPDGRQEAASLVKYGFEKYDIWFDAEVIEGMPPGIRFLVILLIP
+FT                   RQRHATLFPGEEPGETLVTAHQEYSAHSVFFAYWHLIAKGMDIDRGVREVTDELKEHDR
+FT                   FEATSRAKDLWLEWLKAPQ"
+FT   gene            complement(27974..28249)
+FT                   /locus_tag="PhiCh1_185"
+FT   CDS             complement(27974..28249)
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_185"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF38 and to Nmag_4288"
+FT                   /protein_id="QBJ01219.1"
+FT                   /translation="MTGGDVRGDVEQAEDGLFQPKYRDEDVIDALVEAHPEPLTVGEVA
+FT                   DGVGCSETTAHNRLHGLFDDEYPGLETKKVGANARVWWVNPDQLPE"
+FT   gene            complement(28296..28580)
+FT                   /locus_tag="PhiCh1_190"
+FT   CDS             complement(28296..28580)
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_190"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF39 and to Nmag_4289;
+FT                   homolog of PhiH1_220"
+FT                   /protein_id="QBJ01220.1"
+FT                   /translation="MMKATEIHYNTDTGVVTAHQNGDRKRTVTENCTGVDLVAGDDVSV
+FT                   RIDAKMVHVETLTEEPLLVREKKDGGELEVLTTRRPDRETPVHESKPRR"
+FT   gene            complement(28577..29152)
+FT                   /locus_tag="PhiCh1_195"
+FT   CDS             complement(28577..29152)
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_195"
+FT                   /product="putative glutaminase"
+FT                   /note="corresponds to phiCh1 ORF40 and to Nmag_4290"
+FT                   /protein_id="QBJ01221.1"
+FT                   /translation="MCWMSIYRGDDAPERAVAACQQNEQRSGGHSWGVAVAVDGELHRE
+FT                   RGVGAMPIDAVDALPEADVALGHTRFATRGEISLRNAHPFEVRDRDGEPVAMLAHNGTW
+FT                   LSAPDVDDRADSWYMARLMESIYCAEPARPFEEIVRATGETTGETMTVLHRDGSAYTYS
+FT                   GRYEITEDDHCVRSSGGTPIPDGVVTKI"
+FT   gene            complement(29157..30224)
+FT                   /locus_tag="PhiCh1_200"
+FT   CDS             complement(29157..30224)
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_200"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to Nmag_4291; fusion of phiCh1 ORF41 and
+FT                   phiCh1 ORF42 by genome sequence correction"
+FT                   /protein_id="QBJ01222.1"
+FT                   /translation="MKTDGRSPFTHGMEIEQFPGPLPSDVRSYTMNNNRGSLDGWHNDA
+FT                   SGPRETSIGAYKNCKTILNRFYKDTRDEDITWDWHGANNGAGAGSHVHLCVAGDVFDDE
+FT                   ITAWTISYNTVAEIFPFLAPYFCHDWENGFREGTTYRRSELNVEHWADGQTTRLSQDSV
+FT                   RDRVANPRSYRREYSSVTFNPAQASGKPLTIELRANDAHPAMALNGLLTLRRVTGRAIE
+FT                   AGWSPKLENHRRTLERVYEKIYQRATDVGLMTAMQEPIEGGITFQEGRGIPGVDQREFE
+FT                   SAWDVLRAIQVAYPQTPNTWRCRAYNLVRAGRDEYSPANNVDALWNIDAEQGEFRWTNG
+FT                   PRDHTSTADTAEEEA"
+FT   gene            30414..30578
+FT                   /locus_tag="PhiCh1_205"
+FT   CDS             30414..30578
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_205"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF43 and to Nmag_4292;
+FT                   homolog of PhiH1_230"
+FT                   /protein_id="QBJ01223.1"
+FT                   /translation="MAIVTNRSNMEPTSTGGDGSDGEDDVPLGTFLYEALPDSEIDSVE
+FT                   SVRELRERE"
+FT   gene            30575..30970
+FT                   /locus_tag="PhiCh1_210"
+FT   CDS             30575..30970
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_210"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF44 and to Nmag_4293;
+FT                   homolog of PhiH1_235"
+FT                   /protein_id="QBJ01224.1"
+FT                   /translation="MTLFVDTNILIAATVGEPERGEVARDLLDADYEFATTLLNVMEYR
+FT                   TVLTKKKKFEQERVEELIDGLFDRMDVYGPESSDLLEAYAIQRETLLYTMDTVILATSK
+FT                   EVGGPLVTFDGELLDNGAISPEEVLES"
+FT   gene            complement(30967..31566)
+FT                   /gene="int2"
+FT                   /locus_tag="PhiCh1_215"
+FT   CDS             complement(30967..31566)
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="int2"
+FT                   /locus_tag="PhiCh1_215"
+FT                   /product="tyrosine integrase/recombinase"
+FT                   /note="tyrosine integrase/recombinase Int2; corresponds to
+FT                   phiCh1 ORF45 and to Nmag_4294; homolog of PhiH1_240"
+FT                   /protein_id="QBJ01225.1"
+FT                   /translation="MSNADEVHWLKPDQVEAMRAAVLEGSHPERDNAILTLLYDTGLRR
+FT                   AELSGVDRAMLDVDDELLRIPSRIQKGYPNDRDPRPATFELDRGENLRTIATLNAYLEV
+FT                   RDDVDALFPSQMSTRMSPKGVNDVVKRAARRADIRPFTFEGRGGPDDVSAHTLRHSLAW
+FT                   RMLRVETGNILYDVRNRLRHRSLQTTERTYDHFETI"
+FT   gene            31927..32697
+FT                   /locus_tag="PhiCh1_220"
+FT   CDS             31927..32697
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_220"
+FT                   /product="ParA domain protein"
+FT                   /note="corresponds to phiCh1 ORF46 and to Nmag_4295;
+FT                   homolog of PhiH1_265"
+FT                   /protein_id="QBJ01226.1"
+FT                   /translation="MRIGVTNQKGGAGKTTTTLNVAGALNQLGNDVLVIDLDPQGHATE
+FT                   GLGFEDLYDDPERDSLFDVLPELERMDELEQLVVEHQEVDCVPSHETMINAEDALANVM
+FT                   KREERLEMLLDDADGRWDYVLVDCPPNLGVLTDNAIVATGNVLIPAQAKSTSIRAIELL
+FT                   FKQLRSIESAFGPVDELALVANEVEVDGEADEMMAWFRDVFEDKEDCAVFEVRKRVALQ
+FT                   RAWNNGVSIFEHEEECDMESVYLDVARHLEGFHG"
+FT   gene            32690..33088
+FT                   /locus_tag="PhiCh1_225"
+FT   CDS             32690..33088
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_225"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF47 and to Nmag_4296;
+FT                   homolog of PhiH1_255"
+FT                   /protein_id="QBJ01227.1"
+FT                   /translation="MAEKRDRNPWEDRYDDDEEDAENSETSESSKETKTSDVSEASKSS
+FT                   KTSKKTNTEITSEGSERSGKPTVRERKNVNMYLPEDLVEELQGRFFELEAEWRREHGED
+FT                   LPKNEKFYPAVIQAALEETTVQEQLDLD"
+FT   gene            complement(33248..33586)
+FT                   /locus_tag="PhiCh1_230"
+FT   CDS             complement(33248..33586)
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_230"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to Nmag_4297; homolog of PhiH1_250; not
+FT                   annotated in phiCh1"
+FT                   /protein_id="QBJ01228.1"
+FT                   /translation="MPENDQPTPPEEIPNYVAEGLQRQAVPTLRLIIEYCQDLIAYLEQ
+FT                   PPDPEEIASDDSVVDVEENDSGGTVVIRRVKCGSDCTCNNGNGHGPYKYVVSRDGNGGH
+FT                   NWEYEGPV"
+FT   gene            complement(33669..33926)
+FT                   /gene="repR"
+FT                   /locus_tag="PhiCh1_235"
+FT   CDS             complement(33669..33926)
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="repR"
+FT                   /locus_tag="PhiCh1_235"
+FT                   /product="repressor protein"
+FT                   /note="repressor protein RepR; corresponds to phiCh1 ORF48
+FT                   and to Nmag_4298; homolog of PhiH1_270"
+FT                   /protein_id="QBJ01229.1"
+FT                   /translation="MHREVSWMKPADPYILDFMASHGARMKPASIALNVPYTSNWVGQR
+FT                   CRSLAKHDLLESSGGAYWISERGRRFVAGELKPEDLLEED"
+FT   gene            34484..34837
+FT                   /locus_tag="PhiCh1_240"
+FT   CDS             34484..34837
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_240"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF49; homolog of PhiH1_280;
+FT                   not annotated in plasmid pNMAG03"
+FT                   /protein_id="QBJ01230.1"
+FT                   /translation="MNTPNRHCHRSRSNGRHHLSVVGAMSDARGTVLVPEWHVSAYGLK
+FT                   SLYARLTKNQRRQEPEWLYTLLFLPHRDNVCASVRGVTVSRWGVVLSGRRRFAMSSRTN
+FT                   GSNNDTKRYETAG"
+FT   misc_feature    complement(34613..35047)
+FT                   /note="corresponds to phiCh1 ORF50, which is spurious"
+FT   misc_feature    complement(34645..34905)
+FT                   /note="corresponds to phiCh1 ORF51, which is spurious"
+FT   misc_feature    complement(34731..34976)
+FT                   /note="corresponds to phiCh1 ORF52, which is spurious"
+FT   gene            34794..37580
+FT                   /gene="repH"
+FT                   /locus_tag="PhiCh1_245"
+FT   CDS             34794..37580
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="repH"
+FT                   /locus_tag="PhiCh1_245"
+FT                   /product="plasmid replication protein"
+FT                   /note="plasmid replication protein RepH; corresponds to
+FT                   Nmag_4299; homolog of PhiH1_285; fusion of phiCh1 ORF53 and
+FT                   phiCh1 ORF54 by genome sequence correction"
+FT                   /protein_id="QBJ01231.1"
+FT                   /translation="MAATTTPRDTKPQDDASTGLTLRAQFPAEHDVVVRDASLAPTNLW
+FT                   REIFDPWSEHSKLPGHLVTGVRALAAGRDAGEFHEQLASINALDGVYQSVLEWLATDPN
+FT                   VDVDPEDADTGDRFWYALSVTRSLGTGRPLGLQTEPFDIRSGPLELLRIVGIEPTIAID
+FT                   VDHLWDDQDGRWTSRRSQRESLLTFVGWLSEVADVHLVASPATIAKLRQDHVDDLPESV
+FT                   VESAHPTLTELGLSDIDQEQVEAAIAEIPTNGREWDILRVIEDLGGECRRTQLYNDVRL
+FT                   GGSNGSIRDALSTLRSWTCIFSNGPRNAKVEHLTPTGEAALEVLRARGGRKTELSDFAE
+FT                   SPETQPENRLADAVYSGPSTKAPPDADRPEGEASAGRTSRWSGRVDVDYVPNWSRHHAA
+FT                   VASAPEDGGIGLVDRPMEKRTGRNGDEDGRIPWWGYDEDRDEVAVSYEWHGPRAGMVCN
+FT                   VRALLSDAAFREIFTVEAFDGEAGNLSGLLEGNRWALRSLRQLGYLKDGMSASEYRDAL
+FT                   IDARDDFVELTNDIEREKDQPELYRSILSLGHGLSTIAADLYDILGIRVVREISIPHFN
+FT                   RDYWGRSKRVRGLLKFLAMRMTQSSRYGQYSAWRVLCEPRTEKRQVIGDGPDVDAADPR
+FT                   GTVQGSWVLVGKGLSKLRPYLEHFDREEIDLQEEEPGFQPFTLDFVLDERRRTPIERAA
+FT                   KRMLRQRGLKPTEDAIAILEAFCGDAYDATEAIAALEGEPVPRHVRINELKYGLSQLDV
+FT                   DRIMPELAPTKRKTLKALLCADDALSQSEIAERGGFSTRSFRDHRDELGAFDIIEKTDD
+FT                   GKYRLTISYRGEKNRVPALVEDSLSTIQDVLWEATFDLIDDAERFGDPDDAQLEALRWP
+FT                   PDFDELGRRWPMMDAWISIAAALAKSPHPDPDVITVGKIPEQTSIQEPVTAPTAGAD"
+FT   gene            complement(37692..37919)
+FT                   /gene="imm"
+FT                   /locus_tag="PhiCh1_250"
+FT   CDS             complement(37692..37919)
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="imm"
+FT                   /locus_tag="PhiCh1_250"
+FT                   /product="putative immunity protein"
+FT                   /note="putative immunity protein Imm; corresponds to phiCh1
+FT                   ORF55 and to Nmag_4300; homolog of PhiH1_290"
+FT                   /protein_id="QBJ01232.1"
+FT                   /translation="MPDRNEETGQFESAVDETDIEDLFDSREPRSTREVANTLDISRSR
+FT                   AYELLQEAEANGVIASKKFEELAAVIWYRE"
+FT   gene            38162..38683
+FT                   /locus_tag="PhiCh1_255"
+FT   CDS             38162..38683
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_255"
+FT                   /product="transcriptional regulator, PadR-like family"
+FT                   /note="corresponds to phiCh1 ORF56 and to Nmag_4301;
+FT                   homolog of PhiH1_295"
+FT                   /protein_id="QBJ01233.1"
+FT                   /translation="MRENNPNTVKLNEQRQSNLYGEVQNGRAVVRCGDCGTVFSATDAE
+FT                   THQCTEPEYIATDGGVNFQRDLTGFQRDIMFCLRRIERGKATEDQPYGLGIKRELERTR
+FT                   DVDVVNHGRLYPNLDELVEIGLIEKSMVDRRTNEYSTTNTGQQLVDDYSSWVLETVAER
+FT                   LPAAEAGGQQ"
+FT   gene            38796..39236
+FT                   /locus_tag="PhiCh1_260"
+FT   CDS             38796..39236
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_260"
+FT                   /product="putative HNH endonuclease"
+FT                   /note="corresponds to phiCh1 ORF57 and to Nmag_4302"
+FT                   /protein_id="QBJ01234.1"
+FT                   /translation="MTHDDLRALVLDKYGCECIVCGRSPEKWLESEDLDRSQDKISIHH
+FT                   VNGDDSDDRLENLIPVCQSCHTHIHRVDKPPYRKWHRQLPIEARHAWNQHHAEYYEGDR
+FT                   ISREEAERQFGSEGGDPESLKYKAREGDDAATQTAVKGCQGR"
+FT   gene            39233..39862
+FT                   /locus_tag="PhiCh1_265"
+FT   CDS             39233..39862
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_265"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF58 and to Nmag_4303;
+FT                   homolog of PhiH1_305"
+FT                   /protein_id="QBJ01235.1"
+FT                   /translation="MTHGDISVGDVVYDIGKGGGKMVVVDRVADSIVEHREGEDYDIAS
+FT                   YKHHPNLPVREDDAVFTCVYIPDTPGSHPASGTYDFPAGRLARAPIEEANKALDPIQDV
+FT                   IVRDVLEDLLVMASAIDSTGTVDESRATVLLDVAGDVLDESIVRDAEELARSNPDWQGN
+FT                   GSTEPASDGDDAVDEDDEEDSEEADPDAEDGDEVGQLGDFEPTAES"
+FT   gene            39978..40721
+FT                   /gene="pcnA"
+FT                   /locus_tag="PhiCh1_270"
+FT   CDS             39978..40721
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /gene="pcnA"
+FT                   /locus_tag="PhiCh1_270"
+FT                   /product="DNA polymerase sliding clamp"
+FT                   /note="DNA polymerase sliding clamp PcnA; corresponds to
+FT                   phiCh1 ORF59 and to Nmag_4211; homolog of PhiH1_315"
+FT                   /protein_id="QBJ01236.1"
+FT                   /translation="MFKAIATKSELESFTDPISQLVEECKVNLNEDGLHVRAVDPANVG
+FT                   MVESNAHASGFESYEADGGLIGLNVDRFEDVIGMANSGDLVHLELDEETRKLAIQIEGM
+FT                   EFTLALIDPDSIRAEPDIPDLDLTSEIVLEGRHIDRGIKAADMVSDHITLAVDEKEELF
+FT                   EIEAEGDTDDVHIGLERDDLIDLQVGPARSLFSLDYLKDMSKAIDAGDEVTIELGEEFP
+FT                   VKLAFTTEEGNVDVQYMLSPRIQSN"
+FT   gene            40731..41162
+FT                   /locus_tag="PhiCh1_275"
+FT   CDS             40731..41162
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_275"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to Nmag_4212; homolog of PhiH1_320; the
+FT                   N-terminal region corresponds to the N-terminal region of
+FT                   phiCh1 ORF60"
+FT                   /protein_id="QBJ01237.1"
+FT                   /translation="MTEKTISGWIVVDWRKGKHRTRQSKPKASELGSNELLAKLAIDVH
+FT                   VPEVEVPELAVEIDVPEPHVRAATLEALDEEQLPGWTDVANELIPSTIPDEPDEFRNEI
+FT                   NRITVRTMTEASTRPDPEAVREYVDETMRAVAAGEEVDA"
+FT   gene            41162..41377
+FT                   /locus_tag="PhiCh1_280"
+FT   CDS             41162..41377
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_280"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF61 and to Nmag_4213;
+FT                   homolog of PhiH1_325"
+FT                   /protein_id="QBJ01238.1"
+FT                   /translation="MALACQAPECDHEFDDAVSWDEHDARDAGETPYFTRVYENPDGIG
+FT                   MMTDYICSAECMRDYVEAIDGGQDDA"
+FT   gene            41355..41597
+FT                   /locus_tag="PhiCh1_285"
+FT   CDS             41355..41597
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_285"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF62 and to Nmag_4214"
+FT                   /protein_id="QBJ01239.1"
+FT                   /translation="MEGRTMPEAAISEIVVDDYELSIEVEGEEAGKVATDLRDRFYRVV
+FT                   QALEDPDVATPADAEPHPATIAWERLAEEEDSEDE"
+FT   gene            41590..41892
+FT                   /locus_tag="PhiCh1_290"
+FT   CDS             41590..41892
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_290"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF63 and to Nmag_4215"
+FT                   /protein_id="QBJ01240.1"
+FT                   /translation="MSKTGDRVRELAEIVDYVEDEREATVRDIDVEFKRRANNVIEAAM
+FT                   QTGERVPVFDLQIVPDDDRDDAGDEDLPDDVDDEGVTIDLEEPAGSVGGDEADGE"
+FT   gene            41882..42082
+FT                   /locus_tag="PhiCh1_295"
+FT   CDS             41882..42082
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_295"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF64 and to Nmag_4216"
+FT                   /protein_id="QBJ01241.1"
+FT                   /translation="MVSESDEFACANCEEVHDDRGDAIACCGDIPMVVSRGPAGTTVKG
+FT                   PDPAAFADATDSHPGGEADVE"
+FT   gene            42072..42299
+FT                   /locus_tag="PhiCh1_300"
+FT   CDS             42072..42299
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_300"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF65 and to Nmag_4217;
+FT                   homolog of PhiH1_350"
+FT                   /protein_id="QBJ01242.1"
+FT                   /translation="MSSEDSTELHHAKQLVAVADVNDQNPFDVLVEAMHEHRGNYSDVH
+FT                   EAMEETYDSVDELAFNESKRLTADGTVVVE"
+FT   gene            42299..42463
+FT                   /locus_tag="PhiCh1_305"
+FT   CDS             42299..42463
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_305"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF66 and to Nmag_4218"
+FT                   /protein_id="QBJ01243.1"
+FT                   /translation="MLEQRDHRGHPFTIGDDRDDRRDEIDEAAELERQAEREQRILEEA
+FT                   RAVTGGGGR"
+FT   gene            42460..42876
+FT                   /locus_tag="PhiCh1_310"
+FT   CDS             42460..42876
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_310"
+FT                   /product="CxxC motif protein"
+FT                   /note="corresponds to phiCh1 ORF67 and to Nmag_4219;
+FT                   homolog of PhiH1_355"
+FT                   /protein_id="QBJ01244.1"
+FT                   /translation="MNKETGEVNRPSEPAETSEQSETSKTSKSAENCARCGKPLGSTVH
+FT                   PTMDGASCHSCYNDQEPTFLGVVNDWEFQSAAQSDDVLPSVIITLTNDDQTAITVTDRE
+FT                   QAKDIGPEMVGKECWDHGDEWKFNPVDAGDSDDE"
+FT   gene            42866..43246
+FT                   /locus_tag="PhiCh1_315"
+FT   CDS             42866..43246
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_315"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF68 and to Nmag_4220;
+FT                   homolog of PhiH1_360"
+FT                   /protein_id="QBJ01245.1"
+FT                   /translation="MTSEELNRLAFERDLALRQAKLSKADLQVIQLALNENRPLEALYT
+FT                   VNNAIERLDEELDAIEEFPNETQADPREGASKEGEIRENVPTREVVDDWLWEQYDFGLK
+FT                   KIEEEYAEFAFTESPEEVDDAR"
+FT   gene            43236..44108
+FT                   /locus_tag="PhiCh1_320"
+FT   CDS             43236..44108
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_320"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF69 and to Nmag_4221"
+FT                   /protein_id="QBJ01246.1"
+FT                   /translation="MPGETPISWCESSWNPHHGCFKVSEGCQNCNAERTSFHRYGHTDD
+FT                   EWTVSNAESNITLQEHHLEWPSTLDEPQRIFVNSMSDLFLPPTFVPDEHLHRIFDQIEA
+FT                   NPEHVFIALTKHGTETGGRHPDEARILQWDREYGRWPDNLWMGVSIGTNGRAYRAECLR
+FT                   RTGASTKWISFEPLVGPIEDPAGTLAGIDWALAGGESGGEERREMDHSWARDIRDAAEE
+FT                   FGIPFYFKQSSGSKQGHEPELAEAGADAQEAAWEGEGTTLYRELPELTDELREHRPDLA
+FT                   EWEVREDAA"
+FT   gene            44098..44331
+FT                   /locus_tag="PhiCh1_325"
+FT   CDS             44098..44331
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_325"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF70 and to Nmag_4222;
+FT                   homolog of PhiH1_370"
+FT                   /protein_id="QBJ01247.1"
+FT                   /translation="MPRSTSQYLEKTVKSRQGYWYEVHEAARDDEDLHLVPVDTVPGQY
+FT                   VSVEDLDERMADGWELVYDGTTGLHDDGEVSV"
+FT   gene            44328..44762
+FT                   /locus_tag="PhiCh1_330"
+FT   CDS             44328..44762
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_330"
+FT                   /product="DUF4326 domain protein"
+FT                   /note="corresponds to phiCh1 ORF71 and to Nmag_4223;
+FT                   homolog of PhiH1_375"
+FT                   /protein_id="QBJ01248.1"
+FT                   /translation="MNDAETQVGHCRHDDIDVYVGRGDNGERHLLNTDVHERGWLGNPF
+FT                   RTDEHGRVQCIDRFRSEFEARLNDDEEFREAVAQLQGKVLGCWCQRLNDDGPGCHAEVI
+FT                   AEWADRLGRDQPDAISEPAQRDLEGEPTGQTTFNVEEDDV"
+FT   gene            44755..45054
+FT                   /locus_tag="PhiCh1_335"
+FT   CDS             44755..45054
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_335"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF72 and to Nmag_4224"
+FT                   /protein_id="QBJ01249.1"
+FT                   /translation="MFRRLIDAIYDGLLQVGEDETVEMGSHDGPDHPVGDGIELTEVGS
+FT                   ARDFQEDVAEEVQVSMIPGDDPRLAEVTMTFVDENGVRREWTASHHEYNTESYE"
+FT   gene            45051..45488
+FT                   /locus_tag="PhiCh1_340"
+FT   CDS             45051..45488
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_340"
+FT                   /product="CxxC motif protein"
+FT                   /note="corresponds to phiCh1 ORF73 and to Nmag_4225;
+FT                   homolog of PhiH1_385"
+FT                   /protein_id="QBJ01250.1"
+FT                   /translation="MSHVTDRELAEKAKQRANEQDTGEFDLVNLLCPICNEPYFAEDPN
+FT                   PNDFTIDPDDGEYGNDRAAFQISPSNILDLDPENPWDRICVYPKEVEYDDGPQLQVDYA
+FT                   RHDFSQEKYQKWKEALEYFKKNERRKEQNQGLDSFTGDGDV"
+FT   gene            45481..45978
+FT                   /locus_tag="PhiCh1_345"
+FT   CDS             45481..45978
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_345"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF74 and to Nmag_4226"
+FT                   /protein_id="QBJ01251.1"
+FT                   /translation="MSDAAREIEAEPRSASISVYLAGPVGHSEDAGMGWREDLEAEYAD
+FT                   GFAFNNPLSKYNVPADNLSVVDGVSDADNDETVGVDEIVRGDKQLLEGSDAVLVGYEPV
+FT                   RSIGTPMEVMWAYERDYPIALWPIHGAWESNLSPWYRYHIGHIGPVESCLAYFSEEVDP
+FT                   DV"
+FT   gene            45971..46591
+FT                   /locus_tag="PhiCh1_350"
+FT   CDS             45971..46591
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_350"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF75 and to Nmag_4227"
+FT                   /protein_id="QBJ01252.1"
+FT                   /translation="MSEATPPRPEIKFDDRHVDAIMDGEKTVTIRYEFEHEFEQGDVIN
+FT                   LLNQNGHKLTTAKAVTQFELRADWVSFADFEGHRRYTTTGELLDELAEYYPGEPIGPET
+FT                   VLDVIVFETDLIIADGGQEPRQDDRERVTFAESYDDMPEKLDVLVGDSGFIVPASNAIS
+FT                   FKERVLVQFDENKTGRPGGERHWIPDRCLEREPEREGVDLDAT"
+FT   gene            46581..46808
+FT                   /locus_tag="PhiCh1_355"
+FT   CDS             46581..46808
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_355"
+FT                   /product="putative one transmembrane helix protein"
+FT                   /note="corresponds to phiCh1 ORF76 and to Nmag_4228"
+FT                   /protein_id="QBJ01253.1"
+FT                   /translation="MLPDALVGLGIGIAAIVVLKLAILYRFHRRGFRWPDEDREDYIRH
+FT                   SPRFEHVAGDVYRDEWSGEHIDLEEVDCDA"
+FT   gene            46961..47131
+FT                   /locus_tag="PhiCh1_360"
+FT   CDS             46961..47131
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_360"
+FT                   /product="CxxC motif protein"
+FT                   /note="corresponds to phiCh1 ORF77 and to Nmag_4230"
+FT                   /protein_id="QBJ01254.1"
+FT                   /translation="MPETIDLSCPSGCFELEVSGSHELRDDREFLEDVAIDDDAGECPD
+FT                   CGSDCRGGSDV"
+FT   gene            47124..47669
+FT                   /locus_tag="PhiCh1_365"
+FT   CDS             47124..47669
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_365"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF78 and to Nmag_4231"
+FT                   /protein_id="QBJ01255.1"
+FT                   /translation="MSNPDNPPVGTCIRCDAEREGHSYLLLYGDWDADRDGFSRPPITR
+FT                   PLCRSCWNERYDRLAGAYYEVDDVQRLWDILRAANGDLVADLKHMFVGGRPFVRVVDGE
+FT                   LQGATTKPKDVGDKTIRFDPEMVDVDRDWLFEVFGEDDELPDREYPTIAIIRPVEETPF
+FT                   EDVRERGGDSHKISRWSK"
+FT   gene            47657..48448
+FT                   /locus_tag="PhiCh1_370"
+FT   CDS             47657..48448
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_370"
+FT                   /product="repressor protein"
+FT                   /note="corresponds to phiCh1 ORF79 and to Nmag_4232"
+FT                   /protein_id="QBJ01256.1"
+FT                   /translation="MVEVTNLTDFGVEVGDAPTGEPDPQPETDPEPSEEPSTGYPNGRC
+FT                   PAIANGTRRCQNPVSRMNSAGDYCGTHANQAGPVSIDSHPELLVRWLGNVDGRSARCRA
+FT                   IQGNGERCTNDVGPLEYFCGMHEDVDCEMVDDLDDDELDVELIRTALHTVAGLEDEPLT
+FT                   VSEDGIWLPEMYRMPSNIVIRTPTATHQATSSGDGWRKAVYPLVNVEDWDSENLEPEEG
+FT                   TDELRNPECVEDGPKVGLKVYGGDQRWFPVEIVNGGDSTDA"
+FT   gene            48441..49292
+FT                   /locus_tag="PhiCh1_375"
+FT   CDS             48441..49292
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_375"
+FT                   /product="putative C5-cytosine methyltransferase"
+FT                   /note="putative C5-cytosine methyltransferase M.PhiCh1-II;
+FT                   corresponds to phiCh1 ORF80 and to Nmag_4233"
+FT                   /protein_id="QBJ01257.1"
+FT                   /translation="MLESSQFLGTHRYKEPEDIQARIGYSDPPTHVSLFSGIGGFDLGF
+FT                   SRAGFKNLVAVEANQDAADTYRANLINDCENYGQDEPPVLMERDITKVATWEILEAAGI
+FT                   GVGQLTAVSGGPPCQGFSHIGKREEDDPRNELYLEMVRIVHQAKPVFFVMENVPGLATM
+FT                   HDGEAIMEVCENFEAGGYEVTWDKHDAADYGVPQHRERVLVIGKRVDVMGMPEEGNPQF
+FT                   HIGAKPGGIKHPEFFRERHDLKEPDQATFDAFTNDDPETLDALIEQVIQDGIHPEGGQG
+FT                   DD"
+FT   gene            49285..49605
+FT                   /locus_tag="PhiCh1_380"
+FT   CDS             49285..49605
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_380"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF81 and to Nmag_4234;
+FT                   homolog of PhiH1_410"
+FT                   /protein_id="QBJ01258.1"
+FT                   /translation="MTEEIDVHVTATAKSKAFRMYTERELVDIARSAYRGDLRTFQKGN
+FT                   QSEFHALSEDYAVVIKPENGGLVVITQMHQHEDYNRAEVYRYVDSIRSASTDDRGDRRV
+FT                   ES"
+FT   gene            49592..49711
+FT                   /locus_tag="PhiCh1_385"
+FT   CDS             49592..49711
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_385"
+FT                   /product="CxxC motif protein"
+FT                   /note="homolog of PhiH1_415; annotated neither in phiCh1
+FT                   nor in pNMAG03"
+FT                   /protein_id="QBJ01259.1"
+FT                   /translation="MSKAEIERLLYCDHCVGDTLHHLDDDDMWTCSSCGRWST"
+FT   gene            49708..51054
+FT                   /locus_tag="PhiCh1_390"
+FT   CDS             49708..51054
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_390"
+FT                   /product="putative N4-cytosine methyltransferase"
+FT                   /note="putative N4-cytosine methyltransferase M.PhiCh1-III;
+FT                   corresponds to phiCh1 ORF82 and to Nmag_4235; homolog of
+FT                   PhiH1_420"
+FT                   /protein_id="QBJ01260.1"
+FT                   /translation="MISEWTGDIHEGDAEEVLAELPESSVHCVVTSPPYFGHRDYGVDG
+FT                   QIGLEDSLDEFIESLVDVASEIRRVLRDDGSWWLNLGDSFAGSGGAGGQWGQNEHGSAT
+FT                   RLADAGDAYNGPLNTSNIRRKSKMLVPHRVAIALENAGWIIRADAVWTKPNGMPSSAHD
+FT                   RLNEKKEFVFHLVPEPHYWFNLDAIREPHSEASLERAGRHDQAKRGYPSNDHSLEPSRF
+FT                   CHPNGKNPGDIFEINAAQFSDAHFAVFPEELCKDPIKSSCPEKVCAECGTPHEQLTEEI
+FT                   DPWNVESPDREQLRRAIEVYKASDLTEDHLEAVRAYGFADAAAGKNQNRSGLNDERVQQ
+FT                   LASEAKDVLEGYFREFTTTYERHIGWEAACDCETDETNPGIVLDPFAGAGTTCLVAKRF
+FT                   GRRFIGVDLNPEFVAMAQQRIGLDVDDPDLLLDEDETSLREFIEVGDTP"
+FT   gene            51051..51626
+FT                   /locus_tag="PhiCh1_395"
+FT   CDS             51051..51626
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_395"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF83 and to Nmag_4236;
+FT                   homolog of PhiH1_425"
+FT                   /protein_id="QBJ01261.1"
+FT                   /translation="MTTENPYFEEVAGGITVGANRASWDDRAIEVLEQREELVQEYAWA
+FT                   IPNEEAIETVAEHAPIVEVGAGAGYWAWCVEQLDVRIAATDPEPPRPNTYTEIITKTAT
+FT                   EAIECAREIFVDGYTLFLCWPPYGNEMAADAVEAFEGDTLIYVGEGRGGCTGDDRFHRL
+FT                   LHQEWELVETVAIPTYLGIHDRLEVWSR"
+FT   gene            51623..52387
+FT                   /locus_tag="PhiCh1_400"
+FT   CDS             51623..52387
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_400"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF84 and to Nmag_4237;
+FT                   homolog of PhiH1_430"
+FT                   /protein_id="QBJ01262.1"
+FT                   /translation="MTVFEDELNDMTSTARELIPDVFGVPQEAMIEEFPYGTSFPYRTD
+FT                   IAGVDLEMDVVEQRRSDFYGLTPVNTEWRFLKSYLRARRLSPLSKSAWLDESNYRTPVE
+FT                   IWDWLTQSGFIQFDTFAQPGEVQDIPLHGDQWAFELKPRDWEKALEQAERAVYGVGMDY
+FT                   HKQRMENARDDLPYSPYQHGGYADFCVVIMDADHVDEPLDHLDEFEEKGVGLASLDRDE
+FT                   LEVHLEPDRQEPRRWSRNRIDLNERTLPTDDD"
+FT   gene            52380..52595
+FT                   /locus_tag="PhiCh1_405"
+FT   CDS             52380..52595
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_405"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF85 and to Nmag_4238"
+FT                   /protein_id="QBJ01263.1"
+FT                   /translation="MTDFTLDTDGTDLVSNPLEDMMRRHHEDVERAYHLGLLHGINAQS
+FT                   MAEAKRDVMSFEDYPWSPEPERDRDA"
+FT   gene            52588..52869
+FT                   /locus_tag="PhiCh1_410"
+FT   CDS             52588..52869
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_410"
+FT                   /product="CxxC motif protein"
+FT                   /note="corresponds to phiCh1 ORF86 and to Nmag_4239"
+FT                   /protein_id="QBJ01264.1"
+FT                   /translation="MPEWEFCAKIHEDCGGVVRWVEAVDTPGVGYQGECLGCGETEIVV
+FT                   EAIIPIEDLGPSDVLELNPADLDDLRWDYDADFDENQERLLQEVPTDG"
+FT   gene            52862..53221
+FT                   /locus_tag="PhiCh1_415"
+FT   CDS             52862..53221
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_415"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF87 and to Nmag_4240;
+FT                   homolog of PhiH1_435"
+FT                   /protein_id="QBJ01265.1"
+FT                   /translation="MADQEMLSAFGAGDLDNVDLSLPEDGIDLEAKQEVEAYAERVTTG
+FT                   GWELVNISSDRVSWWNPDGHETYWIERKKSGWHGVRSKRDVRPHYTEDLQEALDGAAEW
+FT                   MADHPLRDVVDEADD"
+FT   gene            53214..53567
+FT                   /locus_tag="PhiCh1_420"
+FT   CDS             53214..53567
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_420"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF88 and to Nmag_4241;
+FT                   homolog of PhiH1_440"
+FT                   /protein_id="QBJ01266.1"
+FT                   /translation="MTDPSVFVRRDWKQHVESHRRVIYERAVVDGDEIGPGDVLATSRE
+FT                   YVDPAIAGSVHVFEVDCVVYSADRYKIRPSSGGYQLLEDLVEMPEWVPADLLVGRRLPA
+FT                   DVIQYVDGEVVVR"
+FT   gene            53850..54434
+FT                   /locus_tag="PhiCh1_425"
+FT   CDS             53850..54434
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_425"
+FT                   /product="CxxC motif protein"
+FT                   /note="corresponds to phiCh1 ORF89 and to Nmag_4242;
+FT                   homolog of PhiH1_445"
+FT                   /protein_id="QBJ01267.1"
+FT                   /translation="MSTNPKSNERTTLLECKHPDCDEYGHVWEFQEEYCSNRCNVRHEG
+FT                   RKELAKLMYDHCLCFSCFRELKTIEPPKPEFAFDEDGYGWTRDEETGEPTLEYYSQEVT
+FT                   RQVAVGFQHLTPFASKGEKQRGDHVGWGTICGHCGNTDHKFHYPDPSNRDVIGRLVSIL
+FT                   LAEDDVVIDIETLHREYEQTTDIQLAVGRSL"
+FT   gene            54462..54836
+FT                   /locus_tag="PhiCh1_430"
+FT   CDS             54462..54836
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_430"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF90 and to Nmag_4243;
+FT                   homolog of PhiH1_450"
+FT                   /protein_id="QBJ01268.1"
+FT                   /translation="MSTDSHPESDIPRDPSAYRATLHFKSRFEDAFDDYNRHLDGEIVR
+FT                   RCITEGELTQQDYHTSLFESVIGGVTYRIVVNPRNGTCVSGFPVAIDWQTALDSGRWTR
+FT                   IQLKEIEEFLDAKPNPRQRY"
+FT   gene            54964..55185
+FT                   /locus_tag="PhiCh1_435"
+FT   CDS             54964..55185
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_435"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF91; not annotated in
+FT                   plasmid pNMAG03"
+FT                   /protein_id="QBJ01269.1"
+FT                   /translation="MMLASTVDVERRSVFPRRSRSDRSPLARIYPCPLQSSCAQVRSRP
+FT                   RTPSTHVDDQSAVQIRPWASTNIPGSHE"
+FT   gene            55182..55436
+FT                   /locus_tag="PhiCh1_440"
+FT   CDS             55182..55436
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_440"
+FT                   /product="transmembrane domain protein"
+FT                   /note="corresponds to phiCh1 ORF92 and to Nmag_4244;
+FT                   homolog of PhiH1_460"
+FT                   /protein_id="QBJ01270.1"
+FT                   /translation="MKIKQTARALAGFATVITLLALIVADTVHPQIALGTDDKVILITL
+FT                   IGALLGVDRLLRELPLIEELSDGLSIEIAPNSKEDDDDD"
+FT   gene            55429..55752
+FT                   /locus_tag="PhiCh1_445"
+FT   CDS             55429..55752
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_445"
+FT                   /product="transmembrane domain protein"
+FT                   /note="corresponds to phiCh1 ORF93 and to Nmag_4245;
+FT                   homolog of PhiH1_465; contains three predicted
+FT                   transmembrane domains"
+FT                   /protein_id="QBJ01271.1"
+FT                   /translation="MIDPGIADILGMIAGGVWLSGAIYFQMIRQGRIHPGWILLMFLVG
+FT                   TALMMGSSAIALAGRDELVGLFGILANVLFLVLGLGVWYTLECHVCTQETKAIAESESD
+FT                   NVH"
+FT   gene            55829..57088
+FT                   /locus_tag="PhiCh1_450"
+FT   CDS             55829..57088
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_450"
+FT                   /product="adenine methyltransferase"
+FT                   /note="adenine methyltransferase M.PhiCh1-I; corresponds to
+FT                   phiCh1 ORF94 and to Nmag_4246; homolog of PhiH1_470"
+FT                   /protein_id="QBJ01272.1"
+FT                   /translation="MQLEELPTPEREESVDPEELQVDGANPNEQNEETFGLLCKNMQTK
+FT                   GWIGNAIVANTGDLPGYDGDAEGLIADGEHRWRAAKEIELEEVPVKFYDFEDDAERRLW
+FT                   RQELNKISGEHDQTRDALEYDYLLNNGKTEEISALAEASGEDIDALLAQIRDDSRAGVA
+FT                   YEYDVDHQVYFEDCIEGMSQRLEGDSVDLVLTDPPYGIDIDLSETLGSRSVQHSGTVAN
+FT                   DDLDGALSVFRDAAKEMRRVVKPGGHVYVFASWKTYDLFRDILVDEEFTVRNCIVWCKT
+FT                   VPNNQPNFGTGGTNWGLQHEFVIYATLDSPRPLKHTRPDIIVHKHSTSGNEHPTQKPVG
+FT                   LLEEFIEQSSQPGDVVLDPFAGSGSTAVASVQTDRECIGFELEGDVYQEVVDRRISEAV
+FT                   RAKEAAEDGDAENGDAGDNE"
+FT   gene            57081..57617
+FT                   /locus_tag="PhiCh1_455"
+FT   CDS             57081..57617
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_455"
+FT                   /product="uncharacterized protein"
+FT                   /note="corresponds to phiCh1 ORF95 and to Nmag_4247;
+FT                   homolog of PhiH1_475"
+FT                   /protein_id="QBJ01273.1"
+FT                   /translation="MSDDIEYGAIDIPEEKHPTEYSYVERRAEILSLIERAGHPRAITQ
+FT                   TELAKRYDTSQSNISKDFDRLRDYVHDRVGDDAKVVSELVYNRAIQDLLDEGDAYKAAK
+FT                   VVKMRDEWLFDLGELERAPDRVDVAGELEVDNNLELSDTDREMARDLLRERHQQAAANS
+FT                   DDADSDTDSDGDVDD"
+FT   gene            57632..57970
+FT                   /locus_tag="PhiCh1_460"
+FT   CDS             57632..57970
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_460"
+FT                   /product="DUF217 domain protein"
+FT                   /note="corresponds to phiCh1 ORF96 and to Nmag_4248"
+FT                   /protein_id="QBJ01274.1"
+FT                   /translation="MSRKTISIDEDLHDRLDQHKGDDESWTDFVERLYEAAYIEGRDDE
+FT                   RTVRAPLEDVDEADIHTYHDAVEELHDEIASFNDQLEGVLTEEHIDDIANVTSTQTGKE
+FT                   IENRMTPR"
+FT   gene            58036..58245
+FT                   /locus_tag="PhiCh1_465"
+FT   CDS             58036..58245
+FT                   /codon_start=1
+FT                   /transl_table=11
+FT                   /locus_tag="PhiCh1_465"
+FT                   /product="CxxC motif protein"
+FT                   /note="corresponds to phiCh1 ORF97 and to Nmag_4249;
+FT                   homolog of PhiH1_480"
+FT                   /protein_id="QBJ01275.1"
+FT                   /translation="MGYDYECDVQIDDVCDIGGDVPGLAAQFREATWLNDEFGGLMQDR
+FT                   GYTLRDTITVCPSCTLELLSEKHR"
+XX
+SQ   Sequence 58487 BP; 12506 A; 17706 C; 18496 G; 9779 T; 0 other;
+     ccgacgcccg gtggcctggg gaagccatcc gtgcgtgcag acccgccgtc ggccgatttc        60
+     tgagccgggg cgggatatcg acgaaaccaa accacatggc gcacccttag aacgatgaca       120
+     gataccaact cgaaatttca cgaagaggcc caccccgagg ccatccagat cacgaatcag       180
+     gagcgtgatt acgggcagtg ggggcagtgt gtagttgacc cagcgaagtc gaccggcgag       240
+     cgatgcacgc agccggcgaa gggctcgcat gggaagtgcc acactcacgg cggctcgacg       300
+     acgaccgccg acgagaaccc gaagcagggg cgcggcgacc aggacggcaa cgacaacgcc       360
+     gtcgaacacg gcgcctaccg ggagaacttc atcgatcacc tcaccgagag cgagcaggag       420
+     atgatcgaga gcgtctacgg cgacctcgag acggcggagg acgcccagga cgttgcccgg       480
+     ttcgtcgcct cgatcctgct ggcgcagttc aagcggtcgg acttcgatga gcggttcgcc       540
+     cgccggttcg agtcgatctg cgacaaggcg gggatcttcc cggccgagga actcgagatg       600
+     acggccgacg tcaaccagac cacgcagatg gagctggggg acgacgagaa ggacatcgcc       660
+     cgcaagctcc tccgtgaacg ccacgagcag gccgcgggtg agtcgcgaga tgagtagcga       720
+     gcagttcgtc cccgaggagc aactctcgac gtcggaggcg ctggaccacc aggccgatcg       780
+     gctcgtcgag gcgacgcgcg acctcgagac gaagcgcgaa ctcctcaacc cgttcgagac       840
+     gggcgactgg ctcaccttcg ccaacgagct gacgatgaac tacatggcgg aggagatgga       900
+     ggacgatccg tactacctcc tcgacgagca ccacggcctc tggctcgaca agttcgactc       960
+     cggggaccgc atcctgctgt gccaccggga cggcctgaag acgacgatca cgctggcgta      1020
+     cctgatcgcg ggactcgagt acaagtcggg attccgaggc atctgggcga tgaacaacca      1080
+     gatccaggtg ggcaagaagg cagacacgga gttctggaag atggtcgatc ggaacccgtg      1140
+     gctcatcaac ctgaacgccc cgccggagaa ggaggcggtg aaggcgaagg tgttcgccaa      1200
+     cggctcgatc ctgaacgctg gctggctcgg cggcgggatc gagggcgatc gcgcccatct      1260
+     cctcatcctg gacgacatca tcaaggagaa gggagacggc gacaccgagg acgtcctcga      1320
+     ctggatcgag gcggtctgcg tcccgatggt caaagaccac gggcggaccg tcgtgatcgg      1380
+     gacgcgaaag cggccggacg acatctacac gcactttcgc accctcgagg gctacgagtt      1440
+     cgacgagtac ccggcgatcc tggactactg ggaccagcag ttcagcgccg acgacgacta      1500
+     cgaagtccgc cgtcccgacg aggacctcta caccgctgtc gacgatccct ggaacacggg      1560
+     ggagacacta caagtgctct ggcccgaggc tcgaggcccg cgctggttgg cagacaagcg      1620
+     gtcgaagatg gccgatcacc gcttctggcg ggagtactcg ctcgtcatca tgggctcgtc      1680
+     gggcgacctg atcgacgcga aggacgtccg agtcccagcg gaggatggcg gctgctcgat      1740
+     cggtgaccga gacccgccgc cgaagtaccg agcggggcct ggcgaggtgg tcgttctgag      1800
+     ccacgatccg gcgaactcgc cgaccggcga cgacgccgcg ttcacggtgt ggctcctgca      1860
+     gcgcgacgga cgacgtcgcc tcctggactg ccacgccgag tcggggatgg ggccgaccga      1920
+     catcaagacc cagctggtcg agtacgaccg ggcctacgac cccgcgatca tcgtgatcga      1980
+     ggacaacggg atgcagagct acgtcgtcga ggacgcgatc gagttcgact cccagctggg      2040
+     cgcgaaggtg actggccttc cgatgacggg caagaagcac agcctcgaga acggcatcgc      2100
+     tcgcctgcga atcctcgtcg agaacggacg catcctcttc caccgaggtc accagacgac      2160
+     cgaggacttc atcacgtcga tgcagtcgct cgagcgccgg gacggcaaga tgcacggcca      2220
+     cacgcccgac tacatcgctg cctggtacat ggcggagaag ggcctccgaa agctggagga      2280
+     gatggggctg gtcgacgccg acgacactgc ggcgcacgac gtcgacgagg acgatgacga      2340
+     ggagagtaca ggcggcggtc tctacggagc ttgattctca tgaaacgaaa agacgacagc      2400
+     gaatccgacg acgagtcgag ggcaaagtac gcgatcgtgg gcggtgaatc gaccgtcgac      2460
+     gagatccgag ccacgctgga tcgcgaggag gatgatgacg actgaagtcc agtcggccca      2520
+     ctgcctccgg cggatcgtcg tcgcacgggt ggccgctgcg gacctcttcc gcgaagacgt      2580
+     ccgcgtcgtt gacggcatcc cggacgacgc cgaggtgaag tcgacgtatc tggatccgga      2640
+     cacggactcg atcgtgttca tcgtccagtc gagctcgttc gagccggtaa aggaacgcgc      2700
+     gacgattcct cgcctcgatc tcgaggtgga ggcggtcgaa ccagagcggc agaggaacgc      2760
+     acaggtcatc aacgaggtgg agcgcgccga tgggtgagac ggacccgccg aagatctgga      2820
+     tcgatcacta cgacctcaac ctcggcgtcc gcggtggatc gcaggacacc atcgaagacg      2880
+     tcaaagaggt ctttgacgag gaactggaga aggcgatcga acgcgacccg aagctgggag      2940
+     aggagatccc ggaggactca cgcgactttc aatgacacaa cacgaccaca tccgagccga      3000
+     tcggcttcgg gtagactacc gggacagcgt ccccgacgtg gcgaatacgg cgatgatcgc      3060
+     caccctcgag gaactcgtcg acgggccgct cgtcgacgtg cgttccggcg ggctcctcat      3120
+     ccacgagtac ggggctggga tcgatacgca gctgacgatc tacacgccgc cgaccgtaga      3180
+     cgtcgtcgac ggcgaggacg tgaacgaggc ggtggcgaag ctcaccactg gaggtgactc      3240
+     agcacgatga gtagcaacac tgacagcggg ctctactccg acatcacgaa gtcggtcacg      3300
+     gagaaatccg ctgagactca acagctccag gaggagcgcg cgtctcggac gcggggagga      3360
+     gcgcgccggc caccgttcaa cccggtgaag atggcggagc tcctcgagca caacgagacg      3420
+     cacgcaaagt gcgttcacgc caaatcgcgg tacgtcgcgg ggttcggaat caacatcatc      3480
+     ccgcatcccg aggcggagga tcccgatcga gacggcgagc agtacgagcg cgtctgggac      3540
+     ttctggttcg gcgacgactc gaactggcag gtcggtccgg tggaaagcga gcgggcgacc      3600
+     gcgacgaacg tcctccagac ggcctggacc gactacgagg cgatcggctg gctcacgatc      3660
+     gagatcctca cccagaccga tggcacgccc accgggctgg cgtacgttcc cggtcacacc      3720
+     atccggaagc gtatggacga gcgcggcttc gttcagctcc tcgaggagaa ggagaaatac      3780
+     ttcggcgtcg ctggcgatcg gtaccaaacg aacggtaacg gcgacctcga tccagtcttc      3840
+     gtcgacgccg acgacggctc caccggaacc tcggtgtcca accccgcgaa cgaactcatc      3900
+     ttcaagcgga atcactcccc gctgtacccc cactacggcg cacccgacat catccccgcc      3960
+     gtgaagacga tccgcggcga cagtgcggcg caggactaca acatcgactt tttcgagaac      4020
+     gacggtgttc cgcgcatcgc catcatcgtg aagggggcgg agttgacgga gaaggggcgc      4080
+     gaggagatgc ggaacctgat cgaggacaac aacgaggata accaccggac agcgttcatc      4140
+     gagaccgaga agatcgtcca gaacgaggac tacctcaacc tcgccgacgg cgctgatcgc      4200
+     tccgacgtcg agatccgact cgagccgctg acggtcggaa tcgacgagga ggcgtcgttc      4260
+     ctcgagttcc gcggcagaaa cgagcacgac atcctcaaag tccacgacgt cccgccggtg      4320
+     atcgcgggcg tcgtcgagtc cggagcgttc tccaccgacg ccgaggaaca gcggaaggag      4380
+     ttcgctgagg agacgatcca gcccaagcag cacgacttcg gcgagctgct gtacgaactc      4440
+     gttcacaagc agggcctcga cgcgcccgac tggacgatcg agttcgagct ggcgaagccc      4500
+     gacacgaaac tgcaggatgt cgagatcgcc tcgcagcgcg tgcaggcgat gcagggcctg      4560
+     ctcaccgtaa acgaactccg ggatgagttc ggattcgagc cgttcccgga ggaacacgtc      4620
+     tacggcggag aaacgctcgt ggcagaggtc accggtggaa gcggtccggg cgggggaatc      4680
+     ggagaccaga tagagcagct cgtcgaggac cgagccgacg agatcatcga cagctaccaa      4740
+     gccgatttgg agactgagca gctgatcgag atcggggcga acgccgattc ctgaccactg      4800
+     atgagtacca ccagcagttc gtcaacgtcg agatcaaagc tcgccgatcg tcgcgagcac      4860
+     atccggcacc tccacaagca ggacgacctc gttcccgaag aacaggaggc gtacgaggag      4920
+     ttcctcgacg actacgtcga ggggctccag ccgctcgagg acgaaatcga gcagtggctc      4980
+     cagagcgcct cggaagagga cctttcgtcg ctcgagtcga tccgagaggg gatcaacggg      5040
+     ctgatcgagg atggcgacta cacggacgac ttcgagcagg tgttccggga gggcggtgag      5100
+     cggtctgccc aggcgggccg ccagctggcc gaccgtcgat acaacctcgg cgtggcgacc      5160
+     gacgtcgtcc ctgaggcagc actcgagtcg atcgacgact gggtagacga ggcggcaggc      5220
+     agcacgctcg agacgatcac ggaagactcg acaagttggc ttcgcggcgc acacgaggag      5280
+     ggcctatcga tcccagagat acagggtcag attaatgagg atctcttcga gggccgactc      5340
+     gaagatcacg tcgccgagcg ggcggcgagg actgggacga tctcgacgtc gaacctgggc      5400
+     gtccacagca gtttcgagga gtctgacctc gtcatcggtg aagaatggat cgcgatcggc      5460
+     gaccagcgca ctcgcgacga tcacgacgac gccgacggcc agatcgtcgc agtcgacgag      5520
+     tcgttcctag tgggtggcga ggaactcgac catccaggcg acccctcggc accgctcgag      5580
+     cagatcgtca actgccgctg tacggtggtg gctgtcttcg ctgatgacct caccgaggac      5640
+     gaaattgaag cactcgaggc tggcgagcgg atccagaaag ccaccgtcga cgagacggtg      5700
+     aagatactcg acgatggttc tcacgaaccg ttggctgccg gagtatagtg cgggaattac      5760
+     gatgacggca ctgcccccgc cggggcctct gcttgaggaa cgtaccggcg ttctcacagg      5820
+     atacaaatga gcaacaacga gaagcgtcgc tttaccaagc acgtcgcgat caagacgatc      5880
+     gacgaggagg agcagaccgc cacggggatc gtcctgacgc cgtacgagct ggaccatcaa      5940
+     ctggacttcg tctatcccga cggcgtccag gcgatgtaca acccagcgcc ggaggacgga      6000
+     gttctccacg ctgccttccc agaagatgca gccgaactcg agttcaacga ggtcctcgag      6060
+     gaggaccaag agatcgatgg cgaagaattc gaggagggtg actgggttgt ccggagaaag      6120
+     taccatgacg atgagctgtg gtcgttcgtc ggtgaggtcc tacacgggtt ctccatcggt      6180
+     ggcgacgtca gcaaggcgga tgagttcgaa tcaatcgatg atctgcccga cgaggtcgag      6240
+     attccggata gcgtcgatcc cgacgcggtc gacgatgagc actggccccc ggcgggcatc      6300
+     cgtaacggtg ccacatcgga gatctccgac gtcgacatcc cggcggtaac gtcggcgatg      6360
+     tacgcgacga aggggcgcga cctcgagaaa aacctctacg agagcgccga ggaccgagat      6420
+     gacttcgttg atcggatgac gagacgtggt gcgcccgagg agggtgctgg cggcctctac      6480
+     gattaccttg accagttaga gaagacggcg cccgacggtg ccgtgacgaa gttcttcgct      6540
+     gacgcggaga agttcgattt cgacagctgt gtggagagcg tcatggagga tggccatacc      6600
+     caggaggaag cagaggagat ctgcggcgcg cagtaccacg atacaaaaat ggaacacagc      6660
+     aacacacccg acgaagagcc cgacgacgcc acgaagtggc agatgttcaa gtcgtggcta      6720
+     gctggcactg gcggtccctt tgatgccgcc gagtccgatg acggcgtaag tcccgcggaa      6780
+     gggcagtccg aggtctcggc ggggacgttc tcgaaggcaa tcgatgtcgc cagagacgtc      6840
+     acgaaggagg gccggacgct caacgccacg aaccgagagg cgttgatggc tggccacgac      6900
+     gcgatcgaaa tggcgctcga gtcggacgta gacttcgaga cgaaccgatt cacagatgac      6960
+     gacagtacgg agttcgacat cgttcagtac ggttcttccg gggagagtga cgacgaaaca      7020
+     gagaagtcac gcccggtaga gaagctgacc gaagagcagg gtgaactcgt cttggccgcg      7080
+     atccagcggt tcgtggacaa tcagggcgag gctgccttct ccgaattccg atcctgggtt      7140
+     tggtcgacgg atatcctcga cgacgacaca gcgttcgccg ctgacgaagc cgcctatcag      7200
+     taccgagagt gggatcgcga gcagcgcgag caaacttcgg tcactgagga tttcctcgac      7260
+     tgggtccagg acgagagcga caccgacacc gagatcacca tgagcaagga cgacaacacc      7320
+     gattccgaga cggacaaagc gatggaagac gccccagagt ggggtcaggc catctacgag      7380
+     gaacagcaga agaacagcga ccgcatcgac gagctgagca aggcgatcga cgacgagggc      7440
+     gatgccgacg gtggcgagac ctcggagtcc gacggcgact cgagcggcga cggcgaaggc      7500
+     gagacgagca agtcggccga cggggagact gcgcccgagt gggtgcagcc gatccaggac      7560
+     ggcatcgaga agaacgccga gaatatccag gcggtggcgc aggcatcggg ccacagccag      7620
+     cagctggact acgacggcga agctggcacc gagaagaacg ctgacgaaga gccggacgac      7680
+     ggcgaagtca agaaggcgtt cctcgggctg tagatcgact gacaaccaac acacccatta      7740
+     gaaacctgag atttcaatgg catcccgaac catcaacaac gacctgagtc gcatcactga      7800
+     aaagaacgct ctgaccgtcg acgacctcga cgctggaggc acgctcccag atccgctctg      7860
+     ggacgagttc tggacggaca tgatcgagga gactccgctc ctcgacgcga tccgaaccga      7920
+     gacagtcggc gcgaagaaga cgcggatccc gaccctcaac atcggcgaac gacaccgccg      7980
+     accgcaggac gagggcgagt ggaacgagaa cgaatccgac gtgtcgaccg gtacgatcga      8040
+     catcagcacc gagaaggcaa cggtagcgtg ggacctcccg cgagaagttg tccaggagaa      8100
+     ccccgaggga gaggcccttg cggaccgcat cctgaacctg atgaccgacg cctggtcggc      8160
+     agacgtcgag gacctcgccg ccaacggcga cgaggacgca gaggactcgt tcgagaatca      8220
+     gaacgacggc ttcatcacgg ttgcagaggg cgacgtcgag acgatcgacg ccgctgacga      8280
+     catcctcgac aacgacctcg tcatccggac gatcgcgggc ctcgactcga agtaccgcgc      8340
+     tcggatgaac ccggcgctca tcgtctccga ggaccagctc ctcagctacc actacacgct      8400
+     gaccgaccgg gacaccccgc tcggcgacaa cgtgatcatg ggcgaggcgg acgtcaaccc      8460
+     gttcagcttc cccatcatag gatcggggct gtggccggac gacaaggcga tgttcaccga      8520
+     tccgcagaac ctcatctacg cgctgtaccg cgacctcgag atcgacgtcc tcaccgagtc      8580
+     cgacaaggtg agcgagcgcg acctccacgc ccggtacttc atgcgcggcg acgacgactt      8640
+     cgcgatcgag aacaccgagg ctgtagtcct cgccgagggt ctgggcgacc cactcgagca      8700
+     cctcgaagag gagacctcgt aacggtgaac gatggctgaa cgcaccatcc gacaccgaga      8760
+     cgacggacca cccggcttca gccggtacgc cgactccatc tcgacggagc ccggcgacga      8820
+     gatctccgtc gacggcgaac tcgccaagta cctcgtcgac gaaaagcggt acttcgagta      8880
+     cgtcgacgac ggaccaaccg ctgacagcgt cgactcggac gaagaggcgg aagccgaaga      8940
+     cgatccggat gacgccgacg actccgagga cagcggcgac gaagacggcg gcgacgaggg      9000
+     cagctacgag ttcgacgagg actcctggtt cgaggaccac gacgactacg aatcccgcat      9060
+     cgagcgggta gagtcgggcg acgtcgacga tcacctcgac acgatcgccg atatcgagag      9120
+     tagcgagcag gtcaaggact cgatcggcgt ccgtcgggcg gaagtcgagg ggtaatcgct      9180
+     catgccgctc gagccttcgg atgtcgagtc tgaactcccg ttcgacgcga aggcgttcgg      9240
+     gtggagcgag gagaagttca agagcgagct ggagacgtac attgccgccg ctacagagac      9300
+     ggtcgagaag tggatcaaca ccacactcga gccggagaca gtcacgcgag acctctcccg      9360
+     accgtcgcac gtcgacggtc acgatcttcc gatgccgtcc cgtcccgtcc aggacgtcgt      9420
+     gtcggtcacg atcgacacgg accgcgcgat gggccgcgac gtcgacgaag acgactactg      9480
+     ggttgaggag actcacctgg agctgaagcc cggcgccgac cggaagtcgt ggccgaccga      9540
+     ccgacggtcg atcactgtgg agtgggagta cggctacgag gaggtaccgg agtcgccgaa      9600
+     gaaagcgatc attcggctcg tacgtgcgcg tcttcgagcg atcaacgccg agggcatctc      9660
+     gtccgacacg atcatggggg actcgatctc ctacgatccc gaggatgagg tggtccttgc      9720
+     tgctcgaaag gacgtcgccg gattcgaggc cccgtcgtac tacggaggtg tcgaatgagc      9780
+     ccgcttccat catcggctgc ggccgttcga cagcgcctcc acatgcacgg cgttgacatc      9840
+     tcgatccagc actacgaggt cggcgagggc ggctcacgcg ggagcccggc ggaagagtcg      9900
+     gcgaccgatg acgtgaaggc gtacgtccaa gacaagagcg cctcgacgag cctcagcgag      9960
+     ttgctcggtc aggagatgag catcgacatc gtgttcaccg tactggccga cgacgtcgac     10020
+     gaagatctcc gagatggcgg ccacgatgcc gcgtcgacgg tgacctatca cggtcgatcg     10080
+     tacgtcgtag agcacgccga ggacgaaggg ggcgcgacga tcacactgca ctgctcgact     10140
+     cgtgaggaca gctaacatga tcgataacta cgaggaccga aaccgggagc aaacgctcaa     10200
+     cgcggcggga gacttctcag gcgatcgcct ggaggagttc cttgagtacg agcgcgagca     10260
+     caagaaccgg aagacagtca tcgagccact cgagcgggag ttgctcaccg tgacgacgac     10320
+     cggccgcaac tacgttgctg gcctctggtt cgacagcatg tcggaggaga aggtcgttcg     10380
+     acgaacgacg agagtcgagc aggcgatcga gcgcgaagaa ctccgcgagg tggactgatg     10440
+     gtcgaggacg agaacaacat cccggaagcc cgcgaggcga tccaggacgg cctgacggac     10500
+     ggcctcgagc gtcttcacac gataacgctc cgtgagctca tcaccaacat gagcgacggg     10560
+     caggatgcgc tcggcaaccc gtgggagccg ttgaaagagt cgacgatccg ggcgaaaggt     10620
+     tcggatacac cgctgatcga caactcgcgt ctcctcaccg acatcaacgc ggcgtcgatg     10680
+     atggatcgcg ccaaccggat ggcggtcatc gggacaaatc tggactacgc ggagcaccac     10740
+     gagttcggcg ctccagaggc tggtatccct gcccgaccga tcttcgggcc agcgggtgcg     10800
+     tacgcaagtc agcaggctcc tgatgtcatc ggtgacgaga tcgacacgaa cctcgagggt     10860
+     gctgtaatcg actgagagag gaattactac gatgctcaca actgctgaag aggaccgatt     10920
+     cgaggaggcg ctgccactcg agggcctcga ggtcaaatgg gatggcgagt cctacgaata     10980
+     cgacctcgat cccttctgga ctggaggaga tgcggctgac gaggagccga ctgagtcagt     11040
+     cgagtatccg gcgatcgtgt tcgactggga gacgcagaac cagccggaac tgggtcgcca     11100
+     gccgttgaat gacctccatt cgatcgacgt ctcgtcggac gagtcggtcc tcacagagac     11160
+     gaaaacagcg gaagtgagtg atgacctcgc gatcacgatc gcggtcgaag cagcgtggga     11220
+     cgacaacgga gtcccaccgc aggctcgcgt gacgcaactc accaagcaga tctggcggtt     11280
+     cctacggttc gagctcgacc tgaacagtga gggcgagaac gaagaacggc cgatgaacgt     11340
+     tgaagttcca gatgagagct cggtcgagcc ggttcgagtc gagcacacga ttcgagcacc     11400
+     ctggcagatc cgcttccacc acgctgagcg ccacgaggag gagcacaaca ccgtcgagga     11460
+     gttcgagatc aacatcacga tcgaatagtc aaacgaccag cagtcacaca accgacacaa     11520
+     caacatgccg aaacaaatcg tagaaatcga actaactgct gaaatcgcag accgcccaca     11580
+     ggagacgttc acggacgcgg cgatcgtggg cacagcagaa gaagagccgc cggacgccga     11640
+     gttcggtgaa gtaaaccagt acagcacgtc gacgtcggtc ggcgacgact acggcgagga     11700
+     cagcgacgtc tacacggcgt cggaagccat cgaagagatg ggcgctgagc agtggcgcgt     11760
+     catggtcctc gaggcgactg aggtgaccga ggaggaactg agcgatggcg acaccatcga     11820
+     taaggtgcca atcctcggga accacgaggt cgaatcgcct gacggcgata tcgagttcac     11880
+     gaccgacgac gatccggacg tcgaagactt cgatgccgag atcgtcatca actcggcgac     11940
+     cggcgacgtc gcgaccagcg aggactcgat cgagctgacg tacttccacg cggactggag     12000
+     tcaactcgac gagttcccca gcgacgtcaa caacttcgcc gtcgccgatc gtcgattcga     12060
+     cctgaagggc gtcggtgtcc tggacgaaac ccacagttgg gcgagcgacg aggacatggg     12120
+     aatgatcgcg aacggagtca acgtcgacga ctacgactcc gtcgacgaag cgatggatgt     12180
+     cgcacacgag gtcgcagggt acgtccccag cggcgacctg atgatgatcg tcgacgcatc     12240
+     cgacgacgat ctcgccgcct accagctggg caagttcgcg gtgagcgagc cctggtacaa     12300
+     cccgctgtgg aacgaactcc cagcgggaga aacggtctcg aagaacgtcg gcgatcctga     12360
+     agagcagggg acgttcgaag gtggcgacga agcggaaggc gagggtccgg ttaacgtcct     12420
+     gatcgatgtt tcggatgcca accgcgtctc gaacgccgtg acgaccgcag gagccgactc     12480
+     ggacacatcg ttcttcgaca tccgaaggac gaaggtctac acggccgaga tgctcgagct     12540
+     ggatctcgag agcttgcagg tgagcgacga cgacgtcccg ttcaccgaag acgggcaagc     12600
+     gatgatcgag gacgcgatca agggaacgat gtccggcctg accggatcgg tcggtcaacc     12660
+     actcgcagag tacgaagttg acgtcccaga gtgggacgac gacgacgttg accgagtgaa     12720
+     ccgaaactgg ggcggcatcg atctggatgc ccgactggcc cagagagcgc acacgttcag     12780
+     cctcggtctg aacgtgagcg tgtaatcgag gtgagcatta tatgggaact caatacgacg     12840
+     gcagtgacgt atcggtgatc ttcgcaggga tgcgaatcga acagctacag agcgtgtcga     12900
+     cgccggacgt gtcatatcct ggcgagtacg accggacact gggcgacgat gacgacgtct     12960
+     tcgtgaccga cgatacgcca gaagaactcg agggggagtt ggttgtcgca ccgacatccg     13020
+     gctcgatcga cgacctcgag caacaccttc acgaccggac gatcgacacg ctgacgattc     13080
+     ggttcccacc ggatcactcg cagagcagcg aaacctactc cggcacggct ctgacggagc     13140
+     ggtcggacga agacttcgac ggcgacgatt cggacgaccg aacgtacagc ttcgtctctg     13200
+     aggacatcga gtgatgacgg accgagacat caccgagtac gaggagcaag aatggccgat     13260
+     cgaggagggc gaaacgcagt cggagatcga gtacgagttc ctcaacggag gctcgatgaa     13320
+     gtacctcgtt caggacccag agacggagac gatcatgtcg ttcatcgcgc cacagatggg     13380
+     cgaagaggag aagacgcagt ccgagcgcca gttcgagctg aaccgcgact cgatcgttgc     13440
+     gccggagcta acgatggaga ggtggcgtga cctgcgaacc gcggaccaga tcgggctaac     13500
+     caacgaggtg tcggaagcca tcggactgga ccgtgttttg ggaaatgccg tcgactcgcg     13560
+     agatcaccta ccggacgaat tgctacccga atagctcgcg agttcaacct caactcgagc     13620
+     gaccccatcg gtgaagtcct cgactggccg tggcagcgag tagtactgta cgcggagtgt     13680
+     ctcagcgaag atgagaggga ccaaaacgaa gcagcccgcg aagggatgcc agagatcccc     13740
+     gactccgttg aaggtatcga cgatatcccg aacaagtatc gtccgtaaca gggccacttc     13800
+     caccgtgctt ggctcggtac tttaagtcag gaaacgtgac tctcacgtaa gacgatggtc     13860
+     tcgggtgacg agcacgagtg cccagaatgt ggtaaagcat tcgacagcca ccaatctatg     13920
+     agtagccatc atgctggtct ccacggagga ccaccgttca cgagtacatg tagcgcaaaa     13980
+     tactgcaacg ctgagtactc aacaccgccg tctcagagta ataaagacaa taaatactgt     14040
+     tcaaaagagt gtagaacgtc gggtgcttgg cgagacgaag aggtcatgga agcactctat     14100
+     ctgctgaggg gcatgtcggt ttctcagatt ggtgattatc ttggttgctc aggtcagacg     14160
+     gtttggcgat ggctggatga acacggtatc gaggctcgac aagcgagtga gccgaaatac     14220
+     cctcggatta gttcaaaaga ctggttagta aaaacgtacg tcgagaaaaa catgacctct     14280
+     ggcgagatcg cagagtgggt tggatgctcg agtggtgtgg tctgggagtg gtgtcagagg     14340
+     cacggaatcg actgtcaaga gaacggatct tggccgcgtg gcgaggatca ccatctgtac     14400
+     ggcggcggcg acatcaaata cggtgaaggt tggaataaaa agaaaaagga gcgagttcga     14460
+     gaaagggatg gtcgcgagtg tcagcactgt ggccgtggtg aacaggagca cgtcaaactg     14520
+     ttcggaacga aacacatcgt ccaccacgta gtcccggcca gatcgatcga agacgctcaa     14580
+     gaacgaaatg cgatgaaaaa cctggtcacg ctgtgccgag gtgactgcca caaacggtgg     14640
+     gaggaaatgg caccactacg ccccatcact tctcgagtag aagttcgggg ttgaacccgt     14700
+     gattcaatca aaccggtcgc catcgatggc gtcctggagc tcgttgagat cgttgtagat     14760
+     ctcctgagcg tctctgtagg catcttcagc gctactaaag aacggatcag aatcatcact     14820
+     tggaccaggt ggatcctgtc cgacgaaggg catgagtccg tttctggaag acccggcaac     14880
+     agcagccatc gcgaggaaaa agtcgtttac ctccatgaat aggtcaaagt cctcatcgaa     14940
+     ccggtcgcgg gcctcttcgg aaagtgtatc atagatatcg gcagcctcat cgagttcccc     15000
+     gatggcagtt tcaatacgtt cggcggtctg ttcgctgggg gcttcgagaa cctcgaggtt     15060
+     cgattcgtag tacgaccacg cttcagcttc gctttcttca aaatcccaat cgtcgagcgc     15120
+     tgagttactt cccagacagc cactcagggc cgcgaagcta gcgggtacag ccatcgcgag     15180
+     gagtgaacgt cggttcatgc agtgacgtat agcctgattg attagtaaac tttggttcac     15240
+     aatccaccac aaaccgagaa actgagatga cacaatcatg attccaggag gaggcggcgg     15300
+     caatatccgg cggctggcga cggtgatgac cgcccaggat aacgccagtg agacactcga     15360
+     cgacgttgag gagaaaggcg gtgagacggc cgagtccatg gaagaagtcg aagagagttc     15420
+     tgagggcgtc tcgagaggat ttgattcgat tgatagggca ggcgttgcgc tctcggggac     15480
+     actcgcggga actggtgtcg cactgcaggg tgtcctcgat aggacatctg aactccgcgg     15540
+     cagcttggct ctcactgcag gtatgatgga cgacgtcgac gggtcggtcg atgcgctagc     15600
+     ggcatcaatg tcagatgcca cgttcccgac gcaagacgtc gttctgacga tggaagaact     15660
+     ccggcatctc ggcgtcgaga ctgaagagga aatggagaac gtggcgctcg cagccgatca     15720
+     actcgccgac gcgacagggt cgtcagcatc ggtgatcgct ggcagcctcg cgccgagtat     15780
+     tcaggctctc gacggcgatc tcgatgcact tgaggaccgt tcggacgcct ttaccctggc     15840
+     cctgaacgac agcaggcttg aggctcaaga cctgaacagt gtagttcaac gttcctcgca     15900
+     ggaactgcag gaactcggcc tcacaagcga cgaaacagcc ggtctgatct cgatgtatgc     15960
+     tcaagcgaat caggttgaag gaacacaagc agcccgccag ttcagggaag cgattcggga     16020
+     atccaacggg gacctcaacg agctcaaaga cgaactcaat ctgtccgagg acgcactcga     16080
+     tgagtggaac gagacagtga tggagaacga gggcgagacc gagcgcctcg cagatgagta     16140
+     tgccgagacg aagacggtga tggacgaact gcgcgtcgtc gcgtccgatc tgcagctgag     16200
+     attcagtggg gtactccagc cgctgagcgc actcccccct gtacttttcg ctgccgggtc     16260
+     ggcaggcctg ttctactcga cggttctgca gtcgagtgca gtccctgcaa cagtcacctc     16320
+     aacggcagcg accactgcga acaccgcagc actgaccggg aagaccgcgg cgcttcgcac     16380
+     agcctctggc gcacagaccc taatgacgat gtcgaccgcc tcgctcgcga cggccactcg     16440
+     agcaaagacg gcgtcgatgt gggcatcggt tacgggcatg ggcgcgagcg cagtcgcggc     16500
+     cctgtccgct gcaagtgcga agggaatcct gactgccgcg accggtggcc tcaccgcggg     16560
+     tgtcttggct ctcaacgcgg ctctcgggcc gatcggtgcc gctttcctac tcgtcggagc     16620
+     ggcgactgct gcgctgatcg gtctgtggaa gaccgatctt ttcggggcgg gtgacgcagc     16680
+     cgctggagtg cttggtagaa tccgaagcgg ggcctcgacg ttggtcgcga tcgtccagga     16740
+     actcatcggg atcctgtacg aactcggccg gatcgctttg acactcccgg tgatggcgct     16800
+     cctcgcaccg ttcgccgcgg cgttgaattt cctcgaggac ccatcgagat ggctccaggc     16860
+     agggcgggag atcccgtcga tgatcgcaag tgggatctcg agcgcggcgt ctgctccgat     16920
+     cgacgctgtg agcaacgtcg ccagcggcat ccgcgatcgt cttccgttct cgcccgcact     16980
+     cgccgggcca ctgcaagacc tcgatcgcgt cggcccagct ttagtaggta cgatcacaga     17040
+     tgggatccgc gaccgagcgt ctgcgcccgt cgatgcggtg actgacgtcg caagcggtgt     17100
+     tcgagaccga ctcccattct cacccgcgct cgccggtccg ctccaggacg tcgatgaggt     17160
+     cggcggttca ctgatgggga cgatcgccgg cgacgtcgaa ggcgagggag gcacattgtc     17220
+     gtcagccctc gagtcgacgc tcggtcaaac accgctcggt gaagcagcag gatctgcggc     17280
+     cggtgcagtc ggcgatgccc tcggtggagg cggtggcggc ggtggcggcg agcacatcga     17340
+     gattacgatc gaggagatca acgccggagg cgagggctcg agtgaggaga acatccgttc     17400
+     cgccggtgag gatctcgccg gcagagtgat cgaggagatc tcggaacacc tggcacggga     17460
+     aaacaactac gagccaaacg gctcagctaa cggatcatga ccacagtcac catcgaagac     17520
+     atcgtgtttg acggcatccc gtcgtcggat atcgatgttg aaggcgtcac gagcgtcgac     17580
+     gacagcggag cgtgggacgc accagagcag gcggttgaaa aagggtttga ctactcgtcg     17640
+     tacaatcaac ccgaaccgat cacagcatcg ttcgaggcct gggcgacacc cgagcacagg     17700
+     gcgacgctgg tcgagcttcg agacgctact gagccgttcg cggcatcagt cgatcagctc     17760
+     gtcctcggct ccgcgaaact gactcagttg gacacgaacc gagaggtgag ttcggcgtct     17820
+     cactaccgcg tcacagtaga gtttgaagag gtccgagaag ccgagctcga gacggccgag     17880
+     atgtcggtcg aatcggactc tggtgacctt tcgagctcgt ctgaagacgc cgacgtgtcg     17940
+     tacgaacagc ctgaagaaga tgacaccggg acgtccgaag aaacaaccga tgacggcgga     18000
+     atcgtcggcg cgctgtcgag cgttcgtgaa ggtctctcgg gggtgctgta gatgggggag     18060
+     atcatcccaa ttcccgaacg gagagcccgt gacaaacggc cgatcaacat cgagtttcaa     18120
+     ccacgatcga tgccaggaca gcggttcgcg atccggatgg actggaacga cgtcgccggc     18180
+     gagtggacga tggagatcga gcacgtcact cgcgagcaca ggatcaccaa atccgtggcg     18240
+     aaggcgttcc gagcgtacga gtacgaagag ttcgtttatt tcgtgttcat cgatccgagt     18300
+     gggaacgaga cggagatcac acccgagaac ctgggcgacg agattcggtt gtttgccttc     18360
+     ccaggtgaag caggccagcc gccggatgag tggtagtgat ggtgtttcaa cagcacagaa     18420
+     gcgtccaggc gggcgatgtg aatttggacg ggctcgatct cgatatatcc gtcacgaaat     18480
+     cgagcgatga cccgctcgag ttcgaggtgt cgacgtggaa cctcagcgag gcctcctggc     18540
+     ggaaaatcga tgaaggtgac cagtgccgca tcgaactcgg gtgggccgac ggggagatcg     18600
+     cgacggtctg cttcggtgag atcacgagca caaagccgga gatggatgga ggcgacctcc     18660
+     gctaccagat caaaggcatc gacgagtcgg aaggtgccac ctacgccaga cccgacgagg     18720
+     actggggcca gaagagctgg gtgaacacct caccagacga gatcgcctcg gatatcttcc     18780
+     agtcctgtgg cctgaccgct gcggtcgagc cggttggagg gaacatccag ggcgtgtggt     18840
+     cggcgacgcc agacaagcgc gcccgggacc tcgtcgacga gctgctcgag tacgcagttg     18900
+     agatctctgg agaggcctgg gagtggtacg ccgagcaagg gcgcggctac tttcaacctc     18960
+     gaaaccagga gaccgtcgat gcaccggagc tgagctacga ctcctcgctg gtctcgatca     19020
+     acgaagcatc gagtgaggac gacgacgccg agctcgaact ggacttcgaa accatgctcg     19080
+     accctcggat ccgtaagggc gcggccgtct acgtcgacgt cgatcagcac cgcggcggct     19140
+     accgtgtgga ctcgttcgag ttctcatcgg acactacgtc cggtacacac atcgtgaatg     19200
+     ggacgctgat ccccatcgac gccgattact cagttgcata atcattatgc catcaaacct     19260
+     aatctcggaa ttaaagggca tcgtccggtc agaagtacag tccgctcaga cagtaacgtt     19320
+     cgtccgagtt gaagaggtcg acgacgatcg acgggcgact gtctcactca agcgcgacag     19380
+     cgacctgctg atcgacaacg tcccgatcgc atcgacctgg gcaggcgatg gtttcggagt     19440
+     cgtgatcccc gtcgatcggg gtgttgaagg gttggttctc catccgaagg agccactcga     19500
+     aaaacagatc cagcagcgag gcgagcagga gcccgggagc gaacgccggt tcgagctcga     19560
+     agacgctgtc ttcttcccgc aactctggct cgacgaggac gacgtcccag accacgagga     19620
+     cgacgagttc gtggtcaagc acgagtcggg gagcgagttc cggctcgacg acgatggcgt     19680
+     ccatgtggag ccagaactgt tcgtcgacgg catcgcgttc accgagcact cccacgactt     19740
+     cgactacgac ggtggtggcg aggactcctc gtcgctctcg ggtactaccg aggctcccga     19800
+     cgaataagac cgattcttca caacacacgc atgaaattca aacgaacact ggcccagaca     19860
+     gcggagggtg acttccgcgt cgagggcggt aacttagttt ttaccggcgg tgccgccggt     19920
+     gtagaacagg aacttcgaac gatgctcgcg acgatcgagg gcgaggatcc gttcaacccc     19980
+     gatcacggtc tcgcgatcct cgaggccgca ggggccgacc cagcgatcat cgaacgggga     20040
+     atccgatcgg cgctcgagga cgacgatcgc gtctcgtcag tcgatgctgt cgataccgac     20100
+     gacgccggag cgaaccggaa gacgaccgtc gatatcgacg tcacgctcgt cgacggaacg     20160
+     tcggtcggat tcgatctgga ggtgtaaatc acgatgagtg aaaacagcga ttacggagta     20220
+     caggacgatg gaacattccg gcgcaagcac gtcgacgtca ttcgagatga cgccgagcgt     20280
+     cgattcaaaa acacagccgg agaagacatc gagttcaacc cgagctcggg gcaacaggcc     20340
+     atcatcgaca tactgacaca ggaggccgct gttcagtgga tggcgctcga agaagtctac     20400
+     tacgcaggat ttttcgagga tgcctctggt gaggcgcttg ataaacagct ggcgctcgct     20460
+     ggcttcagtc gtcaaccgtc tcagtcggcg accggcgaag tcgtcttcaa acgcgacgat     20520
+     cccgccgacg acgacatcac gatcgacgaa gagaccgagg tgactacgag gcgatccgac     20580
+     acccgcccgg ccatcccgtt cgaaacgact gaagaggtca tcctccagga gggccagacc     20640
+     gaggtcaccg catcgatcga agcccggaaa gcctggcagg ttgacctcga tgaggagtgg     20700
+     ctcggcgaag agaccaacat tcccgccggt gagataaccg agttcgggga tcccgttgct     20760
+     ggtgtcgacg acgtcgaaaa cgaactgccc accggagacg aggacgaagg ctttcaacca     20820
+     ggtagagatc gggagagcga cgccgagttc agactacgct accagaactc gctcgccgag     20880
+     ggtggcacgt cgaccgcgcc ggcgatggaa tcgagcgtct acaactacga cgaggacatc     20940
+     atcgacgtcc gaatcgacga agtccgagac gaagacgaag ggttcggacc gcgagtcacg     21000
+     gtgttcgcac cggagattga agacgatgat atcgcgcagg ccatcctcga ggcgcgtggt     21060
+     gctgggaccg aatcgatcgg tgaagagagt ggaacggcag agttcgacgc tggtgacgag     21120
+     agtacggagc acttcgaccg ggcagaagag ataacgatct acgtcgacgc agaactcacg     21180
+     acgtcagatt cgttctccga tgacgacatc gacacgatca ccgatcggat catccagtac     21240
+     atcggcggcg aagccggtga cgacatcgtt tatcccggtc tggagatcgg agacgaagtg     21300
+     atctacgacc agatcttccg ccgcgtgatg gaaaccagcg gcgtcatcga ggcagacctc     21360
+     gaggtcggta ctgacgagga ggacctcgac accgagaaca tcgacatcga cgaccgtgag     21420
+     gcggcgatga ccggcctcga tgaggtatcc atcgatgagt cgtgaggatg tccgcgagcg     21480
+     cctcgaacgg acgctgaaca gtccgtaccc gaccgacggc gatatctgga acgcgattct     21540
+     cgaaacgttc gccgccgagt tcgccgagct tgaggaggcc cgtgagcagg tcctcgaatc     21600
+     gaagttcgtc accgatgcaa ccggcgagca gctggaccgt ctcgggacga tcttcgactt     21660
+     ggaccgccag cggggcgaac ccgactcgaa ctatcgagcc cgactgcagg ttgcgttgcg     21720
+     agcacagctg acgtcggcga ccgtcgacga gatccgcgac gtcatcgcag tcctcctgga     21780
+     catcgatgct gccgatgtcg agatcgagga gccgtacgat cgcgagccga tgcacctcaa     21840
+     cgtcagcgtc gacggtgagg cgctggacga tgcagggatt ggcgacgacg agttcatctc     21900
+     cgtcgtcgat accgttgtcg cgatcggcgt ctcggtcggc ctcctcatcg agttcgacgt     21960
+     cgaggaaatt gtcggcgtcc aggacgacgt ctccgccgag atcgacacgg tgcagacggc     22020
+     gtacgtcgac gacgcgcgga cgaacatcga cacactcagt tgatccatga cttcagtaac     22080
+     agcaagcgaa acggtcagcc tggccgataa cgttcaggtc gacctctacg acgcagacga     22140
+     attggcgaat cgcatccccg gctgggaagc gatgactgac cgcgagcgcc tcggcgcact     22200
+     cgaggacgtc gacccggtag gcgagttctc cgagcacaac gtcacgacgc tcgagtaccg     22260
+     aacgcatctc gccgagttac tcaacccgga cgtcgacgtc gatccagtcg aggcaacgca     22320
+     cctcgcgttc ggcgatgacg atacgccgcc ggacgaagac gacgaggaac tcgagggcga     22380
+     gaactaccgg acggaactca gcgacatcat ccaggaggtc gaacgctacc ggacgatcac     22440
+     gcttctcggc tccgacgacg cggtcggaga cgagctgatc gagtcgggac tggtcacggc     22500
+     cgccgacccc ggcgacgccg gggacatgct cgtgaaccgc gtcatcctcg acgacgatcg     22560
+     cctccggccg aagacgaccg atcacgcggt ccggatccgg gtcgatatca gctaccacga     22620
+     cgtcgccgac gagacggtgg tgagctcatg accgagcgcg tccttcccgg cgcctccggc     22680
+     tcgaacctct acgggatcga gatggcagag gcctggggcc agtacagtga tggatggatc     22740
+     gtcccggcga gcgacccgac gaagtccgcc cagcggtacg aggacatcga cgagacggtg     22800
+     ttcacggcgt tcgaggtcac gtacagtagc gaagacctga ctgtggagat cgggccgggt     22860
+     gaggcgttcg tcgacggcct cgtgatgctc gacgaacccc gtgagatcac actcgaggcc     22920
+     aacacccagg accaagaggt cgcgatcggg tgggatcccg acgcgattta ccactccgat     22980
+     gaacacgaca ctcgcgacga ggccgaccga gtcctggtcg acctcgcgag cgagatcgac     23040
+     gacgatgacc cgtcggtcgt gatctggagc ttcgacactg acggcagtgg cgtcgttgag     23100
+     gcacgaaacg aacggtacat cgggccggtc gtcaaggccg gaaaggtgac cgtcgaaacg     23160
+     atcgaggacc tccccagcgc cgaggacttc cccctcggga cggagttctt cgtggaagag     23220
+     gaaaaccaga gctacgaggt aacacaagat gagtaaaatc tgggaaccga gcggtggcgt     23280
+     cgacgacaag gtcctctttg ggatgtaccc cgaggacctc gacgcccagg atcgacaaga     23340
+     actgtacgct gaggcgttcg aggatatcgt caagtcctac tcgacgatgg cgaccgcctg     23400
+     ccggtatcag gcgatcatcg atgagatgat cgacgacgaa actcgagccc agctgatcgc     23460
+     tgacacgcag gcggcgatgg aagcggtcag tatcgcccgg accgcgatgg actcgatcag     23520
+     cgagtcgtcc acagctatgg atccgatcag cgagtccatc gtcgcgatgg aggccgtgat     23580
+     cgattcggac gatatcgcgc tccccgctgt cgtcgagagc cagatcgcga tggacgcggt     23640
+     gagcacgtcg cagaccgcaa tggacgcggt gagcgactcc cagacggcaa tggacgcggt     23700
+     gagcgactcc cagacggcaa tggacgcggt gagcgtctcc cagacggcga tggacgcggt     23760
+     gagcgactcc cagacggcaa tggacgcggt gagcgactcc cagacggcaa tggacgcggt     23820
+     gagcgactcc cagacggcaa tggacgcggt gagcgtctcc accgtcgcga tggaggcagt     23880
+     cgccgccagc gccctcgcga tggacgcggt gatcgcttca gacgatatcg cgttaccgac     23940
+     gattgtcgaa gaggagatcg cgatggacgc ggtaagtacg tccgacaccg cgatggacgc     24000
+     ggtaagtacg tccgaaacag cgatggatgc ggttgggggc tcccagacgg cgatggacgc     24060
+     ggttgcgggc tcccagacgg cgatggacgc ggttgcggcg tccatcatgc cgcgaagtgc     24120
+     cgtcttcgac tctgactacg ctgtttcctc tctttgggcg gcgtctccgg gcgcaaggac     24180
+     tatcctcgaa gagggaggtt caccgacgct cccgcacacc tacgacgaca gccgttcagg     24240
+     atcgtctggg acacacctcc gaatcgaaga cggaagcgac atcagtctcc ctggaaacgc     24300
+     tacgtcggcc ctcgaaatcg aggttgttga ttccgacgat ccctaccgtc gtggtctcac     24360
+     attggagttg gatctgagca acgcgaccac gctcgagttc gagatgcgag ccgactccgt     24420
+     ccctgactct cgtattgatc acggagtcga ggttgacgga tccaccctat tctcgaatag     24480
+     cgggaatagc agctggacga atcggagcgt agatgtttcg gagtacagtg gtacccacga     24540
+     cgtactgttc ttcacggata ctgattcgag gactggcggc gactggatga cctacttcag     24600
+     caatataaac ctgatctgaa ccaatgcaac tgatcttcac accggatgac tccggcacga     24660
+     accgggcgag tggctacgcg accgttccat actccagtga cagcgaagag gaaacggtcg     24720
+     ccgaaatcac agaagacgtg ctcgcaagcg tatttcagga ggctcaggac aacggagcca     24780
+     cactcaaagg tgctgacgaa tcgatcgaca ctgctgtcga tgatcccctc tcgtaccgcg     24840
+     attacctcat ccttagggac ggcgagatcg tcttcgacga gagttactca cgcaaccaaa     24900
+     acgaaggatg aagtggcgcg atcagccgta gatctcgagt agagctcgct tcgttcggcc     24960
+     accggaaatc cggatgtact tctcagctgt ggacagcttc gcccagccca tcatcgcctt     25020
+     catcgacgcg atgttgaggc cctcgtacgc gtgcgtcgac gcagccgttg cacggagcgc     25080
+     gtgtgggtag actcggcggt tgaggtccga ggcctcagct gcatccttca cgcggcggcg     25140
+     gcaggtgttg acgctcaacg gaacctcgta gtagtactcg aagaacgagc tgacgacgtc     25200
+     ctcgacgtcc tcatcgaact cgtaggggac ggcccgctcg gccgcctctg tcttcggctc     25260
+     ccagtacgac ttcaggagct cgtcgagatc gcggttctcg ggatcgttct ggtaggtccg     25320
+     gttggcctgg cgccggcagt agccgcagag gccgccgtcg cgccccttct cgcagggctc     25380
+     gtggctcgga acttcaatca ggccttggtc gggcttgacc caggtccgct tcatgtgggc     25440
+     gatctccccg atccgcatcc cgagcttccc gctcatcgtg atgacgaacg tggcttcgag     25500
+     gttcgcgggc ggcgtcagaa ggtgcgcgcc gtccaggagt ttctggaatt cggtctcgtt     25560
+     cagtgcgtct tcgtgggcat gtctctcttt ggacatacac cacgccggtc acactggtga     25620
+     cctatctggc catttattcg ttgctacgag tatatccctc gtcgaagacg atctcgccgt     25680
+     tcttgagaat tagaaagtcg cggtagggga gcggatcctc aactgctgcc ccgatcccct     25740
+     catccacgct agagagcgtc ttaccgtcag acttcgccgc ctcgaagatt gccgcaagct     25800
+     cgcttttagt tgtttcaacg accgtctcgt cctccgcatc gctggagtat ggaacggtcg     25860
+     cgtagccact cgcccgcttc gtgccggaat cctccggtgt gaaaatgagt tccatcggtt     25920
+     attcgagttt catgtcgctg aactcggcat attcagacga actaccaacg ctgccgagcg     25980
+     tttccattcg gatgtaaaga gattcgccgc ctgaacgacc gttgtaccgg tccgagatat     26040
+     agtcatccgg actgttgtcg tagccttcga gcccgagctc gatcgtcgtc tcaccgctgt     26100
+     acgaggagac gtcaaagctc cgctcagtcc aagaggagtg gtcgctgtct gtgccgaata     26160
+     cctccgatcc accgatctta attttcagat caggcgatcc gttgtccgcc ctcgtgtaga     26220
+     cgctgaaggt gctgctgttc gagagatcga acgactggct ccaccaaccg ctgttcgtcg     26280
+     ggtcgttcgc gaagtcgccc gtgtcccaga tggtgccgct cgcgaggtct gtcgaccaga     26340
+     tcgtgtcgta cgtgtacgca ctggaaatcg cagcggttct tgcgatgatg gacgccgcaa     26400
+     ccgaatccat cgccgtctgg tcagacgcga cggcatcgat atcggcgtaa ttcgagccct     26460
+     ccaggcccgc tctggcggct acaaacttcc cgaccgccat cgagacggca gcaacggtgt     26520
+     cccaggcaag ctgcgaatcc cagatcgcat ccatcgcgag ggtggaggca cttaccgcgt     26580
+     ccatggccgt ctcggacgta cttaccgcgt ccatggccgt ctcggacgta cttaccgcgt     26640
+     ccatggccgt ctcggacgta cttaccgcgt ccatggccgt ctcggacgta cttaccgcgt     26700
+     ccatcgcggt ctgagaggag gcgacatcgt cgatatcggc gtagtcatag ccgctgaggc     26760
+     ccgctcggcc cacagcgaac ttcccgacgg ccatcgagag gtcgcggatc atcccccacg     26820
+     caacgtcgct ctcccagagc gaatcgagcg cgagatcgga gagactgacc tcgttcatgg     26880
+     ccgtctcagt ttcgacgatt gtcggtagcg cgatgtcctc cgaggcgatc gcggcatcca     26940
+     tcgcgatagt ggaggcggcg actgcctcca tcgcgacggc ggacgcgctc accgcatcca     27000
+     ttgcccgctg gtcgacagag accagatcca tcgcggccgc gtcgtctgcg acttcgccga     27060
+     tatcggcgta gtccgccccg tcgagttcga ccagtccagc aacgaacttt ccgaccgcca     27120
+     tcgcgacgtc tcggacgatc tgccaagcga tttcgctctc ccagatcgta tccaacgcga     27180
+     cgtcggacac gctgatcgga tccatcacga actaacccag aaacccacaa ccagtacgat     27240
+     gagttacaac tccatcgacg tacagaccgc agttgcacag accggaaccg cgctcgacga     27300
+     gatctcgcgg tccgaaccgc tgacgatcgc ggcgccgctg ttcatcatcc tggcgacgta     27360
+     cgtcctcttt tacgagggtc tgctctggtc catcggcacc gacggctggc gcgggattcg     27420
+     ctcgcagctt ccgctgttgg acaagctggc cgagtcggct ggagcgtaca ctcactacga     27480
+     aatcgatccg gagcgggaga cggtcggcgt cctcgagctc gacgtcgacg aggcgatcga     27540
+     cgtcttccag gaggaccacg gctacctgga tggaccggtg gccgcgcaca agggcctccc     27600
+     ggacggtcgc caggaggcag cgtcgctggt caagtacggc ttcgagaaat acgacatctg     27660
+     gttcgacgca gaagtgatcg aggggatgcc gccggggatc cggttcctcg tcatcttgct     27720
+     gatcccgaga cagcgtcacg cgacgctgtt cccgggtgag gagccaggcg agacgctggt     27780
+     caccgcccac caggagtact ccgctcacag cgtgttcttc gcgtactggc acttgatcgc     27840
+     gaaggggatg gacatcgacc gcggcgtccg cgaggtcacg gacgagctga aggaacacga     27900
+     ccgattcgag gcgacctcga gggcaaagga tctgtggctt gagtggttga aggctccgca     27960
+     gtgagaagac gacttactcg ggtaactggt cggggttcac ccaccagacg cgtgcgttcg     28020
+     caccgacttt cttcgtctcg aggccggggt attcgtcgtc gaaaagcccg tgcaggcggt     28080
+     tgtgtgcagt ggtttcagag catccgacgc cgtcggccac ctcgccgacg gtcaacggtt     28140
+     cggggtgcgc ctcgacgagc gcgtcaatga cgtcctcgtc tcgatacttc ggctggaata     28200
+     gtccgtcctc ggcctgttcg acgtcgccgc ggacatcgcc tccggtcatg gtctctgttt     28260
+     tcctctccag tactataacg gtactcctac gtagttcacc gtcgcggctt cgactcgtgg     28320
+     acgggagtct cgcgatcggg gcggcgagta gtgagcacct cgagctcgcc gccgtccttc     28380
+     ttctcgcgga cgagtagcgg ttcctcggtc agcgtttcga cgtgcaccat cttcgcgtcg     28440
+     atgcgaacgc tgacgtcgtc accagcgacc aggtcgacgc cggtacagtt ctcggtgacg     28500
+     gttcgtttac gatcgccgtt ctggtgagca gtgacaacgc cggtgtcggt gttgtagtga     28560
+     atctcggttg ctttcatcat atcttcgtca cgaccccatc gggaataggt gttccgccgc     28620
+     tgctacggac gcagtggtcg tcttcggtga tctcgtagcg gccggagtag gtgtacgccg     28680
+     acccgtcgcg atgcaggacg gtcatcgtct cgccggtggt ctctccggtc gcccggacga     28740
+     tctcctcgaa cggccgcgcg ggttcggcgc agtagatgga ctccatcagt cgggccatgt     28800
+     accagctgtc cgcgcggtcg tcgacgtccg gagccgacag ccaggtgccg ttgtgggcga     28860
+     gcatcgcgac cggttcgccg tctcggtcac gaacctcgaa cgggtgggcg ttccgcagcg     28920
+     agatctcgcc gcgggtggcg aagcgggtgt gcccgagagc gacgtcggcc tcggggagcg     28980
+     cgtcgacagc gtcgatgggc atcgcgccca cgccgcgttc gcggtgaagc tcgccgtcga     29040
+     cggcaaccgc gacgccccag gagtggccgc ccgaccgttg ctcgttctgc tggcaggccg     29100
+     cgaccgcccg ctcgggggcg tcgtcgccgc ggtagatgct catccagcac atcgtcttag     29160
+     gcctcctcct cggcggtgtc ggcggtgctg gtgtggtcgc gcgggccgtt cgtccagcgg     29220
+     aactcgccct gctcggcgtc gatgttccag agcgcgtcga cgttgttcgc gggcgagtac     29280
+     tcgtcgcgcc cggctcgaac caggttgtac gcccggcagc gccaggtgtt cggcgtctgt     29340
+     gggtacgcta cctggatggc gcggaggacg tcccacgcgc tctcgaactc gcgctggtcg     29400
+     acgcccggga tcccgcgtcc ctcctggaag gtgatgccgc cctcgatggg ctcctgcatc     29460
+     gcggtcatca ggccgacgtc ggtcgcgcgc tggtagattt tctcgtagac gcgctcgagg     29520
+     gtgcggcggt ggttctccag cttggggctc cagccagcct cgatcgcgcg gccggtgacg     29580
+     cgccggagcg taagcaggcc gttgagggcc atcgccgggt gggcgtcgtt cgcgcgcagt     29640
+     tcgatggtga gcggtttccc gctcgcctgc gcggggttga acgtgacgct gctgtactcg     29700
+     cgccggtagc tccgggggtt cgcgacgcgg tcgcggacgc tgtcctggct gagtcgcgtc     29760
+     gtctggccgt ccgcccagtg ctcgacgttg agctcgctgc ggcggtaggt cgtcccctcg     29820
+     cggaagccgt tctcccagtc gtggcagaag tacggcgcga ggaacgggaa gatctcggct     29880
+     acggtgttgt agctgatcgt ccacgcggtg atctcgtcgt caaagacgtc cccggccacg     29940
+     cagaggtgaa cgtgcgagcc cgcgccagcg ccgttgttgg ctccgtgcca gtcccaggtg     30000
+     atgtcctcgt cgcgcgtgtc cttgtagaac cggttgagga tcgtcttgca gttcttgtac     30060
+     gcgccgatcg aggtctcgcg ggggccgctc gcgtcgttgt gccagccgtc gaggctgccg     30120
+     cggttgttgt tcatcgtgta gctccggacg tcgctgggga gcgggccggg gaactgctcg     30180
+     atctccattc cgtgcgtaaa cgggcttctt ccgtctgttt tcatcgtttt aggcctcctg     30240
+     caggtgtctc atgcataggg gtaataataa aggttgtccc acgtagttaa ccgtcaagta     30300
+     tggcgatttc ggacgaatcg gcgtggtcgg gaaggccgcg aaatttactt acggatgcgc     30360
+     ctgttctttt ttgacatgag caaccgcgac ctcgaggagg ccgagtaaga cctatggcaa     30420
+     tcgtcaccaa tcgtagtaat atggagccga cgtcgacggg cggcgacgga agcgatggcg     30480
+     aggacgacgt cccgctgggg acgttcctct acgaggcgct gccggactcc gagatcgatt     30540
+     cggttgaatc ggtccgcgag ctgcgcgagc gcgaatgacg ctgttcgtcg acacgaacat     30600
+     cctcatcgcg gcgacggtcg gcgaaccgga gcggggtgag gtggcgcggg atcttctcga     30660
+     cgccgactac gagttcgcga cgacgctgct gaacgtgatg gagtaccgga cggtcctgac     30720
+     gaaaaagaag aagttcgagc aggagcgcgt cgaggagctg atcgatgggc tgttcgaccg     30780
+     gatggacgtg tacggaccgg agtcgagcga cctcctcgag gcgtacgcga tccagcgcga     30840
+     gacgctgctc tacacgatgg acacggtgat cctcgcgacg tcgaaagagg tgggcggccc     30900
+     gctcgtcacg ttcgatggcg agcttctcga caacggcgcg atctccccgg aggaggtcct     30960
+     cgagtcctaa atcgtctcga agtggtcgta cgtccgttct gtggtttgaa gcgagcggtg     31020
+     tcgaagtcga ttcctgacgt cgtagaggat gtttcctgtc tccacgcgta gcattcgcca     31080
+     ggcgagtgag tgacgaagcg tatgcgctga gacgtcgtcc ggcccaccgc gtccctcgaa     31140
+     cgtgaacggt cgaatatcag ctcgtcgagc cgcgcgcttg acgacatcgt tcacaccttt     31200
+     cggcgacatc cgggtactca tctggctggg gaacagcgcg tcgacgtcgt cgcgaacctc     31260
+     gaggtacgca ttcagcgtcg cgatcgtcct gagattctca ccgcggtcga gctcgaacgt     31320
+     ggccggtcgc gggtccctat cgttggggta gcccttctgg atccggctcg ggatccggag     31380
+     cagttcgtcg tcgacgtcga gcatcgcgcg atcgacacca gagagttcag cccggcgaag     31440
+     gccggtgtcg tagaggagcg tgaggatcgc gttgtctcgt tcagggtgac tgccctcgag     31500
+     gacggcagca cgcatcgctt cgacctggtc tggtttcaac cagtggactt cgtccgcgtt     31560
+     gctcatctgt ttggcaacct tcactgtcac tgttctaata gtgttcgact tcgacgttgg     31620
+     aatcgaacac ttccaccggt tcaagctctt gtaatggacg ccgtcttgcg atttttcctc     31680
+     gtggaaggta gttctgcagg cgtcaatccc aggggtagta cgccgagatc gggtctccaa     31740
+     atcgccgata cgccgacaaa taaatcatat gctgctatat ggactctgag ggcggcatct     31800
+     cgctggagtc ttatcaaaca tctgggccga gtgtgcgatt agagtgtttg ataaggtctg     31860
+     ccgagcgtct gacgaggctt tatcaactct ccgacctctt tgctctcttt gaggccagag     31920
+     agctacatga gaatcggagt taccaaccag aaaggaggag cagggaagac gacgaccaca     31980
+     ctcaacgtcg ccggcgcgct caaccagctc gggaacgacg tcctcgtgat cgacctggat     32040
+     ccgcagggcc acgcgacgga agggctcggg ttcgaggacc tctacgacga tcccgaacgc     32100
+     gactcgctgt tcgacgtcct ccccgaactt gaacggatgg acgagctcga gcagctcgtc     32160
+     gtcgagcacc aggaggtcga ctgcgtcccg tcgcacgaga cgatgatcaa cgccgaggac     32220
+     gccctggcga acgtgatgaa acgagaggag cgcctcgaga tgctcctcga cgacgccgac     32280
+     ggtcgttggg actacgttct cgtcgactgc ccgcccaacc tgggcgtgct caccgacaac     32340
+     gcgatcgtcg cgaccgggaa cgtcctgatc ccagcgcagg cgaagagcac gagcatccgc     32400
+     gcgatcgagc ttctcttcaa gcagctccgc tcgatcgagt ccgcgttcgg tcccgtcgac     32460
+     gagctcgcac tcgtcgcgaa cgaggtcgag gtcgatgggg aagccgatga gatgatggcc     32520
+     tggttcagag acgtctttga agacaaagag gactgtgctg tctttgaggt cagaaagcgc     32580
+     gtcgcccttc agcgcgcctg gaacaacggt gtctcgatct tcgagcacga ggaggagtgc     32640
+     gacatggagt cagtctacct cgacgtcgct cgccacctgg agggattcca tggctgagaa     32700
+     gcgcgaccgc aacccgtggg aagatcgcta cgacgatgac gaggaggatg cggagaactc     32760
+     ggagacgtca gagagttcaa aagagacaaa gacatcggat gtttcagagg cctcaaagag     32820
+     ctctaaaacc tcaaaaaaga caaatacaga aatcacgtca gaaggttcag agaggtccgg     32880
+     gaaaccgact gttagggagc gcaagaacgt gaatatgtac cttcccgagg acctagtgga     32940
+     ggagttacag ggccgattct ttgaattgga agcagagtgg cgtcgtgagc acggtgaaga     33000
+     tctcccaaag aacgagaagt tctacccggc agtgattcaa gctgccctcg aggagaccac     33060
+     cgttcaggag cagctcgacc tcgactgact cggcgctcac gtcgatccgt ttcggaagtt     33120
+     tccggaaagt tccgaaagtc ttcactttca ctcggcttgg ctggtcttta aacggttata     33180
+     caccgactaa tattgttgca ctcgctcccg cgcaaggagg ccgttcgccc ccgatttttt     33240
+     caccgggtta gaccggccct tcgtattccc agttgtgacc gccgttaccg tcccgtgata     33300
+     ctacatattt gtaaggtccg tgaccattgc cattgttgca agtgcagtcg cttccgcact     33360
+     tgacgcgccg aatgacgacc gtaccaccac tgtcgttttc ttcgacgtcg acaacagagt     33420
+     catcggatgc gatctcctct ggatcgggcg gctgctcgag ataggctatc aagtcttgac     33480
+     agtactcgat gatcaatcga agcgttggaa ccgcttgacg ttggaggcct tctgcgacgt     33540
+     agttcgggat ttcttccggc ggagtgggtt ggtcgttttc tggcatgacc ttatcaaacg     33600
+     tttagagcgc atgtctaata aatctgtttg ataaggtcgt agtgagtggc gtctcgatcg     33660
+     gcgcacgatc agtcctcttc gagaaggtct tcgggtttga gttcgccagc gacaaatcgt     33720
+     cttccacgct cgctgatcca ataggcacct ccggaacttt ccaacagatc gtgtttcgcc     33780
+     agcgagcggc agcgctgtcc cacccaattt gacgtgtatg gaacgttcaa cgcgatggac     33840
+     gcaggtttca tccgtgcgcc atgcgaggcc atgaaatcca agatgtacgg atcggcaggt     33900
+     ttcatccagg agacctcgcg atgcataagt ccgacaacac aattcctgtt tttaaccgcg     33960
+     ttgaaggcag cttctggtga tttaattcct gattagagtc acctatatgg gtgagaaggt     34020
+     ttattagcgg ctggctaaat gttcacgttg tcgaaggtaa tcgcacgcta cgctgccccc     34080
+     agaaagcagc cggtgctggt atcaccgacc gcggttgcct tcgacgttag acgcctcgtg     34140
+     aaggcacgtg cgggcgaatt aacgcccgct tagtgtcttc ccgattcccg aaaccgtgga     34200
+     aatcccgaag acatggcccg cttcaaccgt caccctaaaa gtaatgtcgc ttctgatgtc     34260
+     aggagcggta ctggtaagct atgtctaaac cccggaaaga aggaattaac agggttctgc     34320
+     cgtcttgcgt tcagttccgg cgtgctgtta gcggggtttt attactctcc taatggtaca     34380
+     tttgtgttga acgcacgaat caaggatatc gaaaggagat ccgtcgagtc ccgcttgctc     34440
+     ccacgcaact acgccgcgga tctcctttca aagaggccca ggaatgaaca cccccaatag     34500
+     acactgtcac cgatctcgtt caaacggtcg tcaccacctt tcagtagttg gagctatgtc     34560
+     tgacgcgagg ggaactgttt tagtaccaga gtggcatgtt tcagcgtatg gactaaaaag     34620
+     cctgtacgca cggctcacga aaaatcaacg ccggcaagaa ccggagtggt tgtacactct     34680
+     cctgttcttg ccccatcgtg ataacgtttg cgcctcggtg agaggcgtca ctgtgtcgcg     34740
+     ctggggtgtc gtcctttccg ggcgtcgccg gttcgcgatg agctcgcgga ccaatggcag     34800
+     caacaacgac accaagagat acgaaaccgc aggatgacgc ctcgacgggc ctgacgcttc     34860
+     gagcgcagtt cccggcggag cacgacgtcg tcgtacgaga cgcatcgctt gcgccgacga     34920
+     acctgtggcg ggagatcttc gatccctggt cggagcactc gaagctcccc ggccatctcg     34980
+     tcacgggcgt tcgtgcgcta gcggctggtc gcgacgctgg tgagttccac gagcagcttg     35040
+     catccatcaa tgcgttggat ggagtctacc agtccgtcct cgagtggctc gcgacggatc     35100
+     cgaacgtcga cgtcgacccg gaagacgctg atacgggtga ccgcttctgg tacgcgctct     35160
+     cggtcacgcg ctcgctcggg actggtcggc cgctcggtct ccagaccgaa ccgttcgaca     35220
+     tccggtccgg gccgctcgag ctcctccgaa tcgtcgggat cgagccgacg atcgcgatcg     35280
+     acgtcgacca cctctgggac gaccaggatg gacgatggac gagtcggcga agtcagcgcg     35340
+     agagcctgct gacgttcgtc ggctggctat ccgaggtcgc cgacgtccac ctcgtcgcgt     35400
+     cgccggcgac gatcgcgaag ctgcgccaag atcacgtcga cgaccttccc gagagcgttg     35460
+     ttgagagcgc gcatccaacc cttacagaac tgggactgag tgacatcgac caggagcagg     35520
+     tcgaggcggc gatcgccgag atcccgacca acggtcgcga gtgggacatc ctgcgcgtga     35580
+     tcgaggacct cggcggcgag tgccgccgga cgcagctcta caacgacgtt cgcctcggcg     35640
+     gctcgaacgg atcgatccgt gacgccctct cgacgcttcg ttcctggacc tgcattttca     35700
+     gcaacggtcc acgtaacgcg aaggtcgagc atctcacccc aactggcgaa gccgcactcg     35760
+     aggttctcag ggcgcgaggt ggcagaaaaa ccgagttgag tgatttcgct gagagtccgg     35820
+     aaacccaacc ggaaaatcgt ttagccgatg cagtgtactc cgggccgagc acgaaggccc     35880
+     ccccagacgc cgatcggccg gaaggggagg ccagtgccgg tcggacgtcc cgctggagtg     35940
+     gccgcgtcga cgtggactac gtcccgaact ggagccgcca ccacgcagcc gtcgcgagcg     36000
+     cccccgaaga cggcggtatt ggcctcgtag accggccaat ggagaagcga accggaagga     36060
+     acggagacga ggacggccgc ataccctggt ggggatacga cgaggaccgc gacgaggtcg     36120
+     ccgtctccta cgagtggcac ggcccccggg ctggtatggt gtgcaacgtt cgagcgttgc     36180
+     tgagtgacgc cgcattccgc gagatcttca ccgttgaagc gttcgacggc gaggcgggga     36240
+     acctctccgg tctcctcgag ggcaaccggt gggcgctgcg atccctccgc cagctgggct     36300
+     acctcaagga cgggatgtct gcttccgagt accgggacgc cctgatcgat gcccgtgacg     36360
+     acttcgtcga actcaccaac gacatcgaac gggaaaagga tcaacccgag ctctaccgtt     36420
+     cgatcctctc gctcggtcac ggtctttcga cgatcgccgc agacctgtac gacatcctgg     36480
+     gtatccgcgt cgtccgggag atctcgatcc cgcacttcaa ccgggactac tggggccgat     36540
+     cgaaacgagt ccgcggcctg ttgaagttcc tcgcgatgcg gatgacgcag tcctcgaggt     36600
+     acggtcagta ctccgcatgg cgagttctct gtgaaccgcg gacggagaag cgccaggtga     36660
+     tcggtgacgg ccccgacgtc gatgccgccg atccccgtgg aaccgtccag ggttcgtggg     36720
+     tcctcgtcgg gaagggactc tcgaaactcc gtccctacct ggagcacttc gatcgcgaag     36780
+     agatcgacct tcaggaggag gagcccggct tccaaccgtt caccctcgac ttcgttctcg     36840
+     acgagcgtcg acgaacgccg atcgaacgag ccgcgaaacg gatgctccgg cagcgtggac     36900
+     tcaagccgac ggaagatgcg atcgccatcc tcgaggcgtt ctgcggtgac gcctacgacg     36960
+     caaccgaggc gatcgccgcc ctcgagggcg agccggttcc tcgtcacgtc cggatcaacg     37020
+     agctgaagta cggtctctcg cagctggacg tcgaccggat catgcccgag ctggcaccga     37080
+     cgaagcggaa aacgctgaag gcactcctct gtgccgatga cgcactctcc caatcggaga     37140
+     tcgcggagcg tggtggcttc tcgacgcggt cgttccgtga tcatcgcgac gagctcgggg     37200
+     cgttcgacat catcgagaag accgacgacg ggaagtaccg cctgacgatc tcctaccggg     37260
+     gcgagaagaa ccgcgtcccg gcgctcgtcg aggactcgct ctcgacaatc caggacgtcc     37320
+     tctgggaggc cacgttcgac ctcatcgacg acgctgaacg cttcggcgat cccgacgacg     37380
+     cccagctcga agcactgcgg tggccgcctg acttcgacga actcggcaga cgctggccga     37440
+     tgatggacgc ttggatctcg atagcggcgg cactcgcgaa gagtccgcat cccgaccccg     37500
+     acgtgatcac ggtcgggaag atacccgaac agacgagcat ccaggaaccg gtcaccgctc     37560
+     cgactgccgg ggctgactga ccgtggagtg gaccgatcaa ctcgtcgacg agccgaggca     37620
+     ctctcgggga gcgctctcaa gaccttatca aacacgcaca ccgaaaacgg ccctttgatg     37680
+     tttgataagg tctattcacg ataccaaatg actgctgcga gttcttcgaa ctttttactc     37740
+     gcgatcacgc cgttagcttc ggcctcctgg agtagctcgt acgcgcgcga tcgtgagatg     37800
+     tccaaagtgt tcgcaacctc ccgcgtgcta cgaggttcgc gggagtcgaa tagatcctca     37860
+     atatctgttt cgtcgacggc cgattcgaac tggcccgtct cctcattccg atcgggcatc     37920
+     gacagcacag acactgtcga ttaatttcaa accatcgatg acagtcgtcg agggtcaatt     37980
+     ttattatact ggggttccac ggacatgaca gagcaagcga aaagtacgga ttacatcacg     38040
+     acgcgcggac tctcgtctcc cactgcgaaa acaacgagac aacgcgcgaa tcaagggtta     38100
+     cgaacctcgt gatgaggtcc gtgctctagc ccgcttgctc ccacgcaaag aggcccagag     38160
+     catgagagag aacaatccca atacagtaaa gcttaacgaa cagcgccagt ccaacctcta     38220
+     cggagaggtc caaaacggcc gcgctgtcgt tcgatgcggc gactgcggaa cagttttctc     38280
+     ggcaaccgat gctgagactc atcagtgcac cgaacctgaa tacatcgcta ctgacggcgg     38340
+     cgtcaacttc cagcgcgatc tcaccggatt ccagcgggac atcatgttct gcctacgccg     38400
+     gatcgagcgc gggaaggcga ccgaggacca accgtacggc ctcggcataa agcgcgaact     38460
+     cgagcgaacg cgcgacgtcg acgtcgtcaa ccacggccgg ctctatccca acctggacga     38520
+     gctggtcgag atcggcctga tcgagaaatc gatggtggat cggcggacca acgagtactc     38580
+     tacaaccaac accggtcagc agctggtcga cgactactcc agctgggtac tcgagaccgt     38640
+     cgcggaacga ctccccgcgg ctgaagccgg tggtcagcag tgagcaccgt ctgtcagacc     38700
+     tgcggcgagg tcagcgagaa gtgctaccgc tgcaccaacc cggagtgccc gaaaggtgac     38760
+     ttggtcggcc agaacgacca ggggaggcac gtccgatgac gcacgacgac cttcgggcgc     38820
+     tcgttctcga taagtacggg tgtgagtgca ttgtttgcgg gcgctcacct gaaaagtggc     38880
+     tcgagagtga ggatctcgac cggtcgcaag acaaaatctc catccatcac gtgaatggcg     38940
+     atgactcgga cgaccgactg gagaatttaa ttccagtctg tcaaagctgc cacacccaca     39000
+     ttcaccgagt cgacaagccg ccttatcgga agtggcaccg gcagctccca atcgaggctc     39060
+     ggcatgcgtg gaatcagcat catgccgagt actacgaggg cgatcggatc tcgcgagaag     39120
+     aggctgagcg gcagttcggt tctgaaggcg gtgacccgga gagcctgaag tataaagctc     39180
+     gcgagggcga cgacgctgca actcaaacgg cggttaaggg gtgccagggc cgatgacgca     39240
+     cggcgacatc tctgtcggag acgtcgtcta cgacatcggc aagggcggcg ggaagatggt     39300
+     ggtcgtcgat cgcgtcgcgg actcgatcgt cgagcaccga gagggcgagg actacgacat     39360
+     cgcgtcgtac aaacaccatc cgaacctgcc cgttcgtgag gacgacgccg tcttcacgtg     39420
+     cgtctacatc cccgacacgc cgggatccca ccccgccagc gggacctacg acttccccgc     39480
+     cggccgactg gcgcgagcgc cgatcgagga ggccaacaag gccctcgatc ccatccagga     39540
+     cgtcatcgtt cgcgacgtcc tcgaggatct cctcgtgatg gccagcgcga tcgactcgac     39600
+     cgggaccgtc gacgaaagcc gcgccaccgt cctcctggac gtggccggcg acgtcctcga     39660
+     cgagtcgatc gtacgcgacg ccgaggaact cgcgcgctcc aaccccgact ggcagggcaa     39720
+     cggctcgacc gaacccgcca gtgacggcga cgacgccgtc gacgaggatg acgaggagga     39780
+     ctccgaggag gctgatcccg acgccgaaga cggcgacgag gtcggccaac tcggcgactt     39840
+     cgagcccacc gcagagtcat gatggcgctc gagtccatcg gcggccgcgg cgccgtcgag     39900
+     cacgctgagc tgcagtgcgg tatcgaccag gaccccacga cggagagcgg agcctgaacc     39960
+     aatcagaaac cacaccaatg ttcaaagcaa tcgctacgaa gtccgaactt gaatcgttca     40020
+     cagatcccat cagccagctc gtcgaggagt gcaaagtcaa cctcaacgaa gacgggctgc     40080
+     acgtccgagc cgtcgacccc gcgaacgtcg ggatggtcga atccaacgcc cacgccagcg     40140
+     gcttcgagtc ctacgaggcc gacggtggcc tgatcggcct caacgtcgac cggttcgaag     40200
+     acgtcatcgg gatggccaac tccggcgacc tcgttcacct cgagctggac gaggagacgc     40260
+     ggaagctggc catccagatc gaggggatgg agttcacgct cgcgctgatc gacccggact     40320
+     ccatccgggc cgagccggac atccccgacc tcgacctgac gtccgagatc gtcctcgaag     40380
+     ggcggcacat cgaccgcggc atcaaagccg ccgacatggt ctcggaccac atcacactcg     40440
+     ccgtcgacga aaaagaggag ctgttcgaga tcgaggccga gggcgacacc gacgacgtcc     40500
+     acatcggcct cgaacgcgac gacctgatcg acctgcaggt gggaccagcc cgctcgctgt     40560
+     tctcgttgga ctacctgaag gacatgagca aagcgatcga tgcgggcgac gaggtcacca     40620
+     tcgaactcgg cgaggagttc ccggtgaagc tcgcgttcac gactgaagag ggcaacgtcg     40680
+     acgtccagta catgctctcg ccgcggatcc agagcaactg agtgatcacg atgactgaaa     40740
+     aaaccatctc aggctggatc gtggtcgact ggcggaaggg caagcaccgg actcggcagt     40800
+     cgaagccgaa ggcgtccgaa ctcggcagta acgagctgct cgcgaagctg gcgatcgacg     40860
+     tccacgttcc ggaggtcgag gtccccgaac tggccgtcga gatcgacgtt ccggaaccac     40920
+     atgtccgtgc ggcgacgctg gaggccctgg acgaggagca gctaccgggc tggacggacg     40980
+     tcgcgaacga gttgatcccg tcgacgatcc cggacgaacc cgacgagttc cggaacgaga     41040
+     tcaaccggat caccgtgcga accatgaccg aggcatctac acggcccgat ccagaagcgg     41100
+     tccgcgagta cgtcgacgag acgatgcggg ccgtcgccgc gggagaggag gttgatgcgt     41160
+     gatggcgctg gcctgtcagg ctcctgagtg cgatcacgag ttcgatgatg cggtcagctg     41220
+     ggacgaacac gacgcccgcg acgctggcga aacgccgtac ttcaccaggg tctacgagaa     41280
+     ccccgacgga atcgggatga tgacggacta tatctgctcg gctgagtgca tgcgggacta     41340
+     cgtcgaggct atcgatggag ggcaggacga tgcctgaggc agcgatatcc gaaatcgtcg     41400
+     tcgacgatta cgaactctcg atcgaggtag agggcgagga ggccgggaag gtagcgaccg     41460
+     atctacgcga tcgcttctac cgagtcgtcc aggcgctcga agaccccgac gtcgcgacgc     41520
+     ccgccgatgc cgaaccgcac ccggccacga tcgcctggga acgactcgcg gaagaggagg     41580
+     actcggaaga tgagtaagac cggcgatcgc gtccgtgagc tagcggagat cgtcgactac     41640
+     gtcgaggacg aacgcgaggc gacggtccgg gacatcgacg tcgagttcaa acgccgggcg     41700
+     aacaacgtca tcgaggccgc gatgcagacc ggcgagcgcg tcccggtctt cgaccttcag     41760
+     atcgtcccgg atgacgatcg ggacgacgcc ggcgacgagg acctcccgga cgacgtcgac     41820
+     gacgagggcg tcacgatcga cctcgaggag cccgccgggt ccgtaggggg tgacgaggcc     41880
+     gatggtgagt gagtccgacg agttcgcctg cgcgaactgc gaggaggtcc acgacgaccg     41940
+     cggcgacgcg atcgcctgct gtggcgatat cccgatggtc gtctctcgag gccctgccgg     42000
+     aacgacggtg aaggggccgg atccggcagc gttcgctgac gcgacggact ctcatcccgg     42060
+     aggtgaggcc gatgtcgagt gaggattcta ccgagctcca ccacgcgaag caactcgtcg     42120
+     cggtcgcgga cgtgaatgac cagaacccgt tcgacgttct cgtcgaggcg atgcacgagc     42180
+     accgcggaaa ctactccgat gtccacgagg cgatggagga gacgtacgac tccgtcgacg     42240
+     aactcgcgtt caacgagtcg aagcgcctga cggcggacgg aacggtggtg gtcgagtgat     42300
+     gctcgagcag cgcgaccacc gcggtcaccc gttcacgatc ggcgacgatc gcgacgaccg     42360
+     tcgggacgag atcgacgagg cggcggaact cgagcgccag gccgagcggg agcaacgcat     42420
+     cctcgaggag gcccgcgcag tcacgggcgg aggtggccga tgaacaaaga gacgggcgaa     42480
+     gtcaaccgcc cgtcagaacc ggcagagacg tcggaacagt cagagacctc aaagacgtca     42540
+     aagagcgcag agaactgcgc ccgctgcggg aagccgctcg gatcgactgt ccacccgacg     42600
+     atggatgggg cgagctgcca ctcgtgctac aacgaccagg agccgacgtt cctcggcgtt     42660
+     gtcaacgact gggagttcca gtcggcggcg cagtccgacg acgtcctccc gagcgtcatc     42720
+     atcacgctca cgaacgacga ccagacggcg atcaccgtca ccgatcgcga gcaggcgaag     42780
+     gacatcggcc cggagatggt cgggaaggag tgctgggatc acggtgacga gtggaagttc     42840
+     aacccggtgg acgccggtga ttccgatgac gagtgaggag ttgaaccggc tcgcgttcga     42900
+     acgcgatctg gcactccggc aggcgaagct ctcaaaagct gatctgcagg tcatccagct     42960
+     ggcactcaac gagaaccgac cgctcgaagc actctatacg gtgaacaacg cgatcgagcg     43020
+     cctcgatgag gaactcgacg cgatcgagga gttccccaac gagacgcaag cggacccgcg     43080
+     tgaaggagcg agcaaagaag gcgagattcg agagaacgtt ccgacacgag aggttgtcga     43140
+     cgactggctc tgggagcagt acgacttcgg cctcaagaag atcgaagaag agtacgctga     43200
+     gttcgcgttc acggagtcgc ccgaggaggt ggacgatgcc cggtgagacg ccgatctcct     43260
+     ggtgcgagtc cagctggaat ccgcaccacg gctgcttcaa agtcagcgag ggctgtcaga     43320
+     actgtaacgc cgagcggacg agcttccacc gctacggtca caccgacgac gagtggacgg     43380
+     tctcgaacgc cgagtcgaac atcacgctcc aggagcacca cctcgagtgg ccgtcgacgc     43440
+     tcgacgagcc gcagcgcatc ttcgtcaact cgatgagcga cctgttcctg ccgccaacgt     43500
+     tcgtcccgga cgagcatctt caccggatct tcgaccagat cgaggcgaac ccggagcacg     43560
+     tcttcatcgc gctgacgaag cacggcaccg agaccggcgg ccgtcatccc gacgaggcgc     43620
+     ggatcctcca gtgggatcgc gagtacggcc gctggccgga caacctctgg atgggcgtct     43680
+     cgataggcac gaacgggcgg gcctaccgcg ccgagtgcct gcgacggacg ggcgcgtcga     43740
+     cgaagtggat cagcttcgag ccattagttg ggccaatcga ggacccggcc gggacgctcg     43800
+     cgggcatcga ctgggcgctc gccggcggag agtccggcgg cgaggagcgc cgggagatgg     43860
+     atcattcgtg ggcgcgagac atccgcgacg ccgctgagga gttcgggatc ccgttctact     43920
+     tcaagcagtc gagcggatca aagcagggcc acgaacccga gttggccgag gcaggagccg     43980
+     acgctcagga ggcggcctgg gagggcgagg gaacgacgct ctaccgcgaa ctgcccgagc     44040
+     tgaccgacga acttcgagaa catcgccccg atctcgccga gtgggaggtg cgcgaagatg     44100
+     ccgcgtagca cctcgcagta cctcgagaag acggtcaagt cgcggcaggg ctactggtac     44160
+     gaagtccacg aagccgctcg cgacgacgag gacctccacc tggtcccggt cgacactgtt     44220
+     cccggccagt atgtctcggt tgaggacctc gacgagcgga tggccgacgg ctgggagctc     44280
+     gtctacgacg ggacgaccgg ccttcacgac gacggcgagg tgtcggtatg aacgacgctg     44340
+     agacgcaggt cggacactgc cgccacgacg acatcgacgt ctacgtcggt cgcggtgaca     44400
+     acggcgagcg acacctcctg aacaccgatg tccacgagcg cggctggctc ggcaacccgt     44460
+     tccgaacgga cgagcacggc cgcgttcagt gcatcgaccg gttccggagc gagtttgagg     44520
+     ctcgcctaaa cgatgacgag gagttccgcg aagcggtcgc ccagctgcag gggaaggtcc     44580
+     tcggctgctg gtgccagcgc ctcaacgatg acgggcctgg ctgccacgca gaggtcatcg     44640
+     ccgagtgggc cgatcgcctc ggtcgcgacc aaccggacgc gatctccgag cccgcccagc     44700
+     gcgacctcga gggcgagccg accggacaga cgacgttcaa cgtggaggag gacgatgttt     44760
+     aggcgactca tcgacgccat ctacgacggc ctgctccagg ttggcgaaga cgagacggtc     44820
+     gagatgggaa gtcacgacgg tcccgaccac ccggtcggtg acggtatcga gctgaccgag     44880
+     gtcggatcgg cccgcgactt ccaggaggac gtcgctgagg aggtacaggt ttcgatgatc     44940
+     cctggcgacg acccgcgcct agctgaggtg acgatgacgt tcgtcgacga gaacggcgtt     45000
+     cgtcgcgagt ggaccgcatc acatcacgaa tacaacacgg agagctacga atgagtcacg     45060
+     ttacagatag agagcttgcg gaaaaggcga agcaacgagc gaacgagcaa gatactggcg     45120
+     agttcgatct ggtcaacctg ctgtgcccga tctgcaacga gccgtatttc gcagaggatc     45180
+     ccaacccgaa cgacttcacc atcgatcccg acgacggtga gtacggcaac gatcgggctg     45240
+     ccttccagat cagtccctcg aacatcctgg atctcgatcc ggagaacccc tgggaccgca     45300
+     tctgtgtgta cccgaaggag gtcgagtacg acgacggccc gcaactccag gtcgactacg     45360
+     cccggcacga cttctcgcag gagaagtacc agaagtggaa ggaggcgctc gagtacttca     45420
+     aaaagaacga acggcggaaa gaacagaacc agggcctcga ctcgttcacg ggtgatgggg     45480
+     atgtctgacg ccgcccgcga gatcgaagcc gagcctcgtt cggcgtcgat cagcgtctac     45540
+     ctggccgggc cggtcggcca ctccgaggac gccgggatgg gttggcgcga ggacctcgaa     45600
+     gcggagtacg ccgacgggtt cgcgttcaac aacccgctct cgaagtacaa cgtcccggct     45660
+     gacaacctgt cggtcgtcga cggcgtctcg gatgccgaca acgacgagac ggtcggcgtc     45720
+     gacgagatcg tgcgcggaga caagcaactc ctcgagggat ccgacgcggt gctggtcggc     45780
+     tacgaaccag tccgctcgat cgggacgccg atggaggtca tgtgggcgta cgaacgagac     45840
+     tacccgatcg cgctctggcc gatccacggt gcctgggagt cgaacctctc gccctggtat     45900
+     cgctaccaca tcggtcacat cgggccggtc gagtcctgct tagcgtactt ctccgaggag     45960
+     gtcgatcccg atgtctgagg ccacacctcc ccgtccagag atcaaattcg acgatcggca     46020
+     cgtcgacgcg atcatggacg gcgagaagac ggtcacgatc cgctacgagt tcgaacacga     46080
+     gttcgagcaa ggagacgtca tcaacctgct aaaccagaac ggccacaagt tgaccacggc     46140
+     gaaggcagtc acacagttcg agttacgagc cgactgggtc tcgttcgccg attttgaggg     46200
+     tcatcgccgc tacactacga ccggagaact cctcgacgag ctggccgagt actatcccgg     46260
+     ggagccgata gggcctgaga cggtactcga tgtgatagtc ttcgagactg acctgatcat     46320
+     cgccgatggc ggtcaagaac cccgtcagga tgatcgagag cgtgtcacct tcgccgagtc     46380
+     gtacgacgat atgccggaga aattagatgt gttagtcggc gattctggct ttatcgtacc     46440
+     ggcaagtaac gcgatctcgt tcaaagagcg cgtcctcgtg cagttcgacg agaacaaaac     46500
+     cgggaggcca ggtggcgaga ggcattggat tcccgaccga tgccttgaac gggaacctga     46560
+     acgagagggg gttgatctcg atgctacctg atgccctggt cggactcggc atcggcatcg     46620
+     cggcgatcgt cgtgctgaag ctcgcgatcc tctaccggtt tcaccgcaga ggcttccggt     46680
+     ggcccgacga ggatcgagag gactacatcc gccacagtcc gcgattcgag cacgtcgccg     46740
+     gcgacgtcta ccgcgacgag tggtcgggcg agcacatcga tcttgaggag gtcgattgcg     46800
+     atgcgtaacg gcctccccga aacgttcgat gagttcctca aggccagcaa cgtcgcgacc     46860
+     tgcgacaact gcggcgacac cgttcagtgt cgattcctcg aggacagcgt ttgcgtcggc     46920
+     tgccgccacg ccccggcggc tgcaggaggt gttgatgcag atgcctgaaa cgatcgatct     46980
+     gtcgtgcccg agcggctgct tcgaactcga ggtgagcggt agtcacgaac ttcgagacga     47040
+     ccgcgagttc ctcgaggacg tcgcgatcga tgacgatgcc ggggagtgcc cggactgcgg     47100
+     ttctgactgc cgaggtggga gcgatgtcta atcccgacaa cccgccggtc ggcacctgca     47160
+     tccggtgcga cgccgagcga gaggggcact cgtacctcct gctctacggc gactgggatg     47220
+     ctgaccggga cggcttctcg aggccaccga tcacccgtcc gctctgtcgc agctgctgga     47280
+     acgaacgata cgaccggctc gccggcgcct actacgaggt cgacgacgtc cagcggctct     47340
+     gggacatcct tcgagccgcg aacggcgatc tcgtcgccga cctcaagcac atgttcgtcg     47400
+     gcggccgccc cttcgtccgc gtcgtcgacg gcgagctcca gggcgcgacg acgaagccga     47460
+     aggacgtcgg cgacaagacg atccgattcg acccggagat ggtcgatgtc gaccgggact     47520
+     ggctgttcga ggtgttcggc gaagacgacg aactccccga tcgggagtac ccgacgatcg     47580
+     ccatcatccg gccagtggag gagacgccgt tcgaggacgt tcgcgagcgc ggtggcgact     47640
+     ctcacaagat ctcgaggtgg tcgaagtgac gaacctcacc gacttcggcg tcgaggtcgg     47700
+     cgacgccccc actggcgagc cggatcccca accggaaacc gaccccgagc cgagcgaaga     47760
+     accgagcacc ggctacccga acggtcgctg cccggcgatc gcgaacggca ctcggcgctg     47820
+     tcagaatccc gtctcgcgga tgaactcggc tggcgactac tgtgggactc acgccaacca     47880
+     ggccggtccc gtctcgatcg acagccaccc cgagctactc gtccgctggc tcggcaacgt     47940
+     cgacggtcgc tccgcgaggt gccgcgcgat ccagggcaat ggcgagcggt gtacgaacga     48000
+     cgttggtccg ctcgagtact tctgcgggat gcacgaggac gtcgactgcg agatggtcga     48060
+     cgacctggac gacgacgagc tcgacgtcga actcatccgg acggcgctgc acaccgtcgc     48120
+     ggggctagaa gacgaaccgc tgaccgtcag tgaggacggc atctggttgc ccgagatgta     48180
+     ccggatgccc tcgaacatcg tgatccggac gccgaccgcg actcaccagg cgacctcaag     48240
+     cggcgacggg tggcggaaag cggtgtaccc actcgtgaac gtcgaggact gggattccga     48300
+     gaacctcgag ccggaggagg gaaccgacga actgcggaac ccggagtgcg tcgaagatgg     48360
+     gccgaaggtc ggcctcaagg tgtacggcgg cgatcaacgc tggttcccgg tcgagatcgt     48420
+     caacggaggt gactcgaccg atgcttgaga gcagtcagtt ccttgggacg catcggtaca     48480
+     aagagccgga agacatccag gcccgcattg gctactccga cccgccgacg cacgtctcac     48540
+     tctttagcgg catcggcggg ttcgatctcg ggttctcccg ggcagggttc aagaacctcg     48600
+     tcgcggtcga ggcgaatcag gacgcagccg acacctatcg ggcgaacctg atcaacgact     48660
+     gcgagaacta cggccaggac gagccaccag tcctgatgga gcgcgacatc acgaaggtcg     48720
+     cgacgtggga gatcctcgaa gccgccggca tcggcgtcgg ccaactcacc gcggtctccg     48780
+     gcgggccacc ctgtcagggg ttcagccata tcgggaagcg cgaggaggac gatccgcgca     48840
+     acgagctcta cctggagatg gtccggatcg tccatcaagc caaacccgtg ttcttcgtga     48900
+     tggagaacgt cccggggctc gcgacgatgc acgacggcga ggcgatcatg gaggtctgcg     48960
+     agaacttcga ggcaggtggc tacgaggtga cctgggacaa acacgatgcc gccgactacg     49020
+     gcgtcccgca gcaccgagag cgcgtgctcg tcatcggcaa gcgcgtcgac gtgatgggga     49080
+     tgcccgagga gggcaacccg cagttccaca tcggcgcgaa gcccggcggg atcaagcacc     49140
+     cggagttctt ccgagagcgt cacgatctga aggagccgga ccaggcgacg ttcgatgcgt     49200
+     tcacgaacga cgaccccgag acgctggacg ccctgatcga gcaggtcatc caggacggga     49260
+     tccatccaga aggagggcag ggcgatgact gaagagatcg acgtccacgt cacggcgacg     49320
+     gcgaagtcga aggcgttccg gatgtacact gagcgtgagc tcgtcgacat cgcccggtcg     49380
+     gcgtaccgcg gcgatctccg aacgttccag aagggcaacc agagcgagtt ccatgccctc     49440
+     tccgaggact acgcggtggt catcaaaccc gagaacggcg gtctggtcgt catcacacag     49500
+     atgcaccagc acgaggacta caaccgcgct gaggtgtacc ggtacgtcga ctcgatccgg     49560
+     tcggcatcca cggacgatcg aggtgatcgg cgtgtcgaaa gctgagatcg agcggttgct     49620
+     gtactgcgac cactgtgtcg gcgacacgct ccaccacctg gacgatgacg acatgtggac     49680
+     ctgctcgagc tgtgggcggt ggtcgacatg atctccgaat ggaccggcga catccacgag     49740
+     ggtgacgccg aggaggttct tgcagaactc cccgagtcct cggtccactg cgtcgtcaca     49800
+     tctcccccgt acttcgggca tcgcgattac ggagtcgacg gccagatcgg cctcgaggac     49860
+     agcctcgacg agttcatcga atcactcgtc gacgtcgcga gcgagatccg gcgagtcctg     49920
+     cgggacgatg ggtcttggtg gctcaacctc ggagattcct tcgctggatc cggcggcgca     49980
+     ggtggtcagt ggggccagaa cgaacacggc tcggcgactc gtctcgcgga cgctggtgat     50040
+     gcgtacaacg gcccgctgaa cacgagcaac atccgacgaa agtcgaagat gctcgtccct     50100
+     caccgggtgg cgattgctct cgaaaacgcc ggctggatca tccgcgccga cgccgtctgg     50160
+     acgaagccca acgggatgcc gagttccgca cacgaccgtc tgaacgaaaa gaaggagttc     50220
+     gtgttccacc tggttcccga gccgcactac tggttcaacc tcgacgccat ccgcgaaccc     50280
+     cactctgagg cgtcgctgga gcgggctggt cggcacgacc aggcgaaacg aggctacccg     50340
+     agtaacgacc actcgctcga gccatcgcgg ttctgccacc cgaacggcaa gaacccgggc     50400
+     gacatcttcg agatcaacgc cgcgcagttc tcggacgctc acttcgcagt tttccccgag     50460
+     gagctgtgta aggaccccat caagtcatcg tgtcctgaga aggtttgcgc tgagtgtgga     50520
+     acgccgcacg agcaactgac cgaggagatc gacccgtgga acgtcgagag ccccgatcgc     50580
+     gagcagcttc gccgggcgat cgaggtgtac aaagcgtccg atctcacgga agatcacctc     50640
+     gaggcagttc gtgcgtacgg gttcgccgac gctgcggcgg ggaagaacca gaaccgctct     50700
+     ggcctgaatg acgagcgcgt tcagcagctc gccagcgagg cgaaggacgt cctcgagggg     50760
+     tacttccgcg agttcacgac gacgtacgag cgccacatcg ggtgggaagc cgcctgcgat     50820
+     tgtgagaccg acgagacgaa cccgggaatc gtcctggacc cgttcgcggg cgccggcaca     50880
+     acctgccttg tagcaaaacg attcggccga cggttcatcg gcgtagacct aaatccggag     50940
+     ttcgttgcga tggcccagca gcggatcggc ctcgacgtcg acgaccctga tctcctcctc     51000
+     gacgaggacg aaacgagcct gagagagttc atcgaggtcg gtgatacccc gtgacgaccg     51060
+     aaaacccgta cttcgaggag gtcgcaggcg ggatcaccgt cggagcgaac cgcgcctcct     51120
+     gggacgaccg ggcgatcgaa gtcctcgagc agcgagagga gctcgtccag gagtacgctt     51180
+     gggcgatccc gaacgaggag gcgatcgaga cggtcgccga gcacgcgccg atcgtcgagg     51240
+     tcggcgctgg cgcgggctac tgggcgtggt gcgtcgagca gctcgacgtc cggatcgctg     51300
+     cgaccgaccc cgaaccaccc cggccgaaca cctacacgga gatcatcacc aagacggcga     51360
+     ccgaggcgat cgagtgcgcc cgcgagatct tcgtcgacgg gtacacgctg ttcctctgct     51420
+     ggcctcccta cggcaacgag atggcggccg acgccgtcga ggccttcgag ggcgacacgc     51480
+     tgatctacgt tggcgagggc cgcggcggct gtacgggcga cgaccggttc catcgactcc     51540
+     ttcaccaaga gtgggagctc gtcgagacgg tcgcgatccc gacgtacctc ggcatccacg     51600
+     accggctgga ggtttggtca cgatgaccgt cttcgaggac gaactcaacg atatgacgtc     51660
+     gacggcgcgg gagctgatcc ccgacgtctt cggcgttccg caggaggcga tgatcgagga     51720
+     gttcccctac gggacgtcgt tcccgtaccg gacggacatc gccggcgttg acctcgagat     51780
+     ggacgtcgtc gagcagcgcc gaagcgactt ctacggcctg acaccggtca ataccgagtg     51840
+     gcggttcctg aagtcctacc tccgcgcccg ccgactgtcg ccactctcga agagcgcgtg     51900
+     gctcgacgag tcgaactacc ggacgccggt cgagatctgg gactggctca cgcagagtgg     51960
+     gttcatccag ttcgacacgt tcgctcagcc gggcgaggtc caggacatcc cgctccacgg     52020
+     cgaccagtgg gcgttcgaac tgaagccgcg ggactgggag aaggccctcg agcaggctga     52080
+     gcgagcggtc tacggcgtcg ggatggacta tcacaagcag cggatggaga acgctcgcga     52140
+     cgatctcccg tattccccct accagcacgg cggttacgcc gacttctgcg tcgtgatcat     52200
+     ggacgccgac cacgtcgacg aaccgctcga tcacctagac gagttcgaag agaagggcgt     52260
+     cggtctcgcg agcctcgatc gagacgagct cgaggtccac ctggagcccg atcgccagga     52320
+     accccggcgc tggtcgcgga atcgcatcga cctgaacgaa cgcacactcc caacagacga     52380
+     tgactgactt cacactggac acggacggaa ccgacctggt atcgaatcca ctcgaagaca     52440
+     tgatgcggcg gcatcacgag gacgtggagc gagcgtatca cctgggtcta ctccacggta     52500
+     taaacgctca gtcgatggcc gaggcgaagc gcgacgtcat gtcgttcgaa gactacccct     52560
+     ggtctccaga accggagcgt gatcgcgatg cctgagtggg agttctgcgc gaagatccac     52620
+     gaggactgcg gcggcgtggt ccggtgggtc gaggcagtcg acacgcccgg cgtcggatac     52680
+     cagggtgagt gcctcggctg cggcgagacg gagatcgtcg tcgaggcgat catcccgatc     52740
+     gaggacctcg gcccgagcga cgtcctcgaa ctcaacccag cggacctcga cgacctccgc     52800
+     tgggactacg atgcggactt cgacgagaac caggagcggc tgcttcagga ggttccgacc     52860
+     gatggctgac caagagatgc tctcggcgtt cggcgctggc gacctcgaca acgtcgactt     52920
+     atcgcttccg gaggatggaa tcgacctcga ggccaagcag gaggtcgagg catacgccga     52980
+     gcgcgtcacg accggcggct gggagctcgt caacatctcc tctgaccgcg tgtcatggtg     53040
+     gaatccggac ggccacgaga cctactggat cgagcggaag aagtccggct ggcacggcgt     53100
+     ccgcagtaaa cgagacgtcc gacctcacta cacagaagac ctccaggagg cactcgacgg     53160
+     agccgccgag tggatggcgg accatccgct gcgggacgtc gtcgacgagg ccgatgactg     53220
+     accccagcgt gttcgtccgt cgcgactgga agcagcacgt cgagtcgcac cgtcgtgtca     53280
+     tctacgagcg ggcggtcgtc gacggcgacg agatcgggcc gggcgacgtc ctggcgacca     53340
+     gccgcgagta cgttgacccg gcgatcgcgg gctcggttca cgtcttcgag gtggactgcg     53400
+     tcgtctactc cgccgaccgc tacaagatcc ggccctcgtc gggcggctac caactcctcg     53460
+     aggacctcgt cgagatgccc gagtgggtcc ccgccgatct cctcgtgggt cgtcgtctcc     53520
+     cggcggacgt catccagtac gtcgacggcg aagtcgtcgt gcggtagact gcggtttctc     53580
+     gcctcacctt atcaaacatc taacccggta tgcaccctct aatgtttgat aaggtcatga     53640
+     ctctccccgc cgatccggcc cgccttctct gccgctacag attcgagttc tgacaatact     53700
+     cttatcagtg aataaccggt aatcacgcac taacgcgctc ccacgcaagg aggatagtta     53760
+     ccccagagct gcaaacccac cccgagaatc cgtatactgc taaaagtcac tacggagggg     53820
+     tacgcggagc aaccttctca gctacgcata tgtcaaccaa tcccaagtca aacgaacgaa     53880
+     ccactctcct ggaatgcaaa catccggact gcgacgaata cggtcacgtc tgggagtttc     53940
+     aggaggagta ctgctcgaac agatgtaacg tccggcacga gggccggaag gagctcgcga     54000
+     agctgatgta cgaccactgt ctgtgcttca gctgcttccg cgaactcaag acgatcgaac     54060
+     caccaaagcc cgaattcgcc ttcgacgagg acggctacgg ttggacgcgc gacgaggaga     54120
+     cgggcgagcc gaccctcgag tactactcgc aggaggtcac tcgccaggtc gccgtcggct     54180
+     tccagcacct gacgccgttc gcgtcgaagg gcgagaagca acgaggcgac cacgtcgggt     54240
+     ggggaacgat ctgtggtcac tgcggtaaca ccgaccacaa gttccactac ccagacccga     54300
+     gcaaccgcga cgtcatcggc cgtctggtaa gcattctgct ggccgaagac gacgtcgtga     54360
+     tcgacatcga gacgctgcac cgagagtacg aacaaaccac cgacatccag ctggcggtcg     54420
+     gcagatcact ctgacgcgat cgccgttcca gtcgacgcct catgtctacc gattcccacc     54480
+     ccgagagcga catccccaga gatccatctg cctaccgcgc gaccctgcac ttcaaaagcc     54540
+     ggttcgagga cgccttcgac gactacaacc ggcacctgga cggcgagatc gtccggcgct     54600
+     gtatcaccga gggcgagctg actcagcagg actaccacac ctcgcttttc gagtcagtca     54660
+     tcggcggcgt cacgtatcga atcgtcgtca acccgcgcaa cggcacctgt gtcagcgggt     54720
+     ttccggtcgc gattgactgg caaaccgctc ttgactctgg gcgttggact aggatccaac     54780
+     taaaagaaat tgaggagttc ctcgacgcca agcccaaccc ccgccagcgc tactgatcgc     54840
+     cctccatagt cccgatgacg cccccgcgat attcgcggga aacggtcgag ggaccttgat     54900
+     tcgcgcgttc acatgctcct ggcctcttcg aacgtcgagg cgatcgggca tcgtcaccac     54960
+     tccatgatgc tggccagcac tgtcgacgtc gaacgccgtt ccgtattccc ccggcgctcg     55020
+     cgatccgaca ggtcaccact ggctcgcatc tacccctgcc cgttacagag cagctgcgcc     55080
+     caggtccgtt cgaggccaag aacaccgtcg acgcacgtcg acgaccaatc ggcggttcaa     55140
+     atccgtccct gggcatcaac caatatccct ggtagtcatg aatgaaaata aagcaaacgg     55200
+     cacgagcgtt ggccgggttc gcgacagtta tcacactact ggcgctgatc gtggccgaca     55260
+     cggtacaccc gcagatcgct ctcggaaccg acgacaaggt gatcctgatc acgctgatcg     55320
+     gcgctctgct gggtgtcgat cgcttgctca gagaactccc tctcatcgag gaactcagcg     55380
+     acggtctcag tatcgagatc gcgccaaaca gcaaggagga tgacgacgat gattgatccc     55440
+     ggtatcgccg acatactcgg catgatcgcc gggggggtct ggctcagtgg tgcgatctac     55500
+     ttccagatga tccgccaggg ccggatccat cccggctgga tactactgat gttcctcgtc     55560
+     ggcaccgcgt tgatgatggg atcctccgcg atcgcgctgg ctggccgcga cgaactcgtc     55620
+     ggcctgttcg gcatcctcgc caacgtgctg ttcctcgttc tcggcctcgg cgtctggtac     55680
+     acgctcgagt gccacgtctg cacgcaggag acgaaggcca tcgccgagag cgagtcggac     55740
+     aacgttcact gagtcgagtc accccactga acgcagatac cagctgtgtt cggtcgaacc     55800
+     accagggaat cggttacgag gcgtcacgat gcaacttgaa gaactaccaa caccggaacg     55860
+     agaggaatcg gtcgacccgg aggaactcca ggtcgatgga gcgaacccga acgagcagaa     55920
+     cgaagagacg ttcgggctgc tctgcaagaa catgcagacg aagggctgga tcgggaatgc     55980
+     gatcgtcgcg aacaccgggg accttcccgg gtacgacggc gacgcggagg ggctgatcgc     56040
+     cgatggcgag catcgctggc gagccgccaa ggagatcgag ctcgaggagg tcccggtcaa     56100
+     gttctacgac ttcgaggacg acgcggaacg acgactctgg cggcaggagc tcaacaagat     56160
+     ctccggcgag cacgaccaga cccgcgatgc cctcgagtac gactacctcc tcaacaacgg     56220
+     caagaccgag gagatctccg cgctggccga agcgagcggc gaggacatcg atgcgctact     56280
+     ggcgcagatc cgtgacgact cccgtgctgg tgtcgcctac gagtacgacg tcgaccacca     56340
+     ggtgtacttc gaggactgca tcgagggcat gtcccagcgc ctcgagggtg actcggttga     56400
+     cctcgtcctc acggatccac cgtacggcat cgacatcgac ctctcggaga cgctcggctc     56460
+     ccgatccgtt cagcacagcg gcaccgtcgc gaacgacgat ctcgacggcg cgctctcggt     56520
+     cttccgtgac gctgcgaagg agatgcggcg tgtcgtgaag ccaggcggtc acgtctacgt     56580
+     gttcgccagt tggaagacgt acgacctctt ccgagacatc ctcgtcgacg aagagttcac     56640
+     cgtccgcaac tgcatcgtct ggtgcaagac ggtcccgaac aaccagccga acttcgggac     56700
+     tggcgggacg aactggggcc tccagcacga gttcgtcatc tacgccacgc tcgactcgcc     56760
+     gcgaccactg aagcacactc ggccggacat catcgtccac aagcactcga cgtcggggaa     56820
+     cgagcacccc acgcagaagc cggtcggcct cctcgaggag ttcatcgagc agagctccca     56880
+     gccgggcgac gtcgtcctgg acccgttcgc gggctccggc tcgacggccg tcgcctcggt     56940
+     ccagaccgac cgcgagtgca tcggcttcga gctcgagggc gacgtctacc aggaggtcgt     57000
+     cgatcgccgc atcagcgaag cggtccgagc gaaggaggcg gccgaggacg gcgacgccga     57060
+     gaatggcgac gccggtgata atgagtgatg atatcgagta cggcgcgatc gatatcccgg     57120
+     aggaaaaaca cccgacggag tactcctacg tcgagcgccg tgctgagatc ctatcactca     57180
+     tcgagcgagc cgggcatccc cgggcgatca cccagaccga actcgccaag cgatacgaca     57240
+     cctcgcagtc caacatctcg aaggacttcg accgcttacg cgactacgtc cacgaccgcg     57300
+     tcggcgatga cgcgaaggtg gtctccgagc tcgtctacaa ccgcgccatc caggacctcc     57360
+     tcgacgaggg ggacgcctac aaagcggcga aggtcgtgaa gatgcgcgac gagtggctgt     57420
+     tcgacctcgg cgaactcgag cgcgcccccg atcgcgtcga cgtcgccggc gagctcgagg     57480
+     tggacaacaa cctcgaactc agcgacaccg accgcgagat ggcccgcgac ctcctccggg     57540
+     agcgtcacca gcaggccgca gcgaactccg acgacgccga cagcgatacc gattccgacg     57600
+     gcgacgtcga cgactgactc tttccacacc catgtcacgc aaaaccatca gcatcgacga     57660
+     ggacctccac gatcgcctcg accaacacaa gggcgacgat gaatcgtgga cggacttcgt     57720
+     cgaacgacta tacgaggcgg cgtatatcga gggacgagac gatgaacgca cagtgcgtgc     57780
+     accgctcgag gacgtcgacg aagccgacat ccacacctac cacgacgccg tcgaggagct     57840
+     ccacgacgag atcgccagct tcaacgatca actcgagggc gtcctcaccg aagagcacat     57900
+     cgacgacatc gcgaacgtca cctcgactca gacgggcaag gagatcgaga atcggatgac     57960
+     gccgcgatga acgcagtttg catgcaccca cccgcctgcc agcagcacgc ggttttccat     58020
+     acagaggact gaacgatggg atacgactac gagtgcgacg tccagatcga cgacgtctgc     58080
+     gacatcggcg gcgacgtccc cgggctcgcg gcacagtttc gagaggccac ctggctcaac     58140
+     gacgagttcg gcggcctcat gcaggatcgg ggctacaccc ttcgcgacac gatcaccgtc     58200
+     tgccccagct gcacgctcga gctactctcc gaaaagcacc gatgaacgac gactcccccg     58260
+     ccgatggccg tgcgggctcc cggaacgtct tctgggacct tcacgatcgc gaccactacg     58320
+     cctgccctgg ctgcgggcgc tctgcggacg aggtctcctc cgtccacatc caccatcgag     58380
+     acggcaacaa gcacaacgac tcccgacaca acctcgttgg cctctgtcac ctctgccatc     58440
+     tcggtggccg acacgacctc gacttcgaag acccccgact caccaag                   58487
+//

@@ -1,0 +1,34 @@
+##sequence-region NC_017090.1 1 9694
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1156722
+NC_017090.1	RefSeq	region	1	9694	.	+	.	ID=NC_017090.1:1..9694;Dbxref=taxon:1156722;Is_circular=true;collection-date=2009;country=Spain;gbkey=Src;genome=genomic;mol_type=genomic DNA;nat-host=Halogeometricum sp. CG-9;old-name=Halogeometricum sp. pleomorphic virus 1
+NC_017090.1	RefSeq	gene	49	447	.	+	.	ID=gene-HGPV-1_gp01;Dbxref=GeneID:11948288;Name=ORF1;gbkey=Gene;gene=ORF1;gene_biotype=protein_coding;locus_tag=HGPV-1_gp01
+NC_017090.1	RefSeq	CDS	49	447	.	+	0	ID=cds-YP_005454295.1;Parent=gene-HGPV-1_gp01;Dbxref=Genbank:YP_005454295.1,GeneID:11948288;Name=YP_005454295.1;gbkey=CDS;gene=ORF1;locus_tag=HGPV-1_gp01;product=ORF1;protein_id=YP_005454295.1;transl_table=11
+NC_017090.1	RefSeq	gene	506	913	.	+	.	ID=gene-HGPV-1_gp02;Dbxref=GeneID:11948289;Name=2;gbkey=Gene;gene=2;gene_biotype=protein_coding;locus_tag=HGPV-1_gp02
+NC_017090.1	RefSeq	CDS	506	913	.	+	0	ID=cds-YP_005454296.1;Parent=gene-HGPV-1_gp02;Dbxref=Genbank:YP_005454296.1,GeneID:11948289;Name=YP_005454296.1;gbkey=CDS;gene=2;locus_tag=HGPV-1_gp02;product=VP2;protein_id=YP_005454296.1;transl_table=11
+NC_017090.1	RefSeq	gene	929	1132	.	+	.	ID=gene-HGPV-1_gp03;Dbxref=GeneID:11948290;Name=3;gbkey=Gene;gene=3;gene_biotype=protein_coding;locus_tag=HGPV-1_gp03
+NC_017090.1	RefSeq	CDS	929	1132	.	+	0	ID=cds-YP_005454297.1;Parent=gene-HGPV-1_gp03;Dbxref=Genbank:YP_005454297.1,GeneID:11948290;Name=YP_005454297.1;gbkey=CDS;gene=3;locus_tag=HGPV-1_gp03;product=VP3;protein_id=YP_005454297.1;transl_table=11
+NC_017090.1	RefSeq	gene	1132	2592	.	+	.	ID=gene-HGPV-1_gp04;Dbxref=GeneID:11948291;Name=4;gbkey=Gene;gene=4;gene_biotype=protein_coding;locus_tag=HGPV-1_gp04
+NC_017090.1	RefSeq	CDS	1132	2592	.	+	0	ID=cds-YP_005454298.1;Parent=gene-HGPV-1_gp04;Dbxref=Genbank:YP_005454298.1,GeneID:11948291;Name=YP_005454298.1;gbkey=CDS;gene=4;locus_tag=HGPV-1_gp04;product=VP4 precursor;protein_id=YP_005454298.1;transl_table=11
+NC_017090.1	RefSeq	gene	2597	3166	.	+	.	ID=gene-HGPV-1_gp05;Dbxref=GeneID:11948292;Name=ORF5;gbkey=Gene;gene=ORF5;gene_biotype=protein_coding;locus_tag=HGPV-1_gp05
+NC_017090.1	RefSeq	CDS	2597	3166	.	+	0	ID=cds-YP_005454299.1;Parent=gene-HGPV-1_gp05;Dbxref=Genbank:YP_005454299.1,GeneID:11948292;Name=YP_005454299.1;gbkey=CDS;gene=ORF5;locus_tag=HGPV-1_gp05;product=ORF5;protein_id=YP_005454299.1;transl_table=11
+NC_017090.1	RefSeq	gene	3163	3939	.	+	.	ID=gene-HGPV-1_gp06;Dbxref=GeneID:11948293;Name=ORF6;gbkey=Gene;gene=ORF6;gene_biotype=protein_coding;locus_tag=HGPV-1_gp06
+NC_017090.1	RefSeq	CDS	3163	3939	.	+	0	ID=cds-YP_005454300.1;Parent=gene-HGPV-1_gp06;Dbxref=Genbank:YP_005454300.1,GeneID:11948293;Name=YP_005454300.1;gbkey=CDS;gene=ORF6;locus_tag=HGPV-1_gp06;product=ORF6;protein_id=YP_005454300.1;transl_table=11
+NC_017090.1	RefSeq	gene	3932	5077	.	+	.	ID=gene-HGPV-1_gp07;Dbxref=GeneID:11948294;Name=ORF7;gbkey=Gene;gene=ORF7;gene_biotype=protein_coding;locus_tag=HGPV-1_gp07
+NC_017090.1	RefSeq	CDS	3932	5077	.	+	0	ID=cds-YP_005454301.1;Parent=gene-HGPV-1_gp07;Dbxref=Genbank:YP_005454301.1,GeneID:11948294;Name=YP_005454301.1;gbkey=CDS;gene=ORF7;locus_tag=HGPV-1_gp07;product=ORF7;protein_id=YP_005454301.1;transl_table=11
+NC_017090.1	RefSeq	gene	5074	5250	.	+	.	ID=gene-HGPV-1_gp08;Dbxref=GeneID:11948295;Name=ORF8;gbkey=Gene;gene=ORF8;gene_biotype=protein_coding;locus_tag=HGPV-1_gp08
+NC_017090.1	RefSeq	CDS	5074	5250	.	+	0	ID=cds-YP_005454302.1;Parent=gene-HGPV-1_gp08;Dbxref=Genbank:YP_005454302.1,GeneID:11948295;Name=YP_005454302.1;gbkey=CDS;gene=ORF8;locus_tag=HGPV-1_gp08;product=ORF8;protein_id=YP_005454302.1;transl_table=11
+NC_017090.1	RefSeq	gene	5243	5623	.	+	.	ID=gene-HGPV-1_gp09;Dbxref=GeneID:11948296;Name=ORF9;gbkey=Gene;gene=ORF9;gene_biotype=protein_coding;locus_tag=HGPV-1_gp09
+NC_017090.1	RefSeq	CDS	5243	5623	.	+	0	ID=cds-YP_005454303.1;Parent=gene-HGPV-1_gp09;Dbxref=Genbank:YP_005454303.1,GeneID:11948296;Name=YP_005454303.1;gbkey=CDS;gene=ORF9;locus_tag=HGPV-1_gp09;product=ORF9;protein_id=YP_005454303.1;transl_table=11
+NC_017090.1	RefSeq	gene	5638	6351	.	-	.	ID=gene-HGPV-1_gp10;Dbxref=GeneID:11948297;Name=ORF10;gbkey=Gene;gene=ORF10;gene_biotype=protein_coding;locus_tag=HGPV-1_gp10
+NC_017090.1	RefSeq	CDS	5638	6351	.	-	0	ID=cds-YP_005454304.1;Parent=gene-HGPV-1_gp10;Dbxref=Genbank:YP_005454304.1,GeneID:11948297;Name=YP_005454304.1;gbkey=CDS;gene=ORF10;locus_tag=HGPV-1_gp10;product=ORF10;protein_id=YP_005454304.1;transl_table=11
+NC_017090.1	RefSeq	gene	6348	6551	.	-	.	ID=gene-HGPV-1_gp11;Dbxref=GeneID:11948298;Name=ORF11;gbkey=Gene;gene=ORF11;gene_biotype=protein_coding;locus_tag=HGPV-1_gp11
+NC_017090.1	RefSeq	CDS	6348	6551	.	-	0	ID=cds-YP_005454305.1;Parent=gene-HGPV-1_gp11;Dbxref=Genbank:YP_005454305.1,GeneID:11948298;Name=YP_005454305.1;gbkey=CDS;gene=ORF11;locus_tag=HGPV-1_gp11;product=ORF11;protein_id=YP_005454305.1;transl_table=11
+NC_017090.1	RefSeq	gene	6555	6776	.	-	.	ID=gene-HGPV-1_gp12;Dbxref=GeneID:11948284;Name=ORF12;gbkey=Gene;gene=ORF12;gene_biotype=protein_coding;locus_tag=HGPV-1_gp12
+NC_017090.1	RefSeq	CDS	6555	6776	.	-	0	ID=cds-YP_005454306.1;Parent=gene-HGPV-1_gp12;Dbxref=Genbank:YP_005454306.1,GeneID:11948284;Name=YP_005454306.1;gbkey=CDS;gene=ORF12;locus_tag=HGPV-1_gp12;product=ORF12;protein_id=YP_005454306.1;transl_table=11
+NC_017090.1	RefSeq	gene	6904	7143	.	-	.	ID=gene-HGPV-1_gp13;Dbxref=GeneID:11948285;Name=ORF13;gbkey=Gene;gene=ORF13;gene_biotype=protein_coding;locus_tag=HGPV-1_gp13
+NC_017090.1	RefSeq	CDS	6904	7143	.	-	0	ID=cds-YP_005454307.1;Parent=gene-HGPV-1_gp13;Dbxref=Genbank:YP_005454307.1,GeneID:11948285;Name=YP_005454307.1;gbkey=CDS;gene=ORF13;locus_tag=HGPV-1_gp13;product=ORF13;protein_id=YP_005454307.1;transl_table=11
+NC_017090.1	RefSeq	gene	7509	9143	.	-	.	ID=gene-HGPV-1_gp14;Dbxref=GeneID:11948286;Name=ORF14;gbkey=Gene;gene=ORF14;gene_biotype=protein_coding;locus_tag=HGPV-1_gp14
+NC_017090.1	RefSeq	CDS	7509	9143	.	-	0	ID=cds-YP_005454308.1;Parent=gene-HGPV-1_gp14;Dbxref=Genbank:YP_005454308.1,GeneID:11948286;Name=YP_005454308.1;gbkey=CDS;gene=ORF14;locus_tag=HGPV-1_gp14;product=ORF14;protein_id=YP_005454308.1;transl_table=11
+NC_017090.1	RefSeq	gene	9140	9496	.	-	.	ID=gene-HGPV-1_gp15;Dbxref=GeneID:11948287;Name=ORF15;gbkey=Gene;gene=ORF15;gene_biotype=protein_coding;locus_tag=HGPV-1_gp15
+NC_017090.1	RefSeq	CDS	9140	9496	.	-	0	ID=cds-YP_005454309.1;Parent=gene-HGPV-1_gp15;Dbxref=Genbank:YP_005454309.1,GeneID:11948287;Name=YP_005454309.1;gbkey=CDS;gene=ORF15;locus_tag=HGPV-1_gp15;product=ORF15;protein_id=YP_005454309.1;transl_table=11
+
